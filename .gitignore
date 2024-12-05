@@ -13,6 +13,9 @@ node_modules
 logs
 *.log
 
+# VSC directory
+.vscode
+
 # Misc
 .DS_Store
 .fleet

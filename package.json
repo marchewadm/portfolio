@@ -10,8 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.7.2",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "eslint-plugin-readable-tailwind": "^1.8.2",
+    "typescript": "^5.7.2",
+    "vue-eslint-parser": "^9.4.3"
   }
 }
