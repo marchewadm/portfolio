@@ -4,7 +4,7 @@ import type { IconName } from "~/types/icon";
 const props = defineProps<IconName>();
 
 const getIconName = computed(() => {
-  return `${ICON_PROVIDER}:${props.name}`;
+  return `${ICON_PROVIDER}:${props.iconName}`;
 });
 </script>
 

@@ -6,6 +6,6 @@ defineProps<IconName>();
 
 <template>
   <button class="flex items-center justify-center">
-    <IconBase :name="name" />
+    <IconBase :icon-name="iconName" />
   </button>
 </template>

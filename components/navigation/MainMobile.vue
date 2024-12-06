@@ -1,3 +1,3 @@
 <template>
-  <ButtonIcon name="menu-2" />
+  <ButtonIcon icon-name="menu-2" />
 </template>

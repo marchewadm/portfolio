@@ -1,3 +1,3 @@
 export type IconName = {
-  name: string;
+  iconName: string;
 };
