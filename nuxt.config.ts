@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
+    "nuxt-particles",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -36,4 +37,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/index.css"],
+  particles: {
+    mode: "slim",
+  },
 });
