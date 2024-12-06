@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
   ],
+  imports: {
+    dirs: ["constants/*"],
+  },
   fonts: {
     defaults: {
       weights: [100, 300, 400, 500],
