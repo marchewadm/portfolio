@@ -1,15 +1,21 @@
 <template>
-  <section class="relative flex h-[350px] items-center overflow-hidden">
+  <section class="relative mb-6 flex h-[350px] items-center overflow-hidden">
     <div class="z-10 px-4">
-      <h1 class="mb-1 text-2xl font-medium">
+      <TypographyHeading
+        class="mb-1"
+        tag="h1"
+      >
         Dawid Merchwa
-      </h1>
-      <h2 class="mb-2 font-medium">
+      </TypographyHeading>
+      <TypographyTitle class="mb-2">
         A Computer Science student
-      </h2>
-      <p class="mb-4 text-sm font-light">
+      </TypographyTitle>
+      <TypographyParagraph
+        class="mb-4"
+        variant="sm"
+      >
         Passionate developer, open source contributor, Linux enthusiast, and a lifelong learner exploring new technologies.
-      </p>
+      </TypographyParagraph>
       <ButtonVariant
         class="mb-2 w-full"
         variant="primary"
