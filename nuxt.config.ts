@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "nuxt-particles",
+    "radix-vue/nuxt",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -28,6 +29,28 @@ export default defineNuxtConfig({
           colors: COLORS,
           boxShadow: {
             xs: "0px -3px 10px 0px rgba(102, 102, 102, 25%)",
+          },
+          keyframes: {
+            "slide-down": {
+              from: {
+                height: "0",
+              },
+              to: {
+                height: "var(--radix-accordion-content-height)",
+              },
+            },
+            "slide-up": {
+              from: {
+                height: "var(--radix-accordion-content-height)",
+              },
+              to: {
+                height: "0",
+              },
+            },
+          },
+          animation: {
+            "slide-down": "slide-down 0.3s ease-out",
+            "slide-up": "slide-up 0.3s ease-out",
           },
         },
         fontFamily: {
