@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-6 flex flex-col items-center px-4">
+  <SectionBase>
     <TypographyHeading class="mb-1">
       Education
     </TypographyHeading>
@@ -29,5 +29,5 @@
     <TypographyParagraph class="text-justify">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
     </TypographyParagraph>
-  </section>
+  </SectionBase>
 </template>

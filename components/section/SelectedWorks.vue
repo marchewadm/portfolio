@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-6 flex flex-col items-center px-4">
+  <SectionBase>
     <TypographyHeading class="mb-1">
       Selected Works
     </TypographyHeading>
@@ -16,5 +16,5 @@
     >
       See all
     </ButtonVariant>
-  </section>
+  </SectionBase>
 </template>
