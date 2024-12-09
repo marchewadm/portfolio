@@ -62,11 +62,9 @@ const dummyData = [
       <AccordionItem :value="item.value">
         <AccordionHeader as-child>
           <AccordionTrigger as-child>
-            <div
-              class="cursor-pointer trigger group"
-            >
-              <div class="mb-1 flex justify-between">
-                <TypographyTitle variant="lg">
+            <div class="cursor-pointer trigger group">
+              <div class="flex justify-between">
+                <TypographyTitle>
                   {{ item.title }}
                 </TypographyTitle>
                 <IconBase
@@ -79,9 +77,7 @@ const dummyData = [
                   icon-name="chevron-down"
                 />
               </div>
-              <TypographyParagraph
-                class="text-foreground-lighter"
-              >
+              <TypographyParagraph class="text-foreground-lighter">
                 {{ item.shortDescription }}
               </TypographyParagraph>
             </div>
