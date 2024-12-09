@@ -9,7 +9,7 @@ const { tag = "h2" } = defineProps<Props>();
 <template>
   <component
     :is="tag"
-    class="text-2xl font-medium"
+    class="text-2xl font-medium tracking-tight"
   >
     <slot />
   </component>
