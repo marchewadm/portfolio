@@ -6,5 +6,6 @@
     <SectionEducation />
     <SectionExperience />
     <SectionBlog />
+    <SectionContact />
   </main>
 </template>
