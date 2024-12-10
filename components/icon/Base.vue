@@ -1,16 +1,23 @@
 <script setup lang="ts">
 import type { IconName } from "~/types/icon";
 
-const props = defineProps<IconName>();
+type Props = IconName & {
+  size?: "default" | "lg";
+};
 
-const getIconName = computed(() => {
-  return `${ICON_PROVIDER}:${props.iconName}`;
-});
+const { iconName, size = "default" } = defineProps<Props>();
+
+const getIconName = computed(() => `${ICON_PROVIDER}:${iconName}`);
+
+const variantClasses = computed(() => ({
+  "h-6 w-6": size === "default",
+  "h-8 w-8": size === "lg",
+}));
 </script>
 
 <template>
   <Icon
     :name="getIconName"
-    class="h-6 w-6"
+    :class="variantClasses"
   />
 </template>
