@@ -20,7 +20,10 @@ defineProps<Props>();
       :src="imageSrc"
       :alt="imageAlt"
     />
-    <TypographyTitle class="mb-1 line-clamp-1 -translate-y-4 text-xl">
+    <TypographyTitle
+      class="mb-1 line-clamp-1 -translate-y-4"
+      variant="lg"
+    >
       <slot name="articleTitle" />
     </TypographyTitle>
     <TypographyParagraph class="line-clamp-5 -translate-y-4">
