@@ -8,11 +8,12 @@ const { href = "#" } = defineProps<Props>();
 
 <template>
   <NuxtLink
-    :to="href"
     class="
       border border-decorative text-foreground-lighter bg-decorative-lightest
       rounded-md px-3 py-1 text-sm font-light
     "
+    target="_blank"
+    :to="href"
   >
     <slot />
   </NuxtLink>
