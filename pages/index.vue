@@ -5,5 +5,6 @@
     <SectionSelectedWorks />
     <SectionEducation />
     <SectionExperience />
+    <SectionBlog />
   </main>
 </template>
