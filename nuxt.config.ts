@@ -28,7 +28,8 @@ export default defineNuxtConfig({
         extend: {
           colors: COLORS,
           boxShadow: {
-            xs: "0px -3px 10px 0px rgba(102, 102, 102, 25%)",
+            "xs-above": "0px -3px 10px 0px rgba(102, 102, 102, 25%)",
+            "xs-below": "0px 3px 10px 0px rgba(102, 102, 102, 25%)",
           },
           keyframes: {
             "slide-down": {
