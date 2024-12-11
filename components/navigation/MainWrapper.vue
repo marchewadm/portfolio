@@ -7,7 +7,7 @@
     <nav class="flex items-center justify-between">
       <NuxtLink
         to="#"
-        class="font-light red"
+        class="font-light"
       >
         marchewa.dev
       </NuxtLink>
