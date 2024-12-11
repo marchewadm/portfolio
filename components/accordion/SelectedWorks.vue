@@ -62,15 +62,14 @@ const dummyData = [
       <AccordionItem :value="item.value">
         <AccordionHeader as-child>
           <AccordionTrigger as-child>
-            <div class="cursor-pointer trigger group">
+            <div class="group cursor-pointer">
               <div class="flex justify-between">
                 <TypographyTitle>
                   {{ item.title }}
                 </TypographyTitle>
                 <IconBase
                   class="
-                    text-decorative icon-trigger transition-transform
-                    duration-300
+                    text-decorative transition-transform duration-300
 
                     group-data-[state=open]:rotate-180
                   "
