@@ -4,12 +4,7 @@
       <AccordionFooterLinksMobile />
     </div>
     <div class="flex w-full items-center justify-between gap-x-10">
-      <NuxtLink
-        to="/"
-        class="self-start text-sm font-light"
-      >
-        marchewa.dev
-      </NuxtLink>
+      <ButtonLogo class="self-start text-sm" />
       <TypographyParagraph
         variant="thin"
         class="text-justify text-xs"

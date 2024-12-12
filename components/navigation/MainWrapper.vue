@@ -5,12 +5,7 @@
     "
   >
     <nav class="flex items-center justify-between">
-      <NuxtLink
-        to="#"
-        class="font-light"
-      >
-        marchewa.dev
-      </NuxtLink>
+      <ButtonLogo />
       <NavigationMainMobile class="md:hidden" />
     </nav>
   </header>
