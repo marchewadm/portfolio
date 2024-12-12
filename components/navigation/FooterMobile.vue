@@ -52,13 +52,12 @@ const normalizedLinks = links.map(({ name, href = "#", target = "_self" }) => ({
             v-for="link in normalizedLinks"
             :key="link.name"
           >
-            <NuxtLink
-              class="font-light tracking-tight text-foreground-lighter"
+            <ButtonNavigation
               :to="link.href"
               :target="link.target"
             >
               {{ link.name }}
-            </NuxtLink>
+            </ButtonNavigation>
           </li>
         </ul>
       </AccordionContent>
