@@ -18,7 +18,6 @@
       </TypographyParagraph>
       <ButtonVariant
         class="mb-2 w-full"
-        variant="primary"
         icon-name="arrow-right"
       >
         Get in touch
