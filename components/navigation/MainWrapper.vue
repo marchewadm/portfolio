@@ -6,7 +6,7 @@
   >
     <nav class="flex items-center justify-between">
       <ButtonLogo />
-      <NavigationMainMobile class="md:hidden" />
+      <NavigationMainMobile />
     </nav>
   </header>
 </template>

@@ -38,6 +38,7 @@ const socialsNavigationData = [
 
 <template>
   <ButtonIcon
+    class="md:hidden"
     icon-name="menu-2"
     @click="toggleMenu"
   />
