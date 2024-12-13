@@ -1,6 +1,6 @@
 <template>
   <section class="relative mb-6 flex h-[350px] items-center overflow-hidden">
-    <div class="z-10 px-4">
+    <div class="z-10 w-full px-4">
       <TypographyHeading
         class="mb-1"
         tag="h1"
