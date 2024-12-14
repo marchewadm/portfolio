@@ -44,7 +44,9 @@ const socialsNavigationData = [
   />
   <div
     v-if="isMenuVisible"
-    class="absolute left-0 top-0 bg-surface z-50 h-screen w-full"
+    class="
+      absolute left-0 top-0 bg-surface z-50 h-screen w-full overflow-y-auto
+    "
   >
     <nav class="flex h-full flex-col">
       <div class="border-b py-6 border-decorative">
@@ -73,7 +75,7 @@ const socialsNavigationData = [
           <div class="border-b pt-2 border-decorative" />
         </li>
       </ul>
-      <ul class="mt-6 flex flex-col gap-y-3 px-4">
+      <ul class="my-6 flex flex-col gap-y-3 px-4">
         <ButtonVariant class="w-full">
           Get in touch
         </ButtonVariant>
