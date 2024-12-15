@@ -16,12 +16,15 @@
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "nuxt": "^3.14.1592",
+    "radix-vue": "^1.9.11",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
+    "@iconify-json/tabler": "^1.2.10",
     "eslint-plugin-readable-tailwind": "^1.8.2",
+    "nuxt-particles": "^0.3.0",
     "typescript": "^5.7.2",
     "vue-eslint-parser": "^9.4.3"
   }
