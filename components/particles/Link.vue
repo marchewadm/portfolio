@@ -21,7 +21,7 @@ const options = {
       enable: true,
     },
     number: {
-      value: 50,
+      value: 200,
     },
   },
   interactivity: {
@@ -32,11 +32,59 @@ const options = {
       },
     },
   },
+  responsive: [
+    {
+      maxWidth: 768,
+      options: {
+        particles: {
+          number: {
+            value: 50,
+          },
+        },
+      },
+    },
+    {
+      maxWidth: 1024,
+      options: {
+        particles: {
+          number: {
+            value: 100,
+          },
+        },
+      },
+    },
+    {
+      maxWidth: 1280,
+      options: {
+        particles: {
+          number: {
+            value: 125,
+          },
+        },
+      },
+    },
+    {
+      maxWidth: 1536,
+      options: {
+        particles: {
+          number: {
+            value: 150,
+          },
+        },
+      },
+    },
+  ],
 };
 </script>
 
 <template>
-  <div class="absolute h-full w-full">
+  <div
+    class="
+      absolute h-full w-full
+
+      [mask-image:_linear-gradient(to_bottom,_transparent_0,_white_60px,white_calc(100%-60px),_transparent_100%)]
+    "
+  >
     <NuxtParticles
       id="ts-particles-link"
       class="h-full w-full"
