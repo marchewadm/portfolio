@@ -16,7 +16,11 @@ const variantClasses = computed(() => ({
 
 <template>
   <button
-    class="flex justify-center rounded-xl px-6 py-2"
+    class="
+      flex justify-center rounded-xl px-6 py-2
+
+      md:text-lg
+    "
     :class="variantClasses"
   >
     <span>

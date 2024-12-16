@@ -4,12 +4,18 @@ type Props = {
 };
 
 const { tag = "h2" } = defineProps<Props>();
+
+const variantClasses = computed(() => ({
+  "text-2xl md:text-5xl": tag === "h1",
+  "text-2xl md:text-4xl": tag === "h2",
+}));
 </script>
 
 <template>
   <component
     :is="tag"
-    class="text-2xl font-medium tracking-tight"
+    class="font-medium tracking-tight"
+    :class="variantClasses"
   >
     <slot />
   </component>

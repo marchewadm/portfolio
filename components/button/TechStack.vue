@@ -11,6 +11,8 @@ const { href = "#" } = defineProps<Props>();
     class="
       border border-decorative text-foreground-lighter bg-decorative-lightest
       rounded-md px-3 py-1 text-sm font-light
+
+      md:text-base
     "
     target="_blank"
     :to="href"
