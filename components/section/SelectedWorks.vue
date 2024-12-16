@@ -11,7 +11,11 @@
     </TypographyParagraph>
     <AccordionSelectedWorks />
     <ButtonVariant
-      class="w-full"
+      class="
+        w-full
+
+        md:w-fit
+      "
       variant="secondary"
     >
       See all
