@@ -17,7 +17,13 @@ const { href = "#" } = defineProps<Props>();
       size="lg"
       :icon-name="iconName"
     />
-    <span>
+    <span
+      class="
+        font-light tracking-tight
+
+        md:text-lg
+      "
+    >
       <slot />
     </span>
   </NuxtLink>

@@ -23,7 +23,7 @@ const variantClasses = computed(() => ({
     "
     :class="variantClasses"
   >
-    <span>
+    <span class="tracking-tight">
       <slot />
     </span>
     <IconBase
