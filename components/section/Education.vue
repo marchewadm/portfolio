@@ -15,7 +15,11 @@
       </TypographyTitle>
       <TypographyParagraph
         variant="thin"
-        class="self-center text-xs"
+        class="
+          self-center text-xs
+
+          md:text-sm
+        "
       >
         2022 &dash; 2026
       </TypographyParagraph>
