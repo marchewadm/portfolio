@@ -9,7 +9,11 @@ const { href = "#", target = "_self" } = defineProps<Props>();
 
 <template>
   <NuxtLink
-    class="font-light tracking-tight text-foreground-lighter"
+    class="
+      font-light tracking-tight text-foreground-lighter
+
+      md:text-lg
+    "
     :target="target"
     :to="href"
   >

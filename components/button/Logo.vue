@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     to="/"
-    class="font-light"
+    class="font-light tracking-tight"
   >
     marchewa.dev
   </NuxtLink>
