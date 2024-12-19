@@ -53,7 +53,7 @@ const normalizedLinks = links.map(({ name, href = "#", target = "_self" }) => ({
             :key="link.name"
           >
             <ButtonNavigation
-              :to="link.href"
+              :href="link.href"
               :target="link.target"
             >
               {{ link.name }}
