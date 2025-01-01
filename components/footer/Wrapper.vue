@@ -52,14 +52,24 @@
         <TypographyParagraph
           variant="thin"
           class="
-            mt-1 text-justify text-xs
+            group mt-1 text-justify text-xs
 
             lg:mt-auto
 
             md:text-sm
           "
         >
-          Designed with care and love &hearts; in
+          Designed with care and love
+          <span
+            class="
+              transition-colors duration-500
+
+              group-hover:text-red-500
+            "
+          >
+            &hearts;
+          </span>
+          in
           <NuxtLink
             to="https://www.figma.com/"
             target="_blank"
