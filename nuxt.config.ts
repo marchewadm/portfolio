@@ -1,3 +1,4 @@
+import { transform } from "typescript";
 import { COLORS } from "./constants/colors";
 
 export default defineNuxtConfig({
@@ -48,10 +49,22 @@ export default defineNuxtConfig({
                 height: "0",
               },
             },
+            "bounce-right": {
+              "0%, 20%, 50%, 80%, 100%": {
+                transform: "translateX(0)",
+              },
+              "40%": {
+                transform: "translateX(15px)",
+              },
+              "60%": {
+                transform: "translateX(7.5px)",
+              },
+            },
           },
           animation: {
             "slide-down": "slide-down 0.3s ease-out",
             "slide-up": "slide-up 0.3s ease-out",
+            "bounce-right": "bounce-right 1.5s ease-in-out",
           },
         },
         fontFamily: {

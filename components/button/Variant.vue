@@ -3,6 +3,7 @@ import type { IconName } from "~/types/icon";
 
 type Props = Partial<IconName> & {
   variant?: "primary" | "secondary";
+  isIconAnimated?: boolean;
 };
 
 const { iconName, variant = "primary" } = defineProps<Props>();
@@ -17,7 +18,7 @@ const variantClasses = computed(() => ({
 <template>
   <button
     class="
-      flex justify-center rounded-xl px-6 py-2
+      group flex justify-center rounded-xl px-6 py-2
 
       md:text-lg
     "
@@ -29,6 +30,7 @@ const variantClasses = computed(() => ({
     <IconBase
       v-if="iconName"
       :icon-name="iconName"
+      :class="{ 'group-hover:animate-bounce-right': isIconAnimated }"
     />
   </button>
 </template>

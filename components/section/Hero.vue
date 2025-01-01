@@ -42,7 +42,10 @@
             md:flex-row md:gap-x-4 md:gap-y-0
           "
         >
-          <ButtonVariant icon-name="arrow-right">
+          <ButtonVariant
+            icon-name="arrow-right"
+            :is-icon-animated="true"
+          >
             Get in touch
           </ButtonVariant>
           <ButtonVariant variant="secondary">
