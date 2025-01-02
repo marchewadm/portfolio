@@ -27,7 +27,7 @@
       <div class="flex flex-col">
         <ButtonLogo
           class="
-            text-sm
+            w-fit text-sm
 
             md:text-base
           "
@@ -41,12 +41,7 @@
           "
         >
           Licensed under the
-          <NuxtLink
-            to="https://opensource.org/license/mit"
-            target="_blank"
-          >
-            MIT License
-          </NuxtLink>
+          <LinkFooterExternal href="https://opensource.org/license/mit">MIT License</LinkFooterExternal>
           &copy; 2024 Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
@@ -70,19 +65,10 @@
             &hearts;
           </span>
           in
-          <NuxtLink
-            to="https://www.figma.com/"
-            target="_blank"
-          >
-            Figma,
-          </NuxtLink>
-          developed with passion and precision using
-          <NuxtLink
-            to="https://nuxt.com/"
-            target="_blank"
-          >
+          <LinkFooterExternal href="https://www.figma.com">Figma</LinkFooterExternal>, developed with passion and precision using
+          <LinkFooterExternal href="https://nuxt.com">
             Nuxt.js
-          </NuxtLink>
+          </LinkFooterExternal>
         </TypographyParagraph>
       </div>
       <NavigationFooterDesktop />
