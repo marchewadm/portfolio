@@ -92,23 +92,39 @@ const dummyData = [
           "
         >
           <NuxtImg
-            class="mb-2 mt-3 h-52 w-full object-cover"
+            class="
+              mb-2 mt-3 h-52 w-full rounded-xl object-cover
+
+              lg:h-[500px]
+
+              md:mt-4 md:h-96
+            "
             loading="lazy"
             :src="item.imageUrl"
             :alt="item.imageAlt"
           />
-          <TypographyParagraph class="mb-2 text-justify">
+          <TypographyParagraph class="mb-3 text-justify">
             {{ item.fullDescription }}
           </TypographyParagraph>
           <ButtonVariant
-            class="w-full"
+            class="
+              mx-auto w-full
+
+              md:w-fit
+            "
             variant="secondary"
           >
             Read more
           </ButtonVariant>
         </AccordionContent>
       </AccordionItem>
-      <div class="mb-3 flex flex-wrap gap-2 border-b border-decorative py-3">
+      <div
+        class="
+          mb-3 flex flex-wrap gap-2 border-b border-decorative py-3
+
+          md:pb-3 md:pt-4
+        "
+      >
         <ButtonTechStack
           v-for="techTag in item.tags"
           :key="techTag"

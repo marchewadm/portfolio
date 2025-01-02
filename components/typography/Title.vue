@@ -6,8 +6,8 @@ type Props = {
 const { variant = "default" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
-  "text-base": variant === "default",
-  "text-xl": variant === "lg",
+  "text-base md:text-xl": variant === "default",
+  "text-xl md:text-2xl": variant === "lg",
 }));
 </script>
 

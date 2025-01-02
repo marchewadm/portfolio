@@ -6,9 +6,9 @@ type Props = {
 const { variant = "default" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
-  "text-base font-light tracking-tight": variant === "default",
-  "text-sm font-light tracking-tight": variant === "sm",
-  "text-sm font-thin text-foreground-lighter": variant === "thin",
+  "text-base font-light tracking-tight md:text-lg": variant === "default",
+  "text-sm font-light tracking-tight md:text-base text-foreground-lighter": variant === "sm",
+  "text-sm font-thin text-foreground-lighter md:text-base": variant === "thin",
 }));
 </script>
 

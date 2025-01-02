@@ -9,7 +9,13 @@ const { href = "#" } = defineProps<Props>();
 
 <template>
   <NuxtLink
-    class="flex items-center gap-x-3"
+    class="
+      flex w-fit items-center gap-x-3 transition-colors duration-300
+
+      focus-visible:text-foreground-lighter
+
+      hover:text-foreground-lighter
+    "
     target="_blank"
     :to="href"
   >
@@ -17,7 +23,13 @@ const { href = "#" } = defineProps<Props>();
       size="lg"
       :icon-name="iconName"
     />
-    <span>
+    <span
+      class="
+        font-light tracking-tight
+
+        md:text-lg
+      "
+    >
       <slot />
     </span>
   </NuxtLink>

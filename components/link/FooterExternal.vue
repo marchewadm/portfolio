@@ -9,10 +9,11 @@ const { href = "#" } = defineProps<Props>();
 <template>
   <NuxtLink
     class="
-      border border-decorative text-foreground-lighter bg-decorative-lightest
-      rounded-md px-3 py-1 text-sm font-light
+      underline-offset-4
 
-      md:text-base
+      focus-within:underline
+
+      hover:underline
     "
     target="_blank"
     :to="href"

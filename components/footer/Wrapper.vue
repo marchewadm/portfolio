@@ -1,29 +1,77 @@
 <template>
-  <footer class="mt-11 bg-surface-darker px-4 pb-5 pt-11">
-    <div class="pb-11">
-      <AccordionFooterLinksMobile />
-    </div>
-    <div class="flex w-full items-center justify-between gap-x-10">
-      <ButtonLogo class="self-start text-sm" />
-      <TypographyParagraph
-        variant="thin"
-        class="text-justify text-xs"
+  <footer
+    class="
+      mt-11 bg-surface-darker px-4 pb-5 pt-11
+
+      lg:pb-11
+    "
+  >
+    <div
+      class="
+        max-w-screen-xl
+
+        lg:grid lg:grid-cols-2 lg:gap-x-14
+
+        xl:mx-auto xl:gap-x-28
+      "
+    >
+      <div
+        class="
+          pb-11
+
+          lg:hidden
+        "
       >
-        Designed with care and love &hearts; in
-        <NuxtLink
-          to="https://www.figma.com/"
-          target="_blank"
+        <AccordionFooterLinksMobile />
+      </div>
+      <div class="flex flex-col">
+        <ButtonLogo
+          class="
+            w-fit text-sm
+
+            md:text-base
+          "
+        />
+        <TypographyParagraph
+          variant="thin"
+          class="
+            mt-1 text-justify text-xs
+
+            md:text-sm
+          "
         >
-          Figma,
-        </NuxtLink>
-        developed with passion and precision using
-        <NuxtLink
-          to="https://nuxt.com/"
-          target="_blank"
+          Licensed under the
+          <LinkFooterExternal href="https://opensource.org/license/mit">MIT License</LinkFooterExternal>
+          &copy; 2024 Dawid Merchwa
+        </TypographyParagraph>
+        <TypographyParagraph
+          variant="thin"
+          class="
+            group mt-1 text-justify text-xs
+
+            lg:mt-auto
+
+            md:text-sm
+          "
         >
-          Nuxt.js
-        </NuxtLink>
-      </TypographyParagraph>
+          Designed with care and love
+          <span
+            class="
+              transition-colors duration-500
+
+              group-hover:text-red-500
+            "
+          >
+            &hearts;
+          </span>
+          in
+          <LinkFooterExternal href="https://www.figma.com">Figma</LinkFooterExternal>, developed with passion and precision using
+          <LinkFooterExternal href="https://nuxt.com">
+            Nuxt.js
+          </LinkFooterExternal>
+        </TypographyParagraph>
+      </div>
+      <NavigationFooterDesktop />
     </div>
   </footer>
 </template>

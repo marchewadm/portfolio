@@ -8,7 +8,9 @@ defineProps<Props>();
 </script>
 
 <template>
-  <article class="rounded-lg shadow-xs-below mb-3 mt-7 flex flex-col px-4 pb-4">
+  <article
+    class="rounded-lg shadow-xs-below flex flex-col px-4 pb-4"
+  >
     <NuxtImg
       class="
         rounded-lg grayscale shadow-xs-below mb-6 h-56 w-full -translate-y-4
@@ -26,7 +28,7 @@ defineProps<Props>();
     >
       <slot name="articleTitle" />
     </TypographyTitle>
-    <TypographyParagraph class="line-clamp-5 -translate-y-4">
+    <TypographyParagraph class="line-clamp-5 -translate-y-4 text-justify">
       <slot name="articleDescription" />
     </TypographyParagraph>
     <ButtonVariant class="w-fit">
