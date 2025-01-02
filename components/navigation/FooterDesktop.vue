@@ -57,6 +57,13 @@ const navigationSections = [
           <ButtonNavigation
             :href="link.href"
             :target="link.target"
+            class="
+              transition-colors duration-300
+
+              focus-visible:text-foreground-lightest
+
+              hover:text-foreground-lightest
+            "
           >
             {{ link.text }}
           </ButtonNavigation>
