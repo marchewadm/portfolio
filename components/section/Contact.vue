@@ -73,6 +73,8 @@
             border p-3 border-decorative-lighter mb-4 max-h-96 min-h-48
             rounded-xl font-light
 
+            focus:outline focus:outline-2 focus:outline-primary
+
             md:text-lg
           "
           placeholder="Type your message here..."
