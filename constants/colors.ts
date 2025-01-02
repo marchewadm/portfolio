@@ -4,6 +4,7 @@ export const COLORS = {
   "primary-lighter": "#313131",
   "foreground": "#333333",
   "foreground-lighter": "#666666",
+  "foreground-lightest": "#999999",
 
   // Used for borders, lines, dividers, etc.
   "decorative": "#CCCCCC",
