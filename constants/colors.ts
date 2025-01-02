@@ -1,6 +1,7 @@
 export const COLORS = {
   // Used for primary buttons, links, text, etc.
   "primary": "#1A1A1A",
+  "primary-lighter": "#313131",
   "foreground": "#333333",
   "foreground-lighter": "#666666",
 
