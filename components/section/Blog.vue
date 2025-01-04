@@ -5,31 +5,37 @@
     </TypographyHeading>
     <TypographyParagraph
       variant="thin"
-      class="mb-7"
+      class="mb-3"
     >
       From life to technology, my honest musings
     </TypographyParagraph>
     <div
       class="
-        mb-4 grid grid-cols-1 gap-y-10
+        mb-3 grid grid-cols-1 gap-6
 
-        md:grid-cols-2 md:gap-x-5
+        md:grid-cols-2
       "
     >
       <CardBlogArticle
-        image-src="/img/blog-article-1.jpg"
-        image-alt="Lorem ipsum dolor sit amet"
+        article-image-src="/img/blog-article-1.jpg"
+        article-image-alt="Lorem ipsum dolor sit amet"
+        author-image-src="/img/work-1.jpg"
+        author="Dawid Merchwa"
+        date="Jan 4, 2025"
       >
         <template #articleTitle>
-          Lorem ipsum dolor sit amet
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </template>
         <template #articleDescription>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
         </template>
       </CardBlogArticle>
       <CardBlogArticle
-        image-src="/img/blog-article-2.jpg"
-        image-alt="Ut enim ad minim veniam"
+        article-image-src="/img/blog-article-2.jpg"
+        article-image-alt="Ut enim ad minim veniam"
+        author-image-src="/img/work-1.jpg"
+        author="Dawid Merchwa"
+        date="Dec 17, 2024"
       >
         <template #articleTitle>
           Ut enim ad minim veniam
@@ -39,8 +45,11 @@
         </template>
       </CardBlogArticle>
       <CardBlogArticle
-        image-src="/img/blog-article-3.jpg"
-        image-alt="Sed do eiusmod"
+        article-image-src="/img/blog-article-3.jpg"
+        article-image-alt="Sed do eiusmod"
+        author-image-src="/img/work-1.jpg"
+        author="Dawid Merchwa"
+        date="Sep 26, 2024"
       >
         <template #articleTitle>
           Sed do eiusmod
