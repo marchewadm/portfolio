@@ -1,38 +1,74 @@
 <script setup lang="ts">
 type Props = {
-  imageSrc: string;
-  imageAlt: string;
+  date: string;
+  author: string;
+  authorImageSrc: string;
+  articleImageSrc: string;
+  articleImageAlt: string;
 };
 
-defineProps<Props>();
+const props = defineProps<Props>();
+
+const getAuthorImageAlt = computed(() => `Image presenting the article's author - ${props.author}`);
 </script>
 
 <template>
   <article
-    class="rounded-lg shadow-xs-below flex flex-col px-4 pb-4"
+    class="rounded-lg shadow-xs-below pb-4"
   >
     <NuxtImg
       class="
-        rounded-lg grayscale shadow-xs-below mb-6 h-56 w-full -translate-y-4
-        object-cover transition-all duration-300
+        mb-4 h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
+        transition-all duration-300
 
         hover:grayscale-0
       "
       loading="lazy"
-      :src="imageSrc"
-      :alt="imageAlt"
+      :src="articleImageSrc"
+      :alt="articleImageAlt"
     />
-    <TypographyTitle
-      class="mb-1 line-clamp-1 -translate-y-4"
-      variant="lg"
-    >
-      <slot name="articleTitle" />
-    </TypographyTitle>
-    <TypographyParagraph class="line-clamp-5 -translate-y-4 text-justify">
-      <slot name="articleDescription" />
-    </TypographyParagraph>
-    <ButtonVariant class="w-fit">
-      Read more
-    </ButtonVariant>
+    <div class="px-4">
+      <div class="mb-1 flex justify-between gap-x-12">
+        <TypographyTitle
+          class="line-clamp-1"
+          variant="lg"
+        >
+          <slot name="articleTitle" />
+        </TypographyTitle>
+        <ButtonIcon icon-name="arrow-up-right" />
+      </div>
+      <TypographyParagraph class="mb-2 line-clamp-5 text-justify">
+        <slot name="articleDescription" />
+      </TypographyParagraph>
+      <div
+        class="
+          flex gap-x-2
+
+          md:gap-x-3
+        "
+      >
+        <NuxtImg
+          class="
+            h-10 w-10 rounded-full object-cover grayscale transition-all
+            duration-300
+
+            hover:grayscale-0
+
+            md:h-12 md:w-12
+          "
+          loading="lazy"
+          :src="authorImageSrc"
+          :alt="getAuthorImageAlt"
+        />
+        <div class="flex flex-col justify-between">
+          <TypographyParagraph variant="sm">
+            {{ author }}
+          </TypographyParagraph>
+          <TypographyParagraph variant="thin">
+            {{ date }}
+          </TypographyParagraph>
+        </div>
+      </div>
+    </div>
   </article>
 </template>
