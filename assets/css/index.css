@@ -7,4 +7,8 @@
     @apply text-foreground;
     @apply font-custom;
   }
+
+  ::selection {
+    @apply text-white bg-foreground-lighter;
+  }
 }
