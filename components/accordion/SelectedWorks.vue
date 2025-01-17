@@ -125,12 +125,13 @@ const dummyData = [
           md:pb-3 md:pt-4
         "
       >
-        <ButtonTechStack
-          v-for="techTag in item.tags"
-          :key="techTag"
+        <ButtonTag
+          v-for="tag in item.tags"
+          :key="tag"
+          variant="filled"
         >
-          {{ techTag }}
-        </ButtonTechStack>
+          {{ tag }}
+        </ButtonTag>
       </div>
     </article>
   </AccordionRoot>

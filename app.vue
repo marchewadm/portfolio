@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavigationMainWrapper />
-    <NuxtPage />
+    <main>
+      <NuxtPage />
+    </main>
     <FooterWrapper />
   </div>
 </template>

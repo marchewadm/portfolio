@@ -1,5 +1,5 @@
 <template>
-  <SectionBase>
+  <SectionHomeBase>
     <TypographyHeading class="mb-1">
       About
     </TypographyHeading>
@@ -25,5 +25,5 @@
     >
       Read more
     </ButtonVariant>
-  </SectionBase>
+  </SectionHomeBase>
 </template>

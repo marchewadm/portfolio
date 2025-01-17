@@ -3,11 +3,15 @@ import type { IconName } from "~/types/icon";
 
 type Props = IconName & {
   size?: "default" | "lg";
+  provider?: "default" | "tech-logo";
 };
 
-const { iconName, size = "default" } = defineProps<Props>();
+const { iconName, size = "default", provider = "default" } = defineProps<Props>();
 
-const getIconName = computed(() => `${ICON_PROVIDER}:${iconName}`);
+const getIconName = computed(() => {
+  const iconProvider = provider === "default" ? UI_ICON_PROVIDER : TECH_ICON_PROVIDER;
+  return `${iconProvider}:${iconName}`;
+});
 
 const variantClasses = computed(() => ({
   "h-6 w-6": size === "default",
