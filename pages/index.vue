@@ -1,9 +1,9 @@
 <template>
-  <SectionHero />
-  <SectionAbout />
-  <SectionSelectedWorks />
-  <SectionEducation />
-  <SectionExperience />
-  <SectionBlog />
-  <SectionContact />
+  <SectionHomeHero />
+  <SectionHomeAbout />
+  <SectionHomeSelectedWorks />
+  <SectionHomeEducation />
+  <SectionHomeExperience />
+  <SectionHomeBlog />
+  <SectionHomeContact />
 </template>

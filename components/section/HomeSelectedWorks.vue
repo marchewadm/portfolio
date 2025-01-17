@@ -1,5 +1,5 @@
 <template>
-  <SectionBase>
+  <SectionHomeBase>
     <TypographyHeading class="mb-1">
       Selected Works
     </TypographyHeading>
@@ -20,5 +20,5 @@
     >
       See all
     </ButtonVariant>
-  </SectionBase>
+  </SectionHomeBase>
 </template>

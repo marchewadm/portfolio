@@ -1,5 +1,5 @@
 <template>
-  <SectionBase>
+  <SectionHomeBase>
     <TypographyHeading class="mb-1">
       Blog
     </TypographyHeading>
@@ -69,5 +69,5 @@
     >
       See all
     </ButtonVariant>
-  </SectionBase>
+  </SectionHomeBase>
 </template>

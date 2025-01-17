@@ -1,5 +1,5 @@
 <template>
-  <SectionBase>
+  <SectionHomeBase>
     <TypographyHeading class="mb-1">
       Get in Touch
     </TypographyHeading>
@@ -90,5 +90,5 @@
         </ButtonVariant>
       </form>
     </div>
-  </SectionBase>
+  </SectionHomeBase>
 </template>
