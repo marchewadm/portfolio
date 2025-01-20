@@ -1,6 +1,6 @@
 <template>
   <SectionSubPageBase
-    class="md:grid md:grid-cols-[1fr_auto] md:gap-x-36"
+    class="md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-x-36"
   >
     <div>
       <TypographyHeading
