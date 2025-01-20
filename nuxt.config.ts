@@ -1,4 +1,3 @@
-import { transform } from "typescript";
 import { COLORS } from "./constants/colors";
 
 export default defineNuxtConfig({
@@ -12,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-particles",
     "radix-vue/nuxt",
+    "nuxt-svgo",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -76,5 +76,8 @@ export default defineNuxtConfig({
   css: ["@/assets/css/index.css"],
   particles: {
     mode: "slim",
+  },
+  svgo: {
+    autoImportPath: "./assets/svg/",
   },
 });
