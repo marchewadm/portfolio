@@ -4,36 +4,6 @@ const isMenuVisible = ref(false);
 function toggleMenu() {
   isMenuVisible.value = !isMenuVisible.value;
 }
-
-const siteNavigationData = [
-  {
-    name: "Home",
-  },
-  {
-    name: "About",
-  },
-  {
-    name: "Blog",
-  },
-  {
-    name: "Selected Works",
-  },
-];
-
-const socialsNavigationData = [
-  {
-    iconName: "brand-github",
-  },
-  {
-    iconName: "brand-linkedin",
-  },
-  {
-    iconName: "brand-discord",
-  },
-  {
-    iconName: "mail",
-  },
-];
 </script>
 
 <template>
@@ -60,11 +30,14 @@ const socialsNavigationData = [
       </div>
       <ul class="mt-6 flex flex-col gap-y-4 px-4">
         <li
-          v-for="navigation in siteNavigationData"
-          :key="navigation.name"
+          v-for="link in MAIN_NAVIGATION"
+          :key="link.text"
         >
-          <ButtonNavigation class="inline-block w-full">
-            {{ navigation.name }}
+          <ButtonNavigation
+            class="inline-block w-full"
+            :href="link.href"
+          >
+            {{ link.text }}
           </ButtonNavigation>
           <div class="border-b pt-2 border-decorative" />
         </li>
@@ -89,15 +62,15 @@ const socialsNavigationData = [
       <div class="border-t py-6 border-decorative mt-auto">
         <div class="flex items-center justify-between px-12">
           <NuxtLink
-            v-for="navigation in socialsNavigationData"
-            :key="navigation.iconName"
+            v-for="link in SOCIAL_NAVIGATION"
+            :key="link.text"
             class="flex items-center"
             to="#"
             target="_blank"
           >
             <IconBase
               size="lg"
-              :icon-name="navigation.iconName"
+              :icon-name="link.iconName"
             />
           </NuxtLink>
         </div>
