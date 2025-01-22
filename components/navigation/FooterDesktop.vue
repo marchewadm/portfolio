@@ -1,39 +1,3 @@
-<script setup lang="ts">
-const navigationSections = [
-  {
-    title: "General",
-    links: [
-      { text: "Home", href: "#" },
-      { text: "About", href: "#" },
-      { text: "Sitemap", href: "#", target: "_blank" },
-    ],
-  },
-  {
-    title: "Professional",
-    links: [
-      { text: "Resume", href: "#", target: "_blank" },
-      { text: "Selected Works", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { text: "Blog", href: "#" },
-      { text: "Contact", href: "#" },
-    ],
-  },
-  {
-    title: "Socials",
-    links: [
-      { text: "GitHub", href: "#", target: "_blank" },
-      { text: "LinkedIn", href: "#", target: "_blank" },
-      { text: "Discord", href: "#", target: "_blank" },
-      { text: "Mail", href: "#", target: "_blank" },
-    ],
-  },
-];
-</script>
-
 <template>
   <div
     class="
@@ -43,7 +7,7 @@ const navigationSections = [
     "
   >
     <nav
-      v-for="section in navigationSections"
+      v-for="section in NAVIGATION_DATA"
       :key="section.title"
     >
       <TypographyTitle class="mb-3">
@@ -55,8 +19,6 @@ const navigationSections = [
           :key="link.text"
         >
           <ButtonNavigation
-            :href="link.href"
-            :target="link.target"
             class="
               transition-colors duration-300
 
@@ -64,6 +26,8 @@ const navigationSections = [
 
               hover:text-foreground-lightest
             "
+            :href="link.href"
+            :target="link.target"
           >
             {{ link.text }}
           </ButtonNavigation>

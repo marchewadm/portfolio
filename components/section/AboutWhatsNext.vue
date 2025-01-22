@@ -1,8 +1,19 @@
 <template>
   <SectionSubPageBase>
-    <TypographyHeading class="mb-3">
-      What's Next?
-    </TypographyHeading>
+    <div class="relative mb-3">
+      <TypographyHeading>
+        What's Next?
+      </TypographyHeading>
+      <SvgoArrowScribble
+        class="
+          absolute right-full mt-1 hidden h-20 -translate-y-1/2 rotate-[60deg]
+
+          xl:block
+        "
+        filled
+        :font-controlled="false"
+      />
+    </div>
     <TypographyParagraph class="mb-2 text-justify">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
     </TypographyParagraph>

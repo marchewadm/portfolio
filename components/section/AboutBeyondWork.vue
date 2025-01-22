@@ -1,8 +1,20 @@
 <template>
   <SectionSubPageBase>
-    <TypographyHeading class="mb-3">
-      Beyond Work
-    </TypographyHeading>
+    <div class="relative mb-3">
+      <TypographyHeading>
+        Beyond Work
+      </TypographyHeading>
+      <SvgoArrowRight
+        class="
+          absolute right-full mr-3 mt-1 hidden h-24 translate-x-1/3
+          translate-y-1/4 rotate-45
+
+          xl:block
+        "
+        filled
+        :font-controlled="false"
+      />
+    </div>
     <TypographyParagraph class="mb-3 text-justify">
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt.
     </TypographyParagraph>

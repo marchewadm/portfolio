@@ -13,6 +13,8 @@ defineProps<Props>();
     class="
       flex flex-col shadow-xs-below h-20 w-20 items-center justify-evenly
       rounded-lg p-2
+
+      md:h-24 md:w-24
     "
     target="_blank"
     :href="href"

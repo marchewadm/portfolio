@@ -1,20 +1,3 @@
-<script setup lang="ts">
-const siteNavigationData = [
-  {
-    name: "Home",
-  },
-  {
-    name: "About",
-  },
-  {
-    name: "Blog",
-  },
-  {
-    name: "Selected Works",
-  },
-];
-</script>
-
 <template>
   <nav
     class="
@@ -25,8 +8,8 @@ const siteNavigationData = [
   >
     <ul class="flex gap-x-6">
       <NuxtLink
-        v-for="navigation in siteNavigationData"
-        :key="navigation.name"
+        v-for="link in MAIN_NAVIGATION"
+        :key="link.text"
         class="
           font-light tracking-tight
 
@@ -38,9 +21,9 @@ const siteNavigationData = [
 
           hover:after:scale-x-100
         "
-        to="#"
+        :to="link.href"
       >
-        {{ navigation.name }}
+        {{ link.text }}
       </NuxtLink>
     </ul>
   </nav>

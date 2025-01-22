@@ -1,31 +1,14 @@
-<script setup lang="ts">
-type Props = {
-  sectionName: string;
-  sectionId: string;
-  links: Array<{
-    name: string;
-    href?: string;
-    target?: string;
-  }>;
-};
-
-const { links } = defineProps<Props>();
-
-const normalizedLinks = links.map(({ name, href = "#", target = "_self" }) => ({
-  name,
-  href,
-  target,
-}));
-</script>
-
 <template>
-  <nav>
-    <AccordionItem :value="sectionId">
+  <nav
+    v-for="section in NAVIGATION_DATA"
+    :key="section.title"
+  >
+    <AccordionItem :value="section.title">
       <AccordionHeader as-child>
         <AccordionTrigger as-child>
           <div class="group flex cursor-pointer justify-between">
             <TypographyTitle>
-              {{ sectionName }}
+              {{ section.title }}
             </TypographyTitle>
             <IconBase
               class="
@@ -49,14 +32,14 @@ const normalizedLinks = links.map(({ name, href = "#", target = "_self" }) => ({
       >
         <ul class="mt-3 grid grid-cols-2 gap-2">
           <li
-            v-for="link in normalizedLinks"
-            :key="link.name"
+            v-for="link in section.links"
+            :key="link.text"
           >
             <ButtonNavigation
               :href="link.href"
               :target="link.target"
             >
-              {{ link.name }}
+              {{ link.text }}
             </ButtonNavigation>
           </li>
         </ul>
