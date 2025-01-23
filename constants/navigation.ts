@@ -1,7 +1,7 @@
 export const MAIN_NAVIGATION = [
   { text: "Home", href: "/" },
   { text: "About", href: "/about" },
-  { text: "Blog", href: "#" },
+  { text: "Blog", href: "/blog" },
   { text: "Selected Works", href: "#" },
 ] as const;
 
@@ -31,7 +31,7 @@ export const NAVIGATION_DATA = [
   {
     title: "Resources",
     links: [
-      { text: "Blog", href: "#", target: "_self" },
+      { text: "Blog", href: "/blog", target: "_self" },
       { text: "Contact", href: "#", target: "_self" },
     ],
   },
