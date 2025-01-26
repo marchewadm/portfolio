@@ -5,6 +5,7 @@ type Props = {
   authorImageSrc: string;
   articleImageSrc: string;
   articleImageAlt: string;
+  href: string;
 };
 
 const props = defineProps<Props>();
@@ -16,27 +17,38 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
   <article
     class="rounded-lg shadow-xs-below pb-4"
   >
-    <NuxtImg
-      class="
-        mb-4 h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
-        transition-all duration-300
+    <NuxtLink :to="href">
+      <NuxtImg
+        class="
+          mb-4 h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
+          transition-all duration-300
 
-        hover:grayscale-0
-      "
-      loading="lazy"
-      :src="articleImageSrc"
-      :alt="articleImageAlt"
-    />
+          hover:grayscale-0
+        "
+        loading="lazy"
+        :src="articleImageSrc"
+        :alt="articleImageAlt"
+      />
+    </NuxtLink>
     <div class="px-4">
-      <div class="mb-1 flex justify-between gap-x-12">
-        <TypographyTitle
-          class="line-clamp-1"
-          variant="lg"
+      <NuxtLink
+        class="mb-1 flex justify-between gap-x-12"
+        :to="href"
+      >
+        <span
+          class="
+            line-clamp-1 text-xl
+
+            md:text-2xl
+          "
         >
           <slot name="articleTitle" />
-        </TypographyTitle>
-        <ButtonIcon icon-name="arrow-up-right" />
-      </div>
+        </span>
+        <IconBase
+          icon-name="arrow-up-right"
+          class="flex-shrink-0"
+        />
+      </NuxtLink>
       <TypographyParagraph class="mb-2 line-clamp-5 text-justify">
         <slot name="articleDescription" />
       </TypographyParagraph>
