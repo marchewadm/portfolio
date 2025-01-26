@@ -1,3 +1,6 @@
 <template>
-  <SectionBlogHero />
+  <NuxtLayout>
+    <SectionBlogHero />
+    <SectionBlogPosts />
+  </NuxtLayout>
 </template>
