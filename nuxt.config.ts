@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "radix-vue/nuxt",
     "nuxt-svgo",
+    "@vueuse/nuxt",
   ],
   imports: {
     dirs: ["constants/*"],
