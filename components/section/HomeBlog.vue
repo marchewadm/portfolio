@@ -1,3 +1,9 @@
+<script setup lang="ts">
+const { data: posts } = await useAsyncData("blog", () => {
+  return queryCollection("blog").order("date", "DESC").limit(4).all();
+});
+</script>
+
 <template>
   <SectionHomeBase>
     <TypographyHeading class="mb-1">
@@ -17,45 +23,20 @@
       "
     >
       <CardBlogArticle
-        article-image-src="/img/blog-article-1.jpg"
-        article-image-alt="Lorem ipsum dolor sit amet"
-        author-image-src="/img/work-1.jpg"
-        author="Dawid Merchwa"
-        date="Jan 4, 2025"
+        v-for="post in posts"
+        :key="post.id"
+        :author="post.author"
+        :author-image-src="post.avatar"
+        :article-image-alt="post.alt"
+        :article-image-src="post.image"
+        :date="post.date"
+        :href="post.path"
       >
         <template #articleTitle>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          {{ post.title }}
         </template>
         <template #articleDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-        </template>
-      </CardBlogArticle>
-      <CardBlogArticle
-        article-image-src="/img/blog-article-2.jpg"
-        article-image-alt="Ut enim ad minim veniam"
-        author-image-src="/img/work-1.jpg"
-        author="Dawid Merchwa"
-        date="Dec 17, 2024"
-      >
-        <template #articleTitle>
-          Ut enim ad minim veniam
-        </template>
-        <template #articleDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-        </template>
-      </CardBlogArticle>
-      <CardBlogArticle
-        article-image-src="/img/blog-article-3.jpg"
-        article-image-alt="Sed do eiusmod"
-        author-image-src="/img/work-1.jpg"
-        author="Dawid Merchwa"
-        date="Sep 26, 2024"
-      >
-        <template #articleTitle>
-          Sed do eiusmod
-        </template>
-        <template #articleDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+          {{ post.description }}
         </template>
       </CardBlogArticle>
     </div>

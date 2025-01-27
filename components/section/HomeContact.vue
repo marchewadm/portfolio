@@ -44,43 +44,49 @@
           </ButtonContact>
         </div>
       </div>
-      <form class="flex w-full flex-col">
-        <FormLabel for="form-email">
-          Email
-        </FormLabel>
-        <FormInput
-          id="form-email"
-          class="w-full"
-          placeholder="john.doe@example.com"
-          type="email"
-        />
-        <FormLabel for="form-subject">
-          Subject
-        </FormLabel>
-        <FormInput
-          id="form-subject"
-          class="w-full"
-          placeholder="What's up?"
-          minlength="8"
-          maxlength="64"
-        />
-        <FormLabel for="form-message">
-          Message
-        </FormLabel>
-        <textarea
-          id="form-message"
-          class="
-            border p-3 border-decorative-lighter mb-4 max-h-96 min-h-48
-            rounded-xl font-light
+      <form class="grid grid-cols-1 gap-y-4">
+        <div>
+          <FormLabel for="form-email">
+            Email
+          </FormLabel>
+          <FormInput
+            id="form-email"
+            class="w-full"
+            placeholder="john.doe@example.com"
+            type="email"
+          />
+        </div>
+        <div>
+          <FormLabel for="form-subject">
+            Subject
+          </FormLabel>
+          <FormInput
+            id="form-subject"
+            class="w-full"
+            placeholder="What's up?"
+            minlength="8"
+            maxlength="64"
+          />
+        </div>
+        <div>
+          <FormLabel for="form-message">
+            Message
+          </FormLabel>
+          <textarea
+            id="form-message"
+            class="
+              border p-3 border-decorative-lighter max-h-96 min-h-48 w-full
+              rounded-xl font-light placeholder-foreground-lightest
 
-            focus:outline focus:outline-2 focus:outline-primary
+              focus:outline focus:outline-2 focus:outline-primary
 
-            md:text-lg
-          "
-          placeholder="Type your message here..."
-          minlength="32"
-          maxlength="1024"
-        />
+              md:text-lg
+            "
+            placeholder="Type your message here..."
+            minlength="32"
+            maxlength="1024"
+          />
+        </div>
         <ButtonVariant
           icon-name="send-2"
           type="submit"

@@ -1,7 +1,9 @@
 <template>
-  <SectionAboutHero />
-  <SectionAboutMyStory />
-  <SectionAboutToolbox />
-  <SectionAboutBeyondWork />
-  <SectionAboutWhatsNext />
+  <NuxtLayout>
+    <SectionAboutHero />
+    <SectionAboutMyStory />
+    <SectionAboutToolbox />
+    <SectionAboutBeyondWork />
+    <SectionAboutWhatsNext />
+  </NuxtLayout>
 </template>

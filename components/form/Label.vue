@@ -1,7 +1,7 @@
 <template>
   <label
     class="
-      mb-2 font-medium
+      mb-2 inline-block font-medium
 
       md:text-lg
     "

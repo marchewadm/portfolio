@@ -1,9 +1,11 @@
 <template>
-  <SectionHomeHero />
-  <SectionHomeAbout />
-  <SectionHomeSelectedWorks />
-  <SectionHomeEducation />
-  <SectionHomeExperience />
-  <SectionHomeBlog />
-  <SectionHomeContact />
+  <NuxtLayout>
+    <SectionHomeHero />
+    <SectionHomeAbout />
+    <SectionHomeSelectedWorks />
+    <SectionHomeEducation />
+    <SectionHomeExperience />
+    <SectionHomeBlog />
+    <SectionHomeContact />
+  </NuxtLayout>
 </template>
