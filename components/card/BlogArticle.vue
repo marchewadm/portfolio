@@ -77,7 +77,9 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
             {{ author }}
           </TypographyParagraph>
           <TypographyParagraph variant="thin">
-            {{ date }}
+            <time :datetime="date">
+              {{ formatDate(date) }}
+            </time>
           </TypographyParagraph>
         </div>
       </div>
