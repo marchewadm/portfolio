@@ -22,6 +22,7 @@
         md:w-fit
       "
       variant="secondary"
+      href="/about"
     >
       Read more
     </ButtonVariant>

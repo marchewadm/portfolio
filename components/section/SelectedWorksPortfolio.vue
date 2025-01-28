@@ -70,6 +70,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
             md:w-fit
           "
           variant="secondary"
+          :href="portfolio.path"
         >
           Read more
         </ButtonVariant>

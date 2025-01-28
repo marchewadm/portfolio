@@ -17,6 +17,7 @@
         md:w-fit
       "
       variant="secondary"
+      href="/selected-works"
     >
       See all
     </ButtonVariant>

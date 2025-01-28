@@ -47,6 +47,7 @@ const { data: posts } = await useAsyncData("blog", () => {
         md:w-fit
       "
       variant="secondary"
+      href="/blog"
     >
       See all
     </ButtonVariant>

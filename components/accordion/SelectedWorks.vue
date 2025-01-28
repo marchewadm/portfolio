@@ -1,54 +1,3 @@
-<!-- <script setup lang="ts">
-const dummyData = [
-  {
-    value: "item-1",
-    title: "Lorem ipsum dolor sit",
-    shortDescription: "Is nostrud exercitation ullamco.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.",
-    imageUrl: "/img/work-1.jpg",
-    imageAlt: "Lorem ipsum dolor sit amet.",
-    tags: [
-      "Vue",
-      "Nuxt",
-      "TypeScript",
-      "Radix Vue",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    value: "item-2",
-    title: "Aperiam cupiditate nostrum",
-    shortDescription: "Is nostrud exercitation ullamco.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.",
-    imageUrl: "/img/work-2.jpg",
-    imageAlt: "Lorem ipsum dolor sit amet.",
-    tags: [
-      "Python",
-      "TypeScript",
-      "Vue.js",
-      "FastAPI",
-      "PostgreSQL",
-      "AWS",
-      "Redis",
-      "OpenAI API",
-      "Gemini API",
-      "shadcn-vue",
-      "Radix Vue",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    value: "item-3",
-    title: "Amet consectetur adipisicing",
-    shortDescription: "Is nostrud exercitation ullamco.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.",
-    imageUrl: "/img/work-3.jpg",
-    imageAlt: "Lorem ipsum dolor sit amet.",
-    tags: ["Python", "Django", "Javascript", "PostgreSQL", "Stripe"],
-  },
-];
-</script> -->
-
 <script setup lang="ts">
 const route = useRoute();
 
@@ -124,6 +73,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               md:w-fit
             "
             variant="secondary"
+            :href="portfolio.path"
           >
             Read more
           </ButtonVariant>
