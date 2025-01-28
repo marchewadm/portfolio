@@ -27,21 +27,21 @@
             md:gap-y-3
           "
         >
-          <ButtonContact icon-name="brand-github">
+          <LinkIconExternal icon-name="brand-github">
             @marchewadm
-          </ButtonContact>
-          <ButtonContact icon-name="brand-linkedin">
+          </LinkIconExternal>
+          <LinkIconExternal icon-name="brand-linkedin">
             @merchwadawid
-          </ButtonContact>
-          <ButtonContact icon-name="brand-discord">
+          </LinkIconExternal>
+          <LinkIconExternal icon-name="brand-discord">
             @marchewa02
-          </ButtonContact>
-          <ButtonContact
+          </LinkIconExternal>
+          <LinkIconExternal
             icon-name="mail"
             href="mailto:merchwa.dawid@gmail.com"
           >
             merchwa.dawid@gmail.com
-          </ButtonContact>
+          </LinkIconExternal>
         </div>
       </div>
       <form class="grid grid-cols-1 gap-y-4">

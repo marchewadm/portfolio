@@ -15,5 +15,25 @@ export default defineContentConfig({
         date: z.string(),
       }),
     }),
+    portfolio: defineCollection({
+      source: "portfolio/*.md",
+      type: "page",
+      schema: z.object({
+        title: z.string(),
+        subtitle: z.string(),
+        demoUrl: z.string().optional(),
+        sourceCodeUrl: z.string().optional(),
+        image: z.string(),
+        alt: z.string(),
+        description: z.string(),
+        technologies: z.array(
+          z.object({
+            name: z.string(),
+            homepageUrl: z.string(),
+          }),
+        ),
+        createdAt: z.date()
+      }),
+    }),
   },
 });

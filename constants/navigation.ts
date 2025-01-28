@@ -2,7 +2,7 @@ export const MAIN_NAVIGATION = [
   { text: "Home", href: "/" },
   { text: "About", href: "/about" },
   { text: "Blog", href: "/blog" },
-  { text: "Selected Works", href: "#" },
+  { text: "Selected Works", href: "/selected-works" },
 ] as const;
 
 export const SOCIAL_NAVIGATION = [
@@ -25,7 +25,7 @@ export const NAVIGATION_DATA = [
     title: "Professional",
     links: [
       { text: "Resume", href: "#", target: "_blank" },
-      { text: "Selected Works", href: "#", target: "_self" },
+      { text: "Selected Works", href: "/selected-works", target: "_self" },
     ],
   },
   {
