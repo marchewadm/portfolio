@@ -15,8 +15,8 @@ export default defineContentConfig({
         date: z.string(),
       }),
     }),
-    portfolio: defineCollection({
-      source: "portfolio/*.md",
+    selectedWorks: defineCollection({
+      source: "selected-works/*.md",
       type: "page",
       schema: z.object({
         title: z.string(),
@@ -32,7 +32,7 @@ export default defineContentConfig({
             homepageUrl: z.string(),
           }),
         ),
-        createdAt: z.date()
+        createdAt: z.date(),
       }),
     }),
   },

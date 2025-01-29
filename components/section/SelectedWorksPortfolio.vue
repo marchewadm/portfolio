@@ -3,8 +3,8 @@ const route = useRoute();
 
 const isMediumScreen = useMediaQuery("(min-width: 1024px)");
 
-const { data: portfolios } = await useAsyncData(route.path, () => {
-  return queryCollection("portfolio").order("createdAt", "DESC").all();
+const { data: selectedWorks } = await useAsyncData(route.path, () => {
+  return queryCollection("selectedWorks").order("createdAt", "DESC").all();
 });
 </script>
 
@@ -13,20 +13,20 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
     <TypographyHeading class="mb-3">
       Selected Works
     </TypographyHeading>
-    <template v-if="portfolios">
+    <template v-if="selectedWorks">
       <template v-if="!isMediumScreen">
         <article
-          v-for="(portfolio, index) in portfolios"
-          :key="portfolio.path"
+          v-for="(selectedWork, index) in selectedWorks"
+          :key="selectedWork.path"
         >
           <TypographyTitle>
-            {{ portfolio.title }}
+            {{ selectedWork.title }}
           </TypographyTitle>
           <TypographyParagraph class="text-foreground-lighter">
-            {{ portfolio.subtitle }}
+            {{ selectedWork.subtitle }}
           </TypographyParagraph>
           <div
-            v-if="portfolio.demoUrl || portfolio.sourceCodeUrl"
+            v-if="selectedWork.demoUrl || selectedWork.sourceCodeUrl"
             class="
               mt-2 flex flex-col gap-y-2 place-self-start
 
@@ -34,16 +34,16 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
             "
           >
             <LinkIconExternal
-              v-if="portfolio.demoUrl"
+              v-if="selectedWork.demoUrl"
               icon-name="world-www"
-              :href="portfolio.demoUrl"
+              :href="selectedWork.demoUrl"
             >
               Try out the demo
             </LinkIconExternal>
             <LinkIconExternal
-              v-if="portfolio.sourceCodeUrl"
+              v-if="selectedWork.sourceCodeUrl"
               icon-name="brand-github"
-              :href="portfolio.sourceCodeUrl"
+              :href="selectedWork.sourceCodeUrl"
             >
               View source code on GitHub
             </LinkIconExternal>
@@ -60,11 +60,11 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               md:mt-4 md:h-96
             "
             loading="lazy"
-            :src="portfolio.image"
-            :alt="portfolio.alt"
+            :src="selectedWork.image"
+            :alt="selectedWork.alt"
           />
           <TypographyParagraph class="mb-3 text-justify">
-            {{ portfolio.description }}
+            {{ selectedWork.description }}
           </TypographyParagraph>
           <ButtonVariant
             class="
@@ -73,7 +73,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               md:w-fit
             "
             variant="secondary"
-            :href="portfolio.path"
+            :href="selectedWork.path"
           >
             Read more
           </ButtonVariant>
@@ -83,10 +83,10 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
 
               md:pt-4
             "
-            :class="{ 'border-b border-decorative mb-3 pb-3': index !== portfolios.length - 1 }"
+            :class="{ 'border-b border-decorative mb-3 pb-3': index !== selectedWorks.length - 1 }"
           >
             <ButtonTag
-              v-for="technology in portfolio.technologies"
+              v-for="technology in selectedWork.technologies"
               :key="technology.name"
               :href="technology.homepageUrl"
               render-as="link"
@@ -100,8 +100,8 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
       <template v-else>
         <div class="grid gap-y-12">
           <article
-            v-for="(portfolio, index) in portfolios"
-            :key="portfolio.path"
+            v-for="(selectedWork, index) in selectedWorks"
+            :key="selectedWork.path"
             class="grid grid-cols-2 grid-rows-1 gap-x-12"
           >
             <div
@@ -109,13 +109,13 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               :class="index % 2 !== 0 ? 'order-2' : 'order-1'"
             >
               <TypographyTitle>
-                {{ portfolio.title }}
+                {{ selectedWork.title }}
               </TypographyTitle>
               <TypographyParagraph class="text-foreground-lighter">
-                {{ portfolio.subtitle }}
+                {{ selectedWork.subtitle }}
               </TypographyParagraph>
               <div
-                v-if="portfolio.demoUrl || portfolio.sourceCodeUrl"
+                v-if="selectedWork.demoUrl || selectedWork.sourceCodeUrl"
                 class="
                   mt-2 flex flex-col gap-y-2 place-self-start
 
@@ -123,22 +123,22 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
                 "
               >
                 <LinkIconExternal
-                  v-if="portfolio.demoUrl"
+                  v-if="selectedWork.demoUrl"
                   icon-name="world-www"
-                  :href="portfolio.demoUrl"
+                  :href="selectedWork.demoUrl"
                 >
                   Try out the demo
                 </LinkIconExternal>
                 <LinkIconExternal
-                  v-if="portfolio.sourceCodeUrl"
+                  v-if="selectedWork.sourceCodeUrl"
                   icon-name="brand-github"
-                  :href="portfolio.sourceCodeUrl"
+                  :href="selectedWork.sourceCodeUrl"
                 >
                   View source code on GitHub
                 </LinkIconExternal>
               </div>
               <TypographyParagraph class="my-3 text-justify">
-                {{ portfolio.description }}
+                {{ selectedWork.description }}
               </TypographyParagraph>
               <ButtonVariant
                 class="
@@ -147,7 +147,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
                   md:w-fit
                 "
                 variant="secondary"
-                :href="portfolio.path"
+                :href="selectedWork.path"
               >
                 Read more
               </ButtonVariant>
@@ -164,12 +164,12 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
                   hover:grayscale-0
                 "
                 loading="lazy"
-                :src="portfolio.image"
-                :alt="portfolio.alt"
+                :src="selectedWork.image"
+                :alt="selectedWork.alt"
               />
               <div class="mt-auto flex flex-wrap gap-2">
                 <ButtonTag
-                  v-for="technology in portfolio.technologies"
+                  v-for="technology in selectedWork.technologies"
                   :key="technology.name"
                   :href="technology.homepageUrl"
                   render-as="link"

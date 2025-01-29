@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data: portfolios } = await useAsyncData(route.path, () => {
-  return queryCollection("portfolio").order("createdAt", "DESC").all();
+const { data: selectedWorks } = await useAsyncData(route.path, () => {
+  return queryCollection("selectedWorks").order("createdAt", "DESC").all();
 });
 </script>
 
@@ -13,16 +13,16 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
     :collapsible="true"
   >
     <article
-      v-for="portfolio in portfolios"
-      :key="portfolio.path"
+      v-for="selectedWork in selectedWorks"
+      :key="selectedWork.path"
     >
-      <AccordionItem :value="portfolio.path">
+      <AccordionItem :value="selectedWork.path">
         <AccordionHeader as-child>
           <AccordionTrigger as-child>
             <div class="group cursor-pointer">
               <div class="flex justify-between">
                 <TypographyTitle>
-                  {{ portfolio.title }}
+                  {{ selectedWork.title }}
                 </TypographyTitle>
                 <IconBase
                   class="
@@ -34,7 +34,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
                 />
               </div>
               <TypographyParagraph class="text-foreground-lighter">
-                {{ portfolio.subtitle }}
+                {{ selectedWork.subtitle }}
               </TypographyParagraph>
             </div>
           </AccordionTrigger>
@@ -60,11 +60,11 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               md:mt-4 md:h-96
             "
             loading="lazy"
-            :src="portfolio.image"
-            :alt="portfolio.alt"
+            :src="selectedWork.image"
+            :alt="selectedWork.alt"
           />
           <TypographyParagraph class="mb-3 text-justify">
-            {{ portfolio.description }}
+            {{ selectedWork.description }}
           </TypographyParagraph>
           <ButtonVariant
             class="
@@ -73,7 +73,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
               md:w-fit
             "
             variant="secondary"
-            :href="portfolio.path"
+            :href="selectedWork.path"
           >
             Read more
           </ButtonVariant>
@@ -87,7 +87,7 @@ const { data: portfolios } = await useAsyncData(route.path, () => {
         "
       >
         <ButtonTag
-          v-for="technology in portfolio.technologies"
+          v-for="technology in selectedWork.technologies"
           :key="technology.name"
           :href="technology.homepageUrl"
           render-as="link"
