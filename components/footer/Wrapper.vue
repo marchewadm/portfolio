@@ -71,9 +71,8 @@ const currentYear = new Date().getFullYear();
             &hearts;
           </span>
           in
-          <LinkFooterExternal href="https://www.figma.com">
-            Figma
-          </LinkFooterExternal>, developed with passion and precision using
+          <LinkFooterExternal href="https://www.figma.com">Figma</LinkFooterExternal>,
+          developed with passion and precision using
           <LinkFooterExternal href="https://nuxt.com">
             Nuxt.js
           </LinkFooterExternal>
