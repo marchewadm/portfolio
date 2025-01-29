@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const currentYear = new Date().getFullYear();
+</script>
+
 <template>
   <footer
     class="
@@ -41,8 +45,10 @@
           "
         >
           Licensed under the
-          <LinkFooterExternal href="https://opensource.org/license/mit">MIT License</LinkFooterExternal>
-          &copy; 2024 Dawid Merchwa
+          <LinkFooterExternal href="https://opensource.org/license/mit">
+            MIT License
+          </LinkFooterExternal>
+          &copy; {{ currentYear }} Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
           variant="thin"
@@ -65,7 +71,9 @@
             &hearts;
           </span>
           in
-          <LinkFooterExternal href="https://www.figma.com">Figma</LinkFooterExternal>, developed with passion and precision using
+          <LinkFooterExternal href="https://www.figma.com">
+            Figma
+          </LinkFooterExternal>, developed with passion and precision using
           <LinkFooterExternal href="https://nuxt.com">
             Nuxt.js
           </LinkFooterExternal>
