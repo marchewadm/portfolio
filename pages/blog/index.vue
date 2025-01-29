@@ -7,8 +7,8 @@ function onUpdateSearchQuery(query: string) {
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
     <SectionBlogHero @update:search-query="onUpdateSearchQuery" />
     <SectionBlogPosts :search-query="searchQuery" />
-  </NuxtLayout>
+  </div>
 </template>

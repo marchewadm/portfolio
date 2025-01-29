@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout>
+  <div>
     <SectionHomeHero />
     <SectionHomeAbout />
     <SectionHomeSelectedWorks />
@@ -7,5 +7,5 @@
     <SectionHomeExperience />
     <SectionHomeBlog />
     <SectionHomeContact />
-  </NuxtLayout>
+  </div>
 </template>

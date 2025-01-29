@@ -1,6 +1,6 @@
 <template>
-  <NuxtLayout>
+  <div>
     <SectionSelectedWorksHero />
     <SectionSelectedWorksPortfolio />
-  </NuxtLayout>
+  </div>
 </template>

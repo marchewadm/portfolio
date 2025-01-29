@@ -7,12 +7,12 @@ const { data: page } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <NuxtLayout v-if="page">
-    <SectionSubPageBase>
+  <div>
+    <SectionSubPageBase v-if="page">
       <ContentRenderer :value="page" />
     </SectionSubPageBase>
-  </NuxtLayout>
-  <p v-else>
-    TODO: 404
-  </p>
+    <p v-else>
+      TODO: 404
+    </p>
+  </div>
 </template>
