@@ -28,7 +28,7 @@ function toggleCategory(idx: number) {
 <template>
   <SectionSubPageBase>
     <div class="relative mb-3">
-      <TypographyHeading>
+      <TypographyHeading id="section-about-toolbox">
         Developer's Toolbox
       </TypographyHeading>
       <SvgoArrowPen

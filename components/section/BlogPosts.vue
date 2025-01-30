@@ -34,7 +34,10 @@ const showNoResults = computed(() =>
 
 <template>
   <SectionSubPageBase class="w-full flex-grow">
-    <TypographyHeading class="mb-3 truncate">
+    <TypographyHeading
+      id="section-blog-recent-posts"
+      class="mb-3 truncate"
+    >
       <span :class="{ 'text-foreground-lighter': searchQuery }">
         {{ headingText }}
       </span>

@@ -6,7 +6,10 @@ const { data: posts } = await useAsyncData("blog", () => {
 
 <template>
   <SectionHomeBase>
-    <TypographyHeading class="mb-1">
+    <TypographyHeading
+      id="section-home-blog"
+      class="mb-1"
+    >
       Blog
     </TypographyHeading>
     <TypographyParagraph

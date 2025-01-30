@@ -1,7 +1,7 @@
 <template>
   <SectionSubPageBase>
     <div class="relative mb-3">
-      <TypographyHeading>
+      <TypographyHeading id="section-about-my-story">
         My Story
       </TypographyHeading>
       <SvgoArrowReverse

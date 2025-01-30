@@ -1,7 +1,7 @@
 <template>
   <SectionSubPageBase>
     <div class="relative mb-3">
-      <TypographyHeading>
+      <TypographyHeading id="section-about-whats-next">
         What's Next?
       </TypographyHeading>
       <SvgoArrowScribble

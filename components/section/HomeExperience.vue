@@ -1,6 +1,9 @@
 <template>
   <SectionHomeBase>
-    <TypographyHeading class="mb-1">
+    <TypographyHeading
+      id="section-home-experience"
+      class="mb-1"
+    >
       Experience
     </TypographyHeading>
     <TypographyParagraph

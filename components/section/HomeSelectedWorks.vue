@@ -1,6 +1,9 @@
 <template>
   <SectionHomeBase>
-    <TypographyHeading class="mb-1">
+    <TypographyHeading
+      id="section-home-selected-works"
+      class="mb-1"
+    >
       Selected Works
     </TypographyHeading>
     <TypographyParagraph

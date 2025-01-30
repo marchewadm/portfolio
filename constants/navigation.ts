@@ -32,7 +32,7 @@ export const NAVIGATION_DATA = [
     title: "Resources",
     links: [
       { text: "Blog", href: "/blog", target: "_self" },
-      { text: "Contact", href: "#", target: "_self" },
+      { text: "Contact", href: "/#section-home-contact", target: "_self" },
     ],
   },
   {

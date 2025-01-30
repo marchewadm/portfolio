@@ -49,7 +49,10 @@ function toggleMenu() {
         </li>
       </ul>
       <ul class="my-6 flex flex-col gap-y-3 px-4">
-        <ButtonVariant class="w-full">
+        <ButtonVariant
+          class="w-full"
+          href="/#section-home-contact"
+        >
           Get in touch
         </ButtonVariant>
         <ButtonVariant

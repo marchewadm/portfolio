@@ -27,7 +27,7 @@
       </NuxtLink>
     </ul>
   </nav>
-  <button
+  <NuxtLink
     class="
       bg-primary text-on-primary hidden rounded-xl px-6 py-2 tracking-tight
       transition-colors duration-300
@@ -38,7 +38,8 @@
 
       md:inline-block
     "
+    href="/#section-home-contact"
   >
     Contact
-  </button>
+  </NuxtLink>
 </template>

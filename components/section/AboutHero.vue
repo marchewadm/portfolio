@@ -4,6 +4,7 @@
   >
     <div>
       <TypographyHeading
+        id="section-about-hero"
         tag="h1"
         class="mb-3"
       >

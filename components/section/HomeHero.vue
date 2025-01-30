@@ -15,6 +15,7 @@
     >
       <div>
         <TypographyHeading
+          id="section-home-hero"
           class="mb-1"
           tag="h1"
         >
@@ -45,6 +46,7 @@
           <ButtonVariant
             icon-name="arrow-right"
             :is-icon-animated="true"
+            href="/#section-home-contact"
           >
             Get in touch
           </ButtonVariant>

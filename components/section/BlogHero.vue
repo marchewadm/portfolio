@@ -18,6 +18,7 @@ function emitSearchQuery() {
   >
     <div>
       <TypographyHeading
+        id="section-blog-hero"
         tag="h1"
         class="mb-3"
       >

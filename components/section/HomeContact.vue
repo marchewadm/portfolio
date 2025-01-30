@@ -1,6 +1,9 @@
 <template>
   <SectionHomeBase>
-    <TypographyHeading class="mb-1">
+    <TypographyHeading
+      id="section-home-contact"
+      class="mb-1"
+    >
       Get in Touch
     </TypographyHeading>
     <TypographyParagraph

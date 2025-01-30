@@ -10,7 +10,10 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
 
 <template>
   <SectionSubPageBase class="w-full">
-    <TypographyHeading class="mb-3">
+    <TypographyHeading
+      id="section-selected-works-portfolio"
+      class="mb-3"
+    >
       Selected Works
     </TypographyHeading>
     <template v-if="selectedWorks">

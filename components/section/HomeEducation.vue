@@ -1,6 +1,9 @@
 <template>
   <SectionHomeBase>
-    <TypographyHeading class="mb-1">
+    <TypographyHeading
+      id="section-home-education"
+      class="mb-1"
+    >
       Education
     </TypographyHeading>
     <TypographyParagraph

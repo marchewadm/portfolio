@@ -1,7 +1,7 @@
 <template>
   <SectionSubPageBase>
     <div class="relative mb-3">
-      <TypographyHeading>
+      <TypographyHeading id="section-about-beyond-work">
         Beyond Work
       </TypographyHeading>
       <SvgoArrowRight
