@@ -76,9 +76,12 @@
             id="form-message"
             class="
               border p-3 border-decorative-lighter max-h-96 min-h-48 w-full
-              rounded-xl font-light placeholder-foreground-lightest
+              rounded-xl font-light placeholder-foreground-lightest outline-none
+              transition duration-300 ease-in-out
 
-              focus:outline focus:outline-2 focus:outline-primary
+              focus:border-primary focus:outline-none focus:ring-primary
+
+              hover:border-primary
 
               md:text-lg
             "

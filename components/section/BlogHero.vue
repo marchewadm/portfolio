@@ -33,7 +33,10 @@ function emitSearchQuery() {
           md:border-none md:pb-0
         "
       >
-        <FormLabel for="form-search">
+        <FormLabel
+          class="w-fit"
+          for="form-search"
+        >
           Looking for a particular post?
         </FormLabel>
         <div class="relative">
