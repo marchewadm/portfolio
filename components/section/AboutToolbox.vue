@@ -69,6 +69,7 @@ function toggleCategory(idx: number) {
       <li
         v-for="icon in getActiveCategoryIcons"
         :key="icon.name"
+        class="opacity-0 animate-fade-in"
       >
         <CardTechStack
           :href="icon.url"
