@@ -2,7 +2,7 @@
 import type { IconName } from "~/types/icon";
 
 type Props = IconName & {
-  size?: "default" | "lg";
+  size?: "default" | "sm" | "lg";
   provider?: "default" | "tech-logo";
 };
 
@@ -15,6 +15,7 @@ const getIconName = computed(() => {
 
 const variantClasses = computed(() => ({
   "h-6 w-6": size === "default",
+  "h-5 w-5": size === "sm",
   "h-8 w-8": size === "lg",
 }));
 </script>
