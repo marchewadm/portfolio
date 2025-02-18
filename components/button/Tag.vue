@@ -13,6 +13,7 @@ const linkAttributes = computed(() => renderAs === "link" ? { target: "_blank", 
 
 const variantClasses = computed(() => ({
   "bg-decorative-lightest": variant === "filled",
+  "transition-colors duration-300 hover:bg-decorative-lightest focus-visible:bg-decorative-lightest": variant === "outline",
 }));
 </script>
 
