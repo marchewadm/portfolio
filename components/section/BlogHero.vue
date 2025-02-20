@@ -1,15 +1,7 @@
 <script setup lang="ts">
-const emit = defineEmits<{
-  (e: "update:searchQuery", value: string): void;
-}>();
+const searchQuery = useSearchQuery();
 
-const formSearchQuery = ref("");
-
-const isSearching = computed(() => formSearchQuery.value.length > 0);
-
-function emitSearchQuery() {
-  emit("update:searchQuery", formSearchQuery.value);
-}
+const isSearching = computed(() => searchQuery.value.length > 0);
 </script>
 
 <template>
@@ -43,11 +35,10 @@ function emitSearchQuery() {
         <div class="relative">
           <FormInput
             id="form-search"
-            v-model="formSearchQuery"
+            v-model="searchQuery"
             class="w-full"
             placeholder="Search posts..."
             minlength="1"
-            @input="emitSearchQuery"
           />
           <IconBase
             v-if="!isSearching"

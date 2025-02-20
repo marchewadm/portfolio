@@ -1,34 +1,30 @@
 <script setup lang="ts">
 import { useFuse } from "@vueuse/integrations/useFuse";
 
-type Props = {
-  searchQuery?: string;
-};
-
-const { searchQuery = "" } = defineProps<Props>();
+const searchQuery = useSearchQuery();
 
 const { data: posts } = await useAsyncData("blog", () => {
   return queryCollection("blog").order("date", "DESC").all();
 });
 
-const { results: queriedPosts } = useFuse(toRef(() => searchQuery), posts.value ?? [], {
+const { results: queriedPosts } = useFuse(toRef(() => searchQuery.value), posts.value ?? [], {
   fuseOptions: {
-    keys: ["title", "description", "date"],
+    keys: ["title", "description", "date", "articleTags.name"],
   },
 });
 
 const headingText = computed(() =>
-  searchQuery.length === 0 ? "Recent posts" : "Search results for ",
+  searchQuery.value.length === 0 ? "Recent posts" : "Search results for ",
 );
 
 const displayedPosts = computed(() =>
-  searchQuery.length > 0
+  searchQuery.value.length > 0
     ? queriedPosts.value.map(({ item: queriedPost }) => queriedPost)
     : posts.value ?? [],
 );
 
 const showNoResults = computed(() =>
-  searchQuery.length > 0 && displayedPosts.value.length === 0,
+  searchQuery.value.length > 0 && displayedPosts.value.length === 0,
 );
 </script>
 

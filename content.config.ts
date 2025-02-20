@@ -13,6 +13,11 @@ export default defineContentConfig({
         image: z.string(),
         alt: z.string(),
         date: z.string(),
+        articleTags: z.array(
+          z.object({
+            name: z.string(),
+          }),
+        ),
       }),
     }),
     selectedWorks: defineCollection({
