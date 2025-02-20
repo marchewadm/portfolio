@@ -4,6 +4,12 @@ type Props = {
 };
 
 defineProps<Props>();
+
+const searchQuery = useSearchQuery();
+
+function updateSearchQuery(queryValue: string) {
+  searchQuery.value = queryValue;
+}
 </script>
 
 <template>
@@ -11,7 +17,7 @@ defineProps<Props>();
     <NuxtLink
       v-for="tag in tags"
       :key="tag.name"
-      href="#"
+      href="/blog"
       class="
         border border-decorative text-foreground-lighter rounded-md px-3 py-1
         text-sm font-light transition-colors duration-300
@@ -22,6 +28,7 @@ defineProps<Props>();
 
         md:text-base
       "
+      @click="updateSearchQuery(tag.name)"
     >
       {{ tag.name }}
     </NuxtLink>

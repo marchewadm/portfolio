@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const searchQuery = ref("");
+const searchQuery = useSearchQuery();
 
-function onUpdateSearchQuery(query: string) {
-  searchQuery.value = query;
-}
+onUnmounted(() => {
+  if (searchQuery.value.length > 0) {
+    searchQuery.value = "";
+  }
+});
 </script>
 
 <template>
   <div>
-    <SectionBlogHero @update:search-query="onUpdateSearchQuery" />
-    <SectionBlogPosts :search-query="searchQuery" />
+    <SectionBlogHero />
+    <SectionBlogPosts />
   </div>
 </template>
