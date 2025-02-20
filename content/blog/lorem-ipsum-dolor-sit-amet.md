@@ -15,7 +15,7 @@ articleTags:
   - name: Reflection
 ---
 
-::article-button-exit
+::article-button-exit{buttonType="blog"}
 ::
 
 # {{ $doc.title }}
