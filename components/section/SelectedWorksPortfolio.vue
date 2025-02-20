@@ -51,21 +51,28 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               View source code on GitHub
             </LinkIconExternal>
           </div>
-          <NuxtImg
-            class="
-              mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
-              transition-all duration-300
+          <NuxtLink
+            :to="selectedWork.path"
+            class="group"
+          >
+            <NuxtImg
+              class="
+                mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
+                transition-all duration-300
 
-              hover:grayscale-0
+                group-focus-visible:grayscale-0
 
-              lg:h-[500px]
+                hover:grayscale-0
 
-              md:mt-4 md:h-96
-            "
-            loading="lazy"
-            :src="selectedWork.image"
-            :alt="selectedWork.alt"
-          />
+                lg:h-[500px]
+
+                md:mt-4 md:h-96
+              "
+              loading="lazy"
+              :src="selectedWork.image"
+              :alt="selectedWork.alt"
+            />
+          </NuxtLink>
           <TypographyParagraph class="mb-3 text-justify">
             {{ selectedWork.description }}
           </TypographyParagraph>
@@ -159,17 +166,24 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               class="flex flex-col"
               :class="index % 2 !== 0 ? 'order-1' : 'order-2'"
             >
-              <NuxtImg
-                class="
-                  mb-3 h-80 w-full rounded-xl object-cover grayscale
-                  transition-all duration-300
+              <NuxtLink
+                :to="selectedWork.path"
+                class="group mb-3"
+              >
+                <NuxtImg
+                  class="
+                    h-80 w-full rounded-xl object-cover grayscale transition-all
+                    duration-300
 
-                  hover:grayscale-0
-                "
-                loading="lazy"
-                :src="selectedWork.image"
-                :alt="selectedWork.alt"
-              />
+                    group-focus-visible:grayscale-0
+
+                    hover:grayscale-0
+                  "
+                  loading="lazy"
+                  :src="selectedWork.image"
+                  :alt="selectedWork.alt"
+                />
+              </NuxtLink>
               <div class="mt-auto flex flex-wrap gap-2">
                 <ButtonTag
                   v-for="technology in selectedWork.technologies"
