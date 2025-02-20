@@ -11,7 +11,7 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === "
   <h1
     :id="props.id"
     class="
-      mb-2 text-2xl font-medium tracking-tight
+      mb-1 text-2xl font-medium tracking-tight
 
       md:mb-3 md:text-5xl
     "

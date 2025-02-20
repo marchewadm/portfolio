@@ -1,3 +1,15 @@
+<script setup lang="ts">
+type Props = {
+  buttonType: "blog" | "selectedWorks";
+};
+
+const { buttonType } = defineProps<Props>();
+
+const buttonLink = computed(() => buttonType === "blog" ? "/blog" : "/selected-works");
+
+const buttonText = computed(() => buttonType === "blog" ? "Return to articles" : "Return to portfolio");
+</script>
+
 <template>
   <NuxtLink
     class="
@@ -8,7 +20,7 @@
 
       hover:text-foreground-lightest
     "
-    href="/blog"
+    :href="buttonLink"
   >
     <IconBase
       icon-name="arrow-left"
@@ -21,7 +33,7 @@
         md:text-base
       "
     >
-      Return to articles
+      {{ buttonText }}
     </span>
   </NuxtLink>
 </template>
