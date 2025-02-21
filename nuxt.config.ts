@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "radix-vue/nuxt",
     "nuxt-svgo",
     "@vueuse/nuxt",
+    "@vee-validate/nuxt",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -95,5 +96,8 @@ export default defineNuxtConfig({
   },
   svgo: {
     autoImportPath: "./assets/svg/",
+  },
+  veeValidate: {
+    autoImports: true,
   },
 });
