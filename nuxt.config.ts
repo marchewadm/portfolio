@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@vueuse/nuxt",
     "@vee-validate/nuxt",
+    "@formkit/auto-animate/nuxt",
   ],
   imports: {
     dirs: ["constants/*"],
