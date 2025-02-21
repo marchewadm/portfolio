@@ -20,7 +20,7 @@
           md:w-fit
         "
         icon-name="arrow-right"
-        :is-icon-animated="true"
+        icon-animation="bounce-right"
       >
         View my resume
       </ButtonVariant>

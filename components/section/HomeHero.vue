@@ -45,7 +45,7 @@
         >
           <ButtonVariant
             icon-name="arrow-right"
-            :is-icon-animated="true"
+            icon-animation="bounce-right"
             href="/#section-home-contact"
           >
             Get in touch

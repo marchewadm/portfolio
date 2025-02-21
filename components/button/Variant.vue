@@ -4,15 +4,20 @@ import type { IconName } from "~/types/icon";
 type Props = Partial<IconName> & {
   href?: string;
   variant?: "primary" | "secondary";
-  isIconAnimated?: boolean;
+  iconAnimation?: "bounce-right" | "spin";
 };
 
-const { href, iconName, variant = "primary" } = defineProps<Props>();
+const { href, iconName, iconAnimation, variant = "primary" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
   "bg-primary text-on-primary transition-colors duration-300 hover:bg-primary-lighter hover:text-white focus-visible:bg-primary-lighter focus-visible:text-white": variant === "primary",
   "border border-decorative text-foreground transition-colors duration-300 hover:bg-decorative-lightest focus-visible:bg-decorative-lightest": variant === "secondary",
   "items-center gap-x-2": iconName,
+}));
+
+const animationClasses = computed(() => ({
+  "group-focus-visible:animate-bounce-right group-hover:animate-bounce-right": iconAnimation === "bounce-right",
+  "animate-spin": iconAnimation === "spin",
 }));
 
 const componentTag = computed(() => href ? resolveComponent("NuxtLink") : "button");
@@ -37,7 +42,7 @@ const linkAttributes = computed(() => href ? { to: href } : {});
     <IconBase
       v-if="iconName"
       :icon-name="iconName"
-      :class="{ 'group-focus-visible:animate-bounce-right group-hover:animate-bounce-right': isIconAnimated }"
+      :class="animationClasses"
     />
   </component>
 </template>
