@@ -26,14 +26,14 @@ const isSearching = computed(() => searchQuery.value.length > 0);
           md:border-none md:pb-0
         "
       >
-        <FormLabel
+        <FormLabelBase
           class="w-fit"
-          for="form-search"
+          field-id="form-search"
         >
           Looking for a particular post?
-        </FormLabel>
+        </FormLabelBase>
         <div class="relative">
-          <FormInput
+          <FormInputBase
             id="form-search"
             v-model="searchQuery"
             class="w-full"

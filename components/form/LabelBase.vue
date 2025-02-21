@@ -1,3 +1,11 @@
+<script setup lang="ts">
+type Props = {
+  fieldId: string;
+};
+
+defineProps<Props>();
+</script>
+
 <template>
   <label
     class="
@@ -5,6 +13,7 @@
 
       md:text-lg
     "
+    :for="fieldId"
   >
     <slot />
   </label>
