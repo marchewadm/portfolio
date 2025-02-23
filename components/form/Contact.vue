@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { FetchError } from "ofetch";
 import { contactSchema } from "~/schemas/contactSchema";
+
+const { showToast } = useToastStore();
 
 const { resetForm, handleSubmit, isSubmitting } = useForm({
   validationSchema: toTypedSchema(contactSchema),
@@ -8,10 +11,21 @@ const { resetForm, handleSubmit, isSubmitting } = useForm({
 const { value: messageFieldValue, errorMessage: messageFieldError } = useField<string>("message");
 
 const onSubmit = handleSubmit(async (values) => {
-  await new Promise(resolve => setTimeout(resolve, 5000));
+  try {
+    const response = await $fetch("/api/contact", {
+      method: "POST",
+      body: values,
+    });
 
-  console.log(values);
-  resetForm();
+    showToast(response.message);
+    resetForm();
+  }
+  catch (err: unknown) {
+    const defaultErrorMessage = "An unexpected error occurred. Please try again later.";
+    const errorMessage = err instanceof FetchError && err.statusMessage ? err.statusMessage : defaultErrorMessage;
+
+    showToast(errorMessage, "error");
+  }
 });
 </script>
 
