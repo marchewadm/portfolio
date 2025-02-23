@@ -5,11 +5,7 @@ type Props = {
 
 defineProps<Props>();
 
-const searchQuery = useSearchQuery();
-
-function updateSearchQuery(queryValue: string) {
-  searchQuery.value = queryValue;
-}
+const { updateSearchQuery } = useSearchQueryStore();
 </script>
 
 <template>

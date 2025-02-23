@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const searchQuery = useSearchQuery();
-
-const isSearching = computed(() => searchQuery.value.length > 0);
+const searchQueryStore = useSearchQueryStore();
+const { searchQuery, isSearching } = storeToRefs(searchQueryStore);
 </script>
 
 <template>

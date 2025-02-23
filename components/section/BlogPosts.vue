@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useFuse } from "@vueuse/integrations/useFuse";
 
-const searchQuery = useSearchQuery();
+const searchQueryStore = useSearchQueryStore();
+const { searchQuery } = storeToRefs(searchQueryStore);
 
 const { data: posts } = await useAsyncData("blog", () => {
   return queryCollection("blog").order("date", "DESC").all();

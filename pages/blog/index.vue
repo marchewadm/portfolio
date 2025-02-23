@@ -1,9 +1,12 @@
 <script setup lang="ts">
-const searchQuery = useSearchQuery();
+const searchQueryStore = useSearchQueryStore();
+
+const { isSearching } = storeToRefs(searchQueryStore);
+const { $reset: resetSearchQuery } = searchQueryStore;
 
 onUnmounted(() => {
-  if (searchQuery.value.length > 0) {
-    searchQuery.value = "";
+  if (isSearching) {
+    resetSearchQuery();
   }
 });
 </script>
