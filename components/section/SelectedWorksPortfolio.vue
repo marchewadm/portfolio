@@ -12,7 +12,8 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
   <SectionSubPageBase class="w-full">
     <TypographyHeading
       id="section-selected-works-portfolio"
-      class="mb-3"
+      class="mb-3 opacity-0"
+      data-aos="fade-up"
     >
       Selected Works
     </TypographyHeading>
@@ -22,91 +23,120 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
           v-for="(selectedWork, index) in selectedWorks"
           :key="selectedWork.path"
         >
-          <TypographyTitle>
+          <TypographyTitle
+            class="opacity-0"
+            data-aos="fade-up"
+          >
             {{ selectedWork.title }}
           </TypographyTitle>
-          <TypographyParagraph class="text-foreground-lighter">
+          <TypographyParagraph
+            class="text-foreground-lighter opacity-0"
+            data-aos="fade-up"
+          >
             {{ selectedWork.subtitle }}
           </TypographyParagraph>
           <div
-            v-if="selectedWork.demoUrl || selectedWork.sourceCodeUrl"
-            class="
-              mt-2 flex flex-col gap-y-2 place-self-start
-
-              md:gap-y-3
-            "
+            class="opacity-0"
+            data-aos="fade-up"
           >
-            <LinkIconExternal
-              v-if="selectedWork.demoUrl"
-              icon-name="world-www"
-              :href="selectedWork.demoUrl"
-            >
-              Try out the demo
-            </LinkIconExternal>
-            <LinkIconExternal
-              v-if="selectedWork.sourceCodeUrl"
-              icon-name="brand-github"
-              :href="selectedWork.sourceCodeUrl"
-            >
-              View source code on GitHub
-            </LinkIconExternal>
-          </div>
-          <NuxtLink
-            :to="selectedWork.path"
-            class="group"
-          >
-            <NuxtImg
+            <ul
+              v-if="selectedWork.demoUrl || selectedWork.sourceCodeUrl"
               class="
-                mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
-                transition-all duration-300
+                mt-2 flex flex-col gap-y-2 place-self-start
 
-                group-focus-visible:grayscale-0
-
-                hover:grayscale-0
-
-                lg:h-[500px]
-
-                md:mt-4 md:h-96
+                md:gap-y-3
               "
-              loading="lazy"
-              :src="selectedWork.image"
-              :alt="selectedWork.alt"
-            />
-          </NuxtLink>
-          <TypographyParagraph class="mb-3 text-justify">
+            >
+              <li v-if="selectedWork.demoUrl">
+                <LinkIconExternal
+                  icon-name="world-www"
+                  :href="selectedWork.demoUrl"
+                >
+                  Try out the demo
+                </LinkIconExternal>
+              </li>
+              <li v-if="selectedWork.sourceCodeUrl">
+                <LinkIconExternal
+                  icon-name="brand-github"
+                  :href="selectedWork.sourceCodeUrl"
+                >
+                  View source code on GitHub
+                </LinkIconExternal>
+              </li>
+            </ul>
+            <NuxtLink
+              :to="selectedWork.path"
+              class="group"
+            >
+              <NuxtImg
+                class="
+                  mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
+                  transition-all duration-300
+
+                  group-focus-visible:grayscale-0
+
+                  hover:grayscale-0
+
+                  lg:h-[500px]
+
+                  md:mt-4 md:h-96
+                "
+                loading="lazy"
+                :src="selectedWork.image"
+                :alt="selectedWork.alt"
+              />
+            </NuxtLink>
+          </div>
+          <TypographyParagraph
+            class="mb-3 text-justify opacity-0"
+            data-aos="fade-up"
+          >
             {{ selectedWork.description }}
           </TypographyParagraph>
-          <ButtonVariant
-            class="
-              mx-auto w-full
-
-              md:w-fit
-            "
-            variant="secondary"
-            :href="selectedWork.path"
-          >
-            Read more
-          </ButtonVariant>
           <div
+            class="opacity-0"
+            data-aos="fade-up"
+          >
+            <ButtonVariant
+              class="
+                mx-auto w-full
+
+                md:w-fit
+              "
+              variant="secondary"
+              :href="selectedWork.path"
+            >
+              Read more
+            </ButtonVariant>
+          </div>
+          <ul
             class="
-              flex flex-wrap gap-2 pt-3
+              flex flex-wrap gap-2 pt-3 opacity-0
 
               md:pt-4
             "
             :class="{ 'border-b border-decorative mb-3 pb-3': index !== selectedWorks.length - 1 }"
+            data-aos="fade-up"
           >
-            <ButtonTag
-              v-for="technology in selectedWork.technologies"
+            <li
+              v-for="(technology, idx) in selectedWork.technologies"
               :key="technology.name"
-              :href="technology.homepageUrl"
-              render-as="link"
-              variant="filled"
+              data-aos="zoom-in"
+              :data-aos-delay="idx * 100"
             >
-              {{ technology.name }}
-            </ButtonTag>
-          </div>
+              <ButtonTag
+                :href="technology.homepageUrl"
+                render-as="link"
+                variant="filled"
+                class="inline-block"
+              >
+                {{ technology.name }}
+              </ButtonTag>
+            </li>
+          </ul>
         </article>
       </template>
+
       <template v-else>
         <div class="grid gap-y-12">
           <article
@@ -118,13 +148,19 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               class="flex flex-col"
               :class="index % 2 !== 0 ? 'order-2' : 'order-1'"
             >
-              <TypographyTitle>
+              <TypographyTitle
+                class="opacity-0"
+                data-aos="fade-up"
+              >
                 {{ selectedWork.title }}
               </TypographyTitle>
-              <TypographyParagraph class="text-foreground-lighter">
+              <TypographyParagraph
+                class="text-foreground-lighter opacity-0"
+                data-aos="fade-up"
+              >
                 {{ selectedWork.subtitle }}
               </TypographyParagraph>
-              <div
+              <ul
                 v-if="selectedWork.demoUrl || selectedWork.sourceCodeUrl"
                 class="
                   mt-2 flex flex-col gap-y-2 place-self-start
@@ -132,39 +168,57 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                   md:gap-y-3
                 "
               >
-                <LinkIconExternal
+                <li
                   v-if="selectedWork.demoUrl"
-                  icon-name="world-www"
-                  :href="selectedWork.demoUrl"
+                  class="opacity-0"
+                  data-aos="fade-up"
                 >
-                  Try out the demo
-                </LinkIconExternal>
-                <LinkIconExternal
+                  <LinkIconExternal
+                    icon-name="world-www"
+                    :href="selectedWork.demoUrl"
+                  >
+                    Try out the demo
+                  </LinkIconExternal>
+                </li>
+                <li
                   v-if="selectedWork.sourceCodeUrl"
-                  icon-name="brand-github"
-                  :href="selectedWork.sourceCodeUrl"
+                  class="opacity-0"
+                  data-aos="fade-up"
                 >
-                  View source code on GitHub
-                </LinkIconExternal>
-              </div>
-              <TypographyParagraph class="my-3 text-justify">
+                  <LinkIconExternal
+                    icon-name="brand-github"
+                    :href="selectedWork.sourceCodeUrl"
+                  >
+                    View source code on GitHub
+                  </LinkIconExternal>
+                </li>
+              </ul>
+              <TypographyParagraph
+                class="my-3 text-justify opacity-0"
+                data-aos="fade-up"
+              >
                 {{ selectedWork.description }}
               </TypographyParagraph>
-              <ButtonVariant
+              <div
                 class="
-                  mx-auto w-full
+                  mx-auto w-full opacity-0
 
                   md:w-fit
                 "
-                variant="secondary"
-                :href="selectedWork.path"
+                data-aos="fade-up"
               >
-                Read more
-              </ButtonVariant>
+                <ButtonVariant
+                  variant="secondary"
+                  :href="selectedWork.path"
+                >
+                  Read more
+                </ButtonVariant>
+              </div>
             </div>
             <div
-              class="flex flex-col"
+              class="flex flex-col opacity-0"
               :class="index % 2 !== 0 ? 'order-1' : 'order-2'"
+              data-aos="fade-up"
             >
               <NuxtLink
                 :to="selectedWork.path"
@@ -184,17 +238,23 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                   :alt="selectedWork.alt"
                 />
               </NuxtLink>
-              <div class="mt-auto flex flex-wrap gap-2">
-                <ButtonTag
-                  v-for="technology in selectedWork.technologies"
+              <ul class="flex flex-wrap gap-2">
+                <li
+                  v-for="(technology, idx) in selectedWork.technologies"
                   :key="technology.name"
-                  :href="technology.homepageUrl"
-                  render-as="link"
-                  variant="filled"
+                  data-aos="zoom-in"
+                  :data-aos-delay="idx * 100"
                 >
-                  {{ technology.name }}
-                </ButtonTag>
-              </div>
+                  <ButtonTag
+                    :href="technology.homepageUrl"
+                    render-as="link"
+                    variant="filled"
+                    class="inline-block"
+                  >
+                    {{ technology.name }}
+                  </ButtonTag>
+                </li>
+              </ul>
             </div>
           </article>
         </div>

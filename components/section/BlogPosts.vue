@@ -33,7 +33,8 @@ const showNoResults = computed(() =>
   <SectionSubPageBase class="w-full flex-grow">
     <TypographyHeading
       id="section-blog-recent-posts"
-      class="mb-3 truncate"
+      class="mb-3 truncate opacity-0"
+      data-aos="fade-up"
     >
       <span :class="{ 'text-foreground-lighter': searchQuery }">
         {{ headingText }}
@@ -59,6 +60,8 @@ const showNoResults = computed(() =>
           :article-image-src="post.image"
           :date="post.date"
           :href="post.path"
+          class="opacity-0"
+          data-aos="fade-up"
         >
           <template #articleTitle>
             {{ post.title }}

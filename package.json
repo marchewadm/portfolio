@@ -24,6 +24,7 @@
     "@vueuse/nuxt": "^12.5.0",
     "fuse.js": "^7.0.0",
     "nuxt": "^3.14.1592",
+    "nuxt-aos": "^1.2.5",
     "nuxt-security": "^2.1.5",
     "nuxt-svgo": "^4.0.12",
     "pinia": "^3.0.1",

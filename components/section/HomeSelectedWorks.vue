@@ -2,27 +2,33 @@
   <SectionHomeBase>
     <TypographyHeading
       id="section-home-selected-works"
-      class="mb-1"
+      class="mb-1 opacity-0"
+      data-aos="fade-up"
     >
       Selected Works
     </TypographyHeading>
     <TypographyParagraph
-      class="mb-3"
+      class="mb-3 opacity-0"
       variant="thin"
+      data-aos="fade-up"
     >
       Showcasing skills through real projects
     </TypographyParagraph>
     <AccordionSelectedWorks />
-    <ButtonVariant
+    <div
       class="
-        w-full
+        w-full opacity-0
 
         md:w-fit
       "
-      variant="secondary"
-      href="/selected-works"
+      data-aos="fade-up"
     >
-      See all
-    </ButtonVariant>
+      <ButtonVariant
+        variant="secondary"
+        href="/selected-works"
+      >
+        See all
+      </ButtonVariant>
+    </div>
   </SectionHomeBase>
 </template>

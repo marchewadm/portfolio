@@ -8,13 +8,15 @@ const { data: posts } = await useAsyncData("blog", () => {
   <SectionHomeBase>
     <TypographyHeading
       id="section-home-blog"
-      class="mb-1"
+      class="mb-1 opacity-0"
+      data-aos="fade-up"
     >
       Blog
     </TypographyHeading>
     <TypographyParagraph
       variant="thin"
-      class="mb-3"
+      class="mb-3 opacity-0"
+      data-aos="fade-up"
     >
       From life to technology, my honest musings
     </TypographyParagraph>
@@ -34,6 +36,8 @@ const { data: posts } = await useAsyncData("blog", () => {
         :article-image-src="post.image"
         :date="post.date"
         :href="post.path"
+        class="opacity-0"
+        data-aos="fade-up"
       >
         <template #articleTitle>
           {{ post.title }}
@@ -43,16 +47,20 @@ const { data: posts } = await useAsyncData("blog", () => {
         </template>
       </CardBlogArticle>
     </div>
-    <ButtonVariant
+    <div
       class="
-        w-full
+        w-full opacity-0
 
         md:w-fit
       "
-      variant="secondary"
-      href="/blog"
+      data-aos="fade-up"
     >
-      See all
-    </ButtonVariant>
+      <ButtonVariant
+        variant="secondary"
+        href="/blog"
+      >
+        See all
+      </ButtonVariant>
+    </div>
   </SectionHomeBase>
 </template>

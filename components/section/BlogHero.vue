@@ -10,20 +10,27 @@ const { searchQuery, isSearching } = storeToRefs(searchQueryStore);
     <div>
       <TypographyHeading
         id="section-blog-hero"
+        class="mb-3 opacity-0"
         tag="h1"
-        class="mb-3"
+        data-aos="fade-up"
       >
         Ideas, Projects, and Lessons I've Learned Along the Way
       </TypographyHeading>
-      <TypographyParagraph class="mb-4">
+      <TypographyParagraph
+        class="mb-4 opacity-0"
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
         Each post is a piece of my journey, filled with ideas, projects, and the lessons shaping my path forward.
       </TypographyParagraph>
       <form
         class="
-          flex flex-col border-b pb-3 border-decorative
+          flex flex-col border-b pb-3 border-decorative opacity-0
 
           md:border-none md:pb-0
         "
+        data-aos="fade-left"
+        data-aos-delay="1200"
       >
         <FormLabelBase
           class="w-fit"
@@ -52,12 +59,14 @@ const { searchQuery, isSearching } = storeToRefs(searchQueryStore);
     </div>
     <SvgoHeroListening
       class="
-        hidden h-[430px]
+        hidden h-[430px] opacity-0
 
         md:block
       "
-      filled
+      data-aos="zoom-in"
+      data-aos-delay="1800"
       :font-controlled="false"
+      filled
     />
   </SectionSubPageBase>
 </template>
