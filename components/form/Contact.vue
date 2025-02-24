@@ -52,7 +52,11 @@ const onSubmit = handleSubmit(async (values) => {
         tabindex="-1"
       />
     </div>
-    <div v-auto-animate>
+    <div
+      v-auto-animate
+      class="opacity-0"
+      data-aos="fade-up"
+    >
       <FormLabelVee
         field-id="form-email"
         name="email"
@@ -66,7 +70,11 @@ const onSubmit = handleSubmit(async (values) => {
         type="email"
       />
     </div>
-    <div v-auto-animate>
+    <div
+      v-auto-animate
+      class="opacity-0"
+      data-aos="fade-up"
+    >
       <FormLabelVee
         field-id="form-subject"
         name="subject"
@@ -81,7 +89,11 @@ const onSubmit = handleSubmit(async (values) => {
         maxlength="64"
       />
     </div>
-    <div v-auto-animate>
+    <div
+      v-auto-animate
+      class="opacity-0"
+      data-aos="fade-up"
+    >
       <FormLabelVee
         field-id="form-message"
         name="message"
@@ -118,18 +130,27 @@ const onSubmit = handleSubmit(async (values) => {
         {{ messageFieldError }}
       </p>
     </div>
-    <ButtonVariant
-      type="submit"
+    <div
       class="
-        disabled:bg-foreground-lighter disabled:text-white
+        opacity-0
 
         md:w-fit
       "
-      :icon-name="!isSubmitting ? 'send-2' : 'loader-2'"
-      :icon-animation="isSubmitting ? 'spin' : undefined"
-      :disabled="isSubmitting"
+      data-aos="fade-up"
     >
-      Drop me a message
-    </ButtonVariant>
+      <ButtonVariant
+        type="submit"
+        class="
+          w-full
+
+          disabled:bg-foreground-lighter disabled:text-white
+        "
+        :icon-name="!isSubmitting ? 'send-2' : 'loader-2'"
+        :icon-animation="isSubmitting ? 'spin' : undefined"
+        :disabled="isSubmitting"
+      >
+        Drop me a message
+      </ButtonVariant>
+    </div>
   </form>
 </template>

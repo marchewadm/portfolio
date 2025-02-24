@@ -15,6 +15,8 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
     <article
       v-for="selectedWork in selectedWorks"
       :key="selectedWork.path"
+      class="opacity-0"
+      data-aos="fade-up"
     >
       <AccordionItem :value="selectedWork.path">
         <AccordionHeader as-child>
@@ -87,11 +89,13 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
         "
       >
         <ButtonTag
-          v-for="technology in selectedWork.technologies"
+          v-for="(technology, idx) in selectedWork.technologies"
           :key="technology.name"
           :href="technology.homepageUrl"
           render-as="link"
           variant="filled"
+          data-aos="zoom-in"
+          :data-aos-delay="idx * 100"
         >
           {{ technology.name }}
         </ButtonTag>

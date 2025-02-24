@@ -2,32 +2,44 @@
   <SectionHomeBase>
     <TypographyHeading
       id="section-home-about"
-      class="mb-1"
+      class="mb-1 opacity-0"
+      data-aos="fade-up"
     >
       About
     </TypographyHeading>
     <TypographyParagraph
-      class="mb-3"
+      class="mb-3 opacity-0"
       variant="thin"
+      data-aos="fade-up"
     >
       Life, values, and inspirations shared
     </TypographyParagraph>
-    <TypographyParagraph class="mb-2 text-justify">
+    <TypographyParagraph
+      class="mb-2 text-justify opacity-0"
+      data-aos="fade-up"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
     </TypographyParagraph>
-    <TypographyParagraph class="mb-3 text-justify">
+    <TypographyParagraph
+      class="mb-3 text-justify opacity-0"
+      data-aos="fade-up"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
     </TypographyParagraph>
-    <ButtonVariant
+    <div
       class="
-        w-full
+        w-full opacity-0
 
         md:w-fit
       "
-      variant="secondary"
-      href="/about"
+      data-aos="fade-up"
     >
-      Read more
-    </ButtonVariant>
+      <ButtonVariant
+        variant="secondary"
+        href="/about"
+      >
+        Read more
+      </ButtonVariant>
+    </div>
   </SectionHomeBase>
 </template>

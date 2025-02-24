@@ -16,23 +16,27 @@
       <div>
         <TypographyHeading
           id="section-home-hero"
-          class="mb-1"
+          class="mb-1 opacity-0"
           tag="h1"
+          data-aos="fade-up"
         >
           Dawid Merchwa
         </TypographyHeading>
         <TypographyTitle
-          class="mb-2"
+          class="mb-2 opacity-0"
           variant="lg"
+          data-aos="fade-up"
         >
           A Computer Science student
         </TypographyTitle>
         <TypographyParagraph
           class="
-            mb-4 w-full
+            mb-4 w-full opacity-0
 
             lg:w-[75%]
           "
+          data-aos="fade-up"
+          data-aos-delay="600"
         >
           Passionate developer, open source contributor, Linux enthusiast, and a lifelong learner exploring new technologies.
         </TypographyParagraph>
@@ -43,25 +47,42 @@
             md:flex-row md:gap-x-4 md:gap-y-0
           "
         >
-          <ButtonVariant
-            icon-name="arrow-right"
-            icon-animation="bounce-right"
-            href="/#section-home-contact"
+          <div
+            class="opacity-0"
+            data-aos="fade-left"
+            data-aos-delay="1200"
           >
-            Get in touch
-          </ButtonVariant>
-          <ButtonVariant variant="secondary">
-            Resume
-          </ButtonVariant>
+            <ButtonVariant
+              icon-name="arrow-right"
+              icon-animation="bounce-right"
+              href="/#section-home-contact"
+            >
+              Get in touch
+            </ButtonVariant>
+          </div>
+          <div
+            class="opacity-0"
+            data-aos="fade-left"
+            data-aos-delay="1400"
+          >
+            <ButtonVariant
+              class="w-full"
+              variant="secondary"
+            >
+              Resume
+            </ButtonVariant>
+          </div>
         </div>
       </div>
       <div
         class="
           hidden self-center justify-self-center rounded-full border-4
-          border-white shadow-xs-below
+          border-white shadow-xs-below opacity-0
 
           md:block
         "
+        data-aos="zoom-in"
+        data-aos-delay="1800"
       >
         <NuxtImg
           src="/img/work-1.jpg"
