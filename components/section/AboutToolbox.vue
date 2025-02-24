@@ -28,27 +28,45 @@ function toggleCategory(idx: number) {
 <template>
   <SectionSubPageBase>
     <div class="relative mb-3">
-      <TypographyHeading id="section-about-toolbox">
+      <TypographyHeading
+        id="section-about-toolbox"
+        class="opacity-0"
+        data-aos="fade-up"
+      >
         Developer's Toolbox
       </TypographyHeading>
-      <SvgoArrowPen
+      <div
         class="
-          absolute right-full top-0 mr-1 mt-1 hidden h-20 -translate-y-1/4
-          -rotate-[37deg]
+          absolute right-full top-0 mr-1 mt-1 hidden opacity-0
 
           xl:block
         "
-        filled
-        :font-controlled="false"
-      />
+        data-aos="zoom-in"
+        data-aos-delay="600"
+      >
+        <SvgoArrowPen
+          class="h-20 -translate-y-1/4 -rotate-[37deg]"
+          filled
+          :font-controlled="false"
+        />
+      </div>
     </div>
-    <TypographyParagraph class="mb-3 text-justify">
+    <TypographyParagraph
+      class="mb-3 text-justify opacity-0"
+      data-aos="fade-up"
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
     </TypographyParagraph>
-    <ul class="mb-2 flex flex-wrap gap-2">
+    <ul
+      class="mb-2 flex flex-wrap gap-2 opacity-0"
+      data-aos="fade-up"
+    >
       <li
         v-for="(techCategoryObject, idx) in techCategories"
         :key="techCategoryObject.category"
+        class="opacity-0"
+        data-aos="zoom-in"
+        :data-aos-delay="idx * 100"
       >
         <ButtonTag
           render-as="button"
@@ -61,10 +79,12 @@ function toggleCategory(idx: number) {
     </ul>
     <ul
       class="
-        flex flex-wrap gap-2
+        flex flex-wrap gap-2 opacity-0
 
         md:gap-3
       "
+      data-aos="fade-up"
+      data-aos-delay="900"
     >
       <li
         v-for="icon in getActiveCategoryIcons"
