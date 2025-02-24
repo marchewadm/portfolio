@@ -50,21 +50,32 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             data-[state=open]:animate-slide-down
           "
         >
-          <NuxtImg
+          <NuxtLink
+            :to="selectedWork.path"
             class="
-              mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
-              transition-all duration-300
+              group mb-2 mt-3 block overflow-hidden rounded-xl
 
-              hover:grayscale-0
-
-              lg:h-[500px]
-
-              md:mt-4 md:h-96
+              md:mt-4
             "
-            loading="lazy"
-            :src="selectedWork.image"
-            :alt="selectedWork.alt"
-          />
+          >
+            <NuxtImg
+              class="
+                h-52 w-full rounded-xl object-cover grayscale transition-all
+                duration-300
+
+                group-focus-visible:scale-110 group-focus-visible:grayscale-0
+
+                hover:scale-110 hover:grayscale-0
+
+                lg:h-[500px]
+
+                md:h-96
+              "
+              loading="lazy"
+              :src="selectedWork.image"
+              :alt="selectedWork.alt"
+            />
+          </NuxtLink>
           <TypographyParagraph class="mb-3 text-justify">
             {{ selectedWork.description }}
           </TypographyParagraph>

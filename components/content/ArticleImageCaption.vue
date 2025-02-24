@@ -10,21 +10,23 @@ defineProps<Props>();
 
 <template>
   <figure class="my-3">
-    <NuxtImg
-      class="
-        h-52 w-full rounded-xl object-cover grayscale transition-all
-        duration-300
+    <div class="overflow-hidden rounded-xl">
+      <NuxtImg
+        class="
+          h-52 w-full rounded-xl object-cover grayscale transition-all
+          duration-300
 
-        hover:grayscale-0
+          hover:scale-110 hover:grayscale-0
 
-        lg:h-[500px]
+          lg:h-[500px]
 
-        md:h-96
-      "
-      loading="lazy"
-      :src="imageSrc"
-      :alt="imageAlt"
-    />
+          md:h-96
+        "
+        loading="lazy"
+        :src="imageSrc"
+        :alt="imageAlt"
+      />
+    </div>
     <figcaption
       class="text-center font-thin text-foreground-lighter mt-1 text-sm"
     >

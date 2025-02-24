@@ -18,19 +18,21 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
       md:gap-x-3
     "
   >
-    <NuxtImg
-      class="
-        h-10 w-10 rounded-full object-cover grayscale transition-all
-        duration-300
+    <div class="overflow-hidden rounded-full">
+      <NuxtImg
+        class="
+          h-10 w-10 rounded-full object-cover grayscale transition-all
+          duration-300
 
-        hover:grayscale-0
+          hover:scale-110 hover:grayscale-0
 
-        md:h-12 md:w-12
-      "
-      loading="lazy"
-      :src="authorImageSrc"
-      :alt="getAuthorImageAlt"
-    />
+          md:h-12 md:w-12
+        "
+        loading="lazy"
+        :src="authorImageSrc"
+        :alt="getAuthorImageAlt"
+      />
+    </div>
     <div class="flex flex-col justify-between">
       <TypographyParagraph variant="sm">
         {{ author }}

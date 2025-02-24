@@ -76,24 +76,31 @@
       </div>
       <div
         class="
-          hidden self-center justify-self-center rounded-full border-4
-          border-white shadow-xs-below opacity-0
+          hidden self-center justify-self-center overflow-hidden rounded-full
+          border-4 border-white shadow-xs-below opacity-0
 
           md:block
         "
         data-aos="zoom-in"
         data-aos-delay="1800"
       >
-        <NuxtImg
-          src="/img/work-1.jpg"
-          alt="Portrait of the author"
-          class="
-            h-48 w-48 rounded-full object-cover grayscale transition-all
-            duration-300
+        <NuxtLink
+          to="/about"
+          class="group rounded-full"
+        >
+          <NuxtImg
+            src="/img/work-1.jpg"
+            alt="Portrait of the author"
+            class="
+              h-48 w-48 rounded-full object-cover grayscale transition-all
+              duration-300
 
-            hover:grayscale-0
-          "
-        />
+              group-focus-visible:scale-110 group-focus-visible:grayscale-0
+
+              hover:scale-110 hover:grayscale-0
+            "
+          />
+        </NuxtLink>
       </div>
     </div>
     <ParticlesLink />

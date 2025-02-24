@@ -19,16 +19,16 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
   >
     <NuxtLink
       :to="href"
-      class="group"
+      class="group mb-4 block overflow-hidden rounded-tl-lg rounded-tr-lg"
     >
       <NuxtImg
         class="
-          mb-4 h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
+          h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
           transition-all duration-300
 
-          group-focus-visible:grayscale-0
+          group-focus-visible:scale-110 group-focus-visible:grayscale-0
 
-          hover:grayscale-0
+          hover:scale-110 hover:grayscale-0
         "
         loading="lazy"
         :src="articleImageSrc"
@@ -77,19 +77,21 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
           md:gap-x-3
         "
       >
-        <NuxtImg
-          class="
-            h-10 w-10 rounded-full object-cover grayscale transition-all
-            duration-300
+        <div class="overflow-hidden rounded-full">
+          <NuxtImg
+            class="
+              h-10 w-10 rounded-full object-cover grayscale transition-all
+              duration-300
 
-            hover:grayscale-0
+              hover:scale-110 hover:grayscale-0
 
-            md:h-12 md:w-12
-          "
-          loading="lazy"
-          :src="authorImageSrc"
-          :alt="getAuthorImageAlt"
-        />
+              md:h-12 md:w-12
+            "
+            loading="lazy"
+            :src="authorImageSrc"
+            :alt="getAuthorImageAlt"
+          />
+        </div>
         <div class="flex flex-col justify-between">
           <TypographyParagraph variant="sm">
             {{ author }}

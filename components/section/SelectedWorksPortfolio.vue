@@ -66,16 +66,16 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             </ul>
             <NuxtLink
               :to="selectedWork.path"
-              class="group"
+              class="group mb-2 mt-3 block overflow-hidden rounded-xl"
             >
               <NuxtImg
                 class="
-                  mb-2 mt-3 h-52 w-full rounded-xl object-cover grayscale
-                  transition-all duration-300
+                  h-52 w-full rounded-xl object-cover grayscale transition-all
+                  duration-300
 
-                  group-focus-visible:grayscale-0
+                  group-focus-visible:scale-110 group-focus-visible:grayscale-0
 
-                  hover:grayscale-0
+                  hover:scale-110 hover:grayscale-0
 
                   lg:h-[500px]
 
@@ -222,16 +222,17 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             >
               <NuxtLink
                 :to="selectedWork.path"
-                class="group mb-3"
+                class="group mb-3 overflow-hidden rounded-xl"
               >
                 <NuxtImg
                   class="
                     h-80 w-full rounded-xl object-cover grayscale transition-all
                     duration-300
 
+                    group-focus-visible:scale-110
                     group-focus-visible:grayscale-0
 
-                    hover:grayscale-0
+                    hover:scale-110 hover:grayscale-0
                   "
                   loading="lazy"
                   :src="selectedWork.image"
