@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@vee-validate/nuxt",
     "@formkit/auto-animate/nuxt",
     "@pinia/nuxt",
+    "nuxt-aos",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -128,5 +129,10 @@ export default defineNuxtConfig({
   },
   veeValidate: {
     autoImports: true,
+  },
+  aos: {
+    once: true,
+    offset: 0,
+    duration: 600,
   },
 });
