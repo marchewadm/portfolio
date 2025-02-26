@@ -87,8 +87,9 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             "
             variant="secondary"
             :href="selectedWork.path"
+            :title="`Read more about ${selectedWork.title}`"
           >
-            Read more
+            More details
           </ButtonVariant>
         </AccordionContent>
       </AccordionItem>
@@ -102,11 +103,11 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
         <ButtonTag
           v-for="(technology, idx) in selectedWork.technologies"
           :key="technology.name"
-          :href="technology.homepageUrl"
-          render-as="link"
           variant="filled"
           data-aos="zoom-in"
+          :href="technology.homepageUrl"
           :data-aos-delay="idx * 100"
+          :title="`Open the ${technology.name} website in a new tab`"
         >
           {{ technology.name }}
         </ButtonTag>

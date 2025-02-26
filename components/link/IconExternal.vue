@@ -1,6 +1,7 @@
 <script setup lang="ts">
 type Props = {
   href?: string;
+  title?: string;
   iconName: string;
 };
 
@@ -18,6 +19,7 @@ const { href = "#" } = defineProps<Props>();
     "
     target="_blank"
     :to="href"
+    :title="title"
   >
     <IconBase
       size="lg"

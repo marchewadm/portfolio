@@ -56,6 +56,7 @@
               icon-name="arrow-right"
               icon-animation="bounce-right"
               href="/#section-home-contact"
+              title="Visit the contact section"
             >
               Get in touch
             </ButtonVariant>
@@ -68,6 +69,8 @@
             <ButtonVariant
               class="w-full"
               variant="secondary"
+              href="#"
+              title="View my resume in a new tab"
             >
               Resume
             </ButtonVariant>
@@ -87,6 +90,7 @@
         <NuxtLink
           to="/about"
           class="group rounded-full"
+          title="Visit the about page"
         >
           <NuxtImg
             src="/img/work-1.jpg"

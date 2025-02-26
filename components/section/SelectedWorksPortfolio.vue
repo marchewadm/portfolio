@@ -50,6 +50,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               <li v-if="selectedWork.demoUrl">
                 <LinkIconExternal
                   icon-name="world-www"
+                  title="Try out the demo in a new tab"
                   :href="selectedWork.demoUrl"
                 >
                   Try out the demo
@@ -58,6 +59,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               <li v-if="selectedWork.sourceCodeUrl">
                 <LinkIconExternal
                   icon-name="brand-github"
+                  title="Explore the source code on GitHub in a new tab"
                   :href="selectedWork.sourceCodeUrl"
                 >
                   View source code on GitHub
@@ -105,8 +107,9 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               "
               variant="secondary"
               :href="selectedWork.path"
+              :title="`Read more about ${selectedWork.title}`"
             >
-              Read more
+              More details
             </ButtonVariant>
           </div>
           <ul
@@ -125,10 +128,10 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               :data-aos-delay="idx * 100"
             >
               <ButtonTag
-                :href="technology.homepageUrl"
-                render-as="link"
                 variant="filled"
                 class="inline-block"
+                :href="technology.homepageUrl"
+                :title="`Open the ${technology.name} website in a new tab`"
               >
                 {{ technology.name }}
               </ButtonTag>
@@ -175,6 +178,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                 >
                   <LinkIconExternal
                     icon-name="world-www"
+                    title="Try out the demo in a new tab"
                     :href="selectedWork.demoUrl"
                   >
                     Try out the demo
@@ -187,6 +191,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                 >
                   <LinkIconExternal
                     icon-name="brand-github"
+                    title="Explore the source code on GitHub in a new tab"
                     :href="selectedWork.sourceCodeUrl"
                   >
                     View source code on GitHub
@@ -210,8 +215,9 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                 <ButtonVariant
                   variant="secondary"
                   :href="selectedWork.path"
+                  :title="`Read more about ${selectedWork.title}`"
                 >
-                  Read more
+                  More details
                 </ButtonVariant>
               </div>
             </div>
@@ -247,10 +253,10 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
                   :data-aos-delay="idx * 100"
                 >
                   <ButtonTag
-                    :href="technology.homepageUrl"
-                    render-as="link"
                     variant="filled"
                     class="inline-block"
+                    :href="technology.homepageUrl"
+                    :title="`Open the ${technology.name} website in a new tab`"
                   >
                     {{ technology.name }}
                   </ButtonTag>

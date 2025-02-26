@@ -3,11 +3,12 @@ import type { IconName } from "~/types/icon";
 
 type Props = Partial<IconName> & {
   href?: string;
+  title?: string;
   variant?: "primary" | "secondary";
   iconAnimation?: "bounce-right" | "spin";
 };
 
-const { href, iconName, iconAnimation, variant = "primary" } = defineProps<Props>();
+const { href, title, iconName, iconAnimation, variant = "primary" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
   "bg-primary text-on-primary transition-colors duration-300 hover:bg-primary-lighter hover:text-white focus-visible:bg-primary-lighter focus-visible:text-white": variant === "primary",
@@ -22,7 +23,7 @@ const animationClasses = computed(() => ({
 
 const componentTag = computed(() => href ? resolveComponent("NuxtLink") : "button");
 
-const linkAttributes = computed(() => href ? { to: href } : {});
+const linkAttributes = computed(() => href ? { to: href, title } : {});
 </script>
 
 <template>

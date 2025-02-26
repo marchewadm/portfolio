@@ -38,6 +38,8 @@
           class="w-full"
           icon-name="arrow-right"
           icon-animation="bounce-right"
+          href="#"
+          title="Visit my GitHub profile in a new tab"
         >
           Check out my GitHub
         </ButtonVariant>

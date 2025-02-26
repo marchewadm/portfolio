@@ -26,6 +26,7 @@
       <ButtonVariant
         variant="secondary"
         href="/selected-works"
+        title="Discover more projects on the selected works page"
       >
         See all
       </ButtonVariant>

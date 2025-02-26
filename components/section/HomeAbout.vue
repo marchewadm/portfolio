@@ -37,8 +37,9 @@
       <ButtonVariant
         variant="secondary"
         href="/about"
+        title="Read more about me"
       >
-        Read more
+        More details
       </ButtonVariant>
     </div>
   </SectionHomeBase>

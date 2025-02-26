@@ -3,6 +3,7 @@ import type { IconName } from "~/types/icon";
 
 type Props = {
   href: string;
+  title: string;
 } & IconName;
 
 defineProps<Props>();
@@ -18,6 +19,7 @@ defineProps<Props>();
     "
     target="_blank"
     :href="href"
+    :title="title"
   >
     <span
       class="

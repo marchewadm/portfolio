@@ -20,6 +20,7 @@ defineProps<Props>();
       v-if="demoUrl"
       href="#"
       icon-name="world-www"
+      title="Try out the demo in a new tab"
     >
       Try out the demo
     </LinkIconExternal>
@@ -27,6 +28,7 @@ defineProps<Props>();
       v-if="sourceCodeUrl"
       href="#"
       icon-name="brand-github"
+      title="Explore the source code on GitHub in a new tab"
     >
       View source code on GitHub
     </LinkIconExternal>
