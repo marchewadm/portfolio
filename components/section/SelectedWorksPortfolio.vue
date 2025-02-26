@@ -67,8 +67,9 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               </li>
             </ul>
             <NuxtLink
-              :to="selectedWork.path"
               class="group mb-2 mt-3 block overflow-hidden rounded-xl"
+              :title="`Read more about ${selectedWork.title}`"
+              :to="selectedWork.path"
             >
               <NuxtImg
                 class="
@@ -227,8 +228,9 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               data-aos="fade-up"
             >
               <NuxtLink
-                :to="selectedWork.path"
                 class="group mb-3 overflow-hidden rounded-xl"
+                :title="`Read more about ${selectedWork.title}`"
+                :to="selectedWork.path"
               >
                 <NuxtImg
                   class="
