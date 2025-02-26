@@ -30,22 +30,17 @@ const { data: posts } = await useAsyncData("blog", () => {
       <CardBlogArticle
         v-for="post in posts"
         :key="post.id"
+        :href="post.path"
+        :date="post.date"
         :author="post.author"
         :author-image-src="post.avatar"
+        :article-title="post.title"
+        :article-description="post.description"
         :article-image-alt="post.alt"
         :article-image-src="post.image"
-        :date="post.date"
-        :href="post.path"
         class="opacity-0"
         data-aos="fade-up"
-      >
-        <template #articleTitle>
-          {{ post.title }}
-        </template>
-        <template #articleDescription>
-          {{ post.description }}
-        </template>
-      </CardBlogArticle>
+      />
     </div>
     <div
       class="
@@ -58,6 +53,7 @@ const { data: posts } = await useAsyncData("blog", () => {
       <ButtonVariant
         variant="secondary"
         href="/blog"
+        title="Discover more articles on the blog page"
       >
         See all
       </ButtonVariant>
