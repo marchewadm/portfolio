@@ -1,16 +1,20 @@
 <script setup lang="ts">
 type Props = {
+  href: string;
   date: string;
   author: string;
   authorImageSrc: string;
+  articleTitle: string;
+  articleDescription: string;
   articleImageSrc: string;
   articleImageAlt: string;
-  href: string;
 };
 
-const props = defineProps<Props>();
+const { author, articleTitle } = defineProps<Props>();
 
-const getAuthorImageAlt = computed(() => `Image presenting the article's author - ${props.author}`);
+const getAuthorImageAlt = computed(() => `Image presenting the article's author - ${author}`);
+
+const getLinkTitle = computed(() => `Read more about ${articleTitle}`);
 </script>
 
 <template>
@@ -18,8 +22,9 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
     class="rounded-lg shadow-xs-below pb-4"
   >
     <NuxtLink
-      :to="href"
       class="group mb-4 block overflow-hidden rounded-tl-lg rounded-tr-lg"
+      :to="href"
+      :title="getLinkTitle"
     >
       <NuxtImg
         class="
@@ -46,6 +51,7 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
           hover:text-foreground-lighter
         "
         :to="href"
+        :title="getLinkTitle"
       >
         <span
           class="
@@ -54,7 +60,7 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
             md:text-2xl
           "
         >
-          <slot name="articleTitle" />
+          {{ articleTitle }}
         </span>
         <IconBase
           icon-name="arrow-up-right"
@@ -68,7 +74,7 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
         />
       </NuxtLink>
       <TypographyParagraph class="mb-2 line-clamp-5 text-justify">
-        <slot name="articleDescription" />
+        {{ articleDescription }}
       </TypographyParagraph>
       <div
         class="
