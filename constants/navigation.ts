@@ -18,7 +18,7 @@ export const NAVIGATION_DATA = [
     links: [
       { text: "Home", href: "/", target: "_self" },
       { text: "About", href: "/about", target: "_self" },
-      { text: "Sitemap", href: "#", target: "_blank" },
+      { text: "Sitemap", href: "/sitemap.xml", target: "_blank" },
     ],
   },
   {
