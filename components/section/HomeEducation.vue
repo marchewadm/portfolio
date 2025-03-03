@@ -1,19 +1,9 @@
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-education"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      Education
-    </TypographyHeading>
-    <TypographyParagraph
-      class="mb-3 opacity-0"
-      variant="thin"
-      data-aos="fade-up"
-    >
-      Insights from my academic path
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="Education"
+    heading-id="section-home-education"
+    subtitle="Insights from my academic path"
+  >
     <div class="mb-3 grid w-full grid-cols-[1fr_auto]">
       <TypographyTitle
         class="opacity-0"

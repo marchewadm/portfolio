@@ -5,21 +5,11 @@ const { data: posts } = await useAsyncData("blog", () => {
 </script>
 
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-blog"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      Blog
-    </TypographyHeading>
-    <TypographyParagraph
-      variant="thin"
-      class="mb-3 opacity-0"
-      data-aos="fade-up"
-    >
-      From life to technology, my honest musings
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="Blog"
+    heading-id="section-home-blog"
+    subtitle="From life to technology, my honest musings"
+  >
     <div
       class="
         mb-3 grid grid-cols-1 gap-6

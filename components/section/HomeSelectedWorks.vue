@@ -1,19 +1,9 @@
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-selected-works"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      Selected Works
-    </TypographyHeading>
-    <TypographyParagraph
-      class="mb-3 opacity-0"
-      variant="thin"
-      data-aos="fade-up"
-    >
-      Showcasing skills through real projects
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="Selected Works"
+    heading-id="section-home-selected-works"
+    subtitle="Showcasing skills through real projects"
+  >
     <AccordionSelectedWorks />
     <div
       class="

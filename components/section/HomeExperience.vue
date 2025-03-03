@@ -1,19 +1,9 @@
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-experience"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      Experience
-    </TypographyHeading>
-    <TypographyParagraph
-      class="mb-3 opacity-0"
-      variant="thin"
-      data-aos="fade-up"
-    >
-      Professional roles and open source impact
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="Experience"
+    heading-id="section-home-experience"
+    subtitle="Professional roles and open source impact"
+  >
     <div class="mb-3 self-start">
       <TypographyTitle
         class="opacity-0"

@@ -7,25 +7,28 @@
     "
   >
     <ul class="flex gap-x-6">
-      <NuxtLink
+      <li
         v-for="link in MAIN_NAVIGATION"
         :key="link.text"
-        class="
-          font-light tracking-tight
-
-          after:block after:scale-x-0 after:border-b after:transition-transform
-          after:duration-200 after:ease-in-out after:content-['']
-          after:border-foreground
-
-          focus-visible:after:scale-x-100
-
-          hover:after:scale-x-100
-        "
-        :to="link.href"
-        :title="link.title"
       >
-        {{ link.text }}
-      </NuxtLink>
+        <NuxtLink
+          class="
+            font-light tracking-tight
+
+            after:block after:scale-x-0 after:border-b
+            after:transition-transform after:duration-200 after:ease-in-out
+            after:content-[''] after:border-foreground
+
+            focus-visible:after:scale-x-100
+
+            hover:after:scale-x-100
+          "
+          :to="link.href"
+          :title="link.title"
+        >
+          {{ link.text }}
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
   <NuxtLink

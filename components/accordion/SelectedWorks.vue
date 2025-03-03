@@ -20,25 +20,35 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
     >
       <AccordionItem :value="selectedWork.path">
         <AccordionHeader as-child>
-          <AccordionTrigger as-child>
-            <div class="group cursor-pointer">
-              <div class="flex justify-between">
-                <TypographyTitle>
-                  {{ selectedWork.title }}
-                </TypographyTitle>
-                <IconBase
-                  class="
-                    text-decorative transition-transform duration-300
+          <AccordionTrigger class="group flex w-full flex-col">
+            <span class="flex justify-between">
+              <span
+                class="
+                  text-base font-medium tracking-tight
 
-                    group-data-[state=open]:rotate-180
-                  "
-                  icon-name="chevron-down"
-                />
-              </div>
-              <TypographyParagraph class="text-foreground-lighter">
-                {{ selectedWork.subtitle }}
-              </TypographyParagraph>
-            </div>
+                  md:text-xl
+                "
+              >
+                {{ selectedWork.title }}
+              </span>
+              <IconBase
+                class="
+                  text-decorative transition-transform duration-300
+
+                  group-data-[state=open]:rotate-180
+                "
+                icon-name="chevron-down"
+              />
+            </span>
+            <span
+              class="
+                font-light tracking-tight text-foreground-lighter text-left
+
+                md:text-lg
+              "
+            >
+              {{ selectedWork.subtitle }}
+            </span>
           </AccordionTrigger>
         </AccordionHeader>
         <AccordionContent
@@ -51,12 +61,13 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
           "
         >
           <NuxtLink
-            :to="selectedWork.path"
             class="
               group mb-2 mt-3 block overflow-hidden rounded-xl
 
               md:mt-4
             "
+            :to="selectedWork.path"
+            :title="`Read more about ${selectedWork.title}`"
           >
             <NuxtImg
               class="
