@@ -14,32 +14,34 @@
       "
     >
       <div>
-        <TypographyHeading
-          id="section-home-hero"
-          class="mb-1 opacity-0"
-          tag="h1"
-          data-aos="fade-up"
-        >
-          Dawid Merchwa
-        </TypographyHeading>
-        <TypographyTitle
-          class="mb-2 opacity-0"
-          variant="lg"
-          data-aos="fade-up"
-        >
-          A Computer Science student
-        </TypographyTitle>
-        <TypographyParagraph
-          class="
-            mb-4 w-full opacity-0
+        <hgroup class="mb-4">
+          <TypographyHeading
+            id="section-home-hero"
+            class="mb-1 opacity-0"
+            tag="h1"
+            data-aos="fade-up"
+          >
+            Dawid Merchwa
+          </TypographyHeading>
+          <TypographyTitle
+            class="mb-2 opacity-0"
+            variant="lg"
+            data-aos="fade-up"
+          >
+            A Computer Science student
+          </TypographyTitle>
+          <TypographyParagraph
+            class="
+              w-full opacity-0
 
-            lg:w-[75%]
-          "
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          Passionate developer, open source contributor, Linux enthusiast, and a lifelong learner exploring new technologies.
-        </TypographyParagraph>
+              lg:w-[75%]
+            "
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            Passionate developer, open source contributor, Linux enthusiast, and a lifelong learner exploring new technologies.
+          </TypographyParagraph>
+        </hgroup>
         <div
           class="
             flex flex-col gap-y-2

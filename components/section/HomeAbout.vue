@@ -1,19 +1,9 @@
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-about"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      About
-    </TypographyHeading>
-    <TypographyParagraph
-      class="mb-3 opacity-0"
-      variant="thin"
-      data-aos="fade-up"
-    >
-      Life, values, and inspirations shared
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="About"
+    heading-id="section-home-about"
+    subtitle="Life, values, and inspirations shared"
+  >
     <TypographyParagraph
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"

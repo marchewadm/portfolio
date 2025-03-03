@@ -1,3 +1,13 @@
+<script setup lang="ts">
+type Props = {
+  heading: string;
+  headingId: string;
+  subtitle: string;
+};
+
+defineProps<Props>();
+</script>
+
 <template>
   <section
     class="
@@ -6,6 +16,22 @@
       md:mb-10
     "
   >
+    <hgroup class="mb-3 flex flex-col items-center gap-y-1">
+      <TypographyHeading
+        :id="headingId"
+        class="opacity-0"
+        data-aos="fade-up"
+      >
+        {{ heading }}
+      </TypographyHeading>
+      <TypographyParagraph
+        class="opacity-0"
+        variant="thin"
+        data-aos="fade-up"
+      >
+        {{ subtitle }}
+      </TypographyParagraph>
+    </hgroup>
     <slot />
   </section>
 </template>

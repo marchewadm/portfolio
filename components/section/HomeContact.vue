@@ -1,19 +1,9 @@
 <template>
-  <SectionHomeBase>
-    <TypographyHeading
-      id="section-home-contact"
-      class="mb-1 opacity-0"
-      data-aos="fade-up"
-    >
-      Get in Touch
-    </TypographyHeading>
-    <TypographyParagraph
-      class="mb-3 opacity-0"
-      variant="thin"
-      data-aos="fade-up"
-    >
-      Reach out for collaboration or inquiries
-    </TypographyParagraph>
+  <SectionHomeBase
+    heading="Get in Touch"
+    heading-id="section-home-contact"
+    subtitle="Reach out for collaboration or inquiries"
+  >
     <div
       class="
         grid grid-cols-1
