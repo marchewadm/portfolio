@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
+
+const currentYearAsString = computed(() => String(currentYear));
 </script>
 
 <template>
@@ -51,7 +53,7 @@ const currentYear = new Date().getFullYear();
           >
             MIT License
           </LinkFooterExternal>
-          &copy; {{ currentYear }} Dawid Merchwa
+          &copy; <time :datetime="currentYearAsString">{{ currentYear }}</time> Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
           variant="thin"
