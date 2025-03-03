@@ -1,8 +1,27 @@
 import { COLORS } from "./constants/colors";
 
 export default defineNuxtConfig({
+  site: {
+    name: "Dawid Merchwa",
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      titleTemplate: "%s %separator Dawid Merchwa",
+      templateParams: {
+        separator: "·",
+      },
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: "remove",
+      },
+    },
   },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -12,6 +31,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
+    "@nuxtjs/seo",
     "@nuxt/content",
     "nuxt-particles",
     "radix-vue/nuxt",

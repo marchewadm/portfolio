@@ -69,7 +69,6 @@ function toggleCategory(idx: number) {
         :data-aos-delay="idx * 100"
       >
         <ButtonTag
-          render-as="button"
           :variant="techCategoryObject.isActive === true ? 'filled' : 'outline'"
           @click="toggleCategory(idx)"
         >
@@ -94,6 +93,7 @@ function toggleCategory(idx: number) {
         <CardTechStack
           :href="icon.url"
           :icon-name="icon.name"
+          :title="`Open the ${icon.label} website in a new tab`"
         >
           {{ icon.label }}
         </CardTechStack>

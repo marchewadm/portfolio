@@ -31,6 +31,8 @@
           class="w-full"
           icon-name="arrow-right"
           icon-animation="bounce-right"
+          href="#"
+          title="View my resume in a new tab"
         >
           View my resume
         </ButtonVariant>

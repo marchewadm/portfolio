@@ -4,6 +4,8 @@ const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("blog").path(route.path).first();
 });
+
+// TODO: modify content to accept short description to be used as meta description, set title as well
 </script>
 
 <template>

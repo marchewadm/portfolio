@@ -38,6 +38,7 @@
             <ButtonNavigation
               :href="link.href"
               :target="link.target"
+              :title="link.title"
             >
               {{ link.text }}
             </ButtonNavigation>

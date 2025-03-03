@@ -1,15 +1,15 @@
 <script setup lang="ts">
 type Props = {
   href?: string;
+  title?: string;
   variant?: "filled" | "outline";
-  renderAs?: "link" | "button";
 };
 
-const { href = "#", variant = "outline", renderAs = "link" } = defineProps<Props>();
+const { title, href, variant = "outline" } = defineProps<Props>();
 
-const componentTag = computed(() => renderAs === "link" ? resolveComponent("NuxtLink") : "button");
+const componentTag = computed(() => href ? resolveComponent("NuxtLink") : "button");
 
-const linkAttributes = computed(() => renderAs === "link" ? { target: "_blank", to: href } : {});
+const linkAttributes = computed(() => href ? { target: "_blank", to: href, title } : {});
 
 const variantClasses = computed(() => ({
   "bg-decorative-lightest": variant === "filled",

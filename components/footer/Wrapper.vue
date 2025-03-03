@@ -45,7 +45,10 @@ const currentYear = new Date().getFullYear();
           "
         >
           Licensed under the
-          <LinkFooterExternal href="https://opensource.org/license/mit">
+          <LinkFooterExternal
+            href="https://opensource.org/license/mit"
+            title="Open the MIT License website in a new tab"
+          >
             MIT License
           </LinkFooterExternal>
           &copy; {{ currentYear }} Dawid Merchwa
@@ -71,9 +74,16 @@ const currentYear = new Date().getFullYear();
             &hearts;
           </span>
           in
-          <LinkFooterExternal href="https://www.figma.com">Figma</LinkFooterExternal>,
+          <LinkFooterExternal
+            href="https://www.figma.com"
+            title="Open the Figma website in a new tab"
+          >
+            Figma</LinkFooterExternal>,
           developed with passion and precision using
-          <LinkFooterExternal href="https://nuxt.com">
+          <LinkFooterExternal
+            href="https://nuxt.com"
+            title="Open the Nuxt.js website in a new tab"
+          >
             Nuxt.js
           </LinkFooterExternal>
         </TypographyParagraph>

@@ -2,6 +2,7 @@
 type Props = {
   href?: string;
   target?: string;
+  title?: string;
 };
 
 const { href = "#", target = "_self" } = defineProps<Props>();
@@ -16,6 +17,7 @@ const { href = "#", target = "_self" } = defineProps<Props>();
     "
     :target="target"
     :to="href"
+    :title="title"
   >
     <slot />
   </NuxtLink>

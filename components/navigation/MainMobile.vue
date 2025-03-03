@@ -36,6 +36,7 @@ function toggleMenu() {
           <ButtonNavigation
             class="inline-block w-full"
             :href="link.href"
+            :title="link.title"
           >
             {{ link.text }}
           </ButtonNavigation>
@@ -52,12 +53,15 @@ function toggleMenu() {
         <ButtonVariant
           class="w-full"
           href="/#section-home-contact"
+          title="Visit the contact section"
         >
           Get in touch
         </ButtonVariant>
         <ButtonVariant
           class="w-full"
           variant="secondary"
+          href="#"
+          title="View my resume in a new tab"
         >
           Resume
         </ButtonVariant>
@@ -70,6 +74,7 @@ function toggleMenu() {
             class="flex items-center"
             to="#"
             target="_blank"
+            :title="link.title"
           >
             <IconBase
               size="lg"

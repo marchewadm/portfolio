@@ -22,6 +22,7 @@
           hover:after:scale-x-100
         "
         :to="link.href"
+        :title="link.title"
       >
         {{ link.text }}
       </NuxtLink>
@@ -39,6 +40,7 @@
       md:inline-block
     "
     href="/#section-home-contact"
+    title="Visit the contact section"
   >
     Contact
   </NuxtLink>

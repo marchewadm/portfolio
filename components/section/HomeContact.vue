@@ -36,38 +36,16 @@
           "
         >
           <li
-            class="opacity-0"
-            data-aos="fade-up"
-          >
-            <LinkIconExternal icon-name="brand-github">
-              @marchewadm
-            </LinkIconExternal>
-          </li>
-          <li
-            class="opacity-0"
-            data-aos="fade-up"
-          >
-            <LinkIconExternal icon-name="brand-linkedin">
-              @merchwadawid
-            </LinkIconExternal>
-          </li>
-          <li
-            class="opacity-0"
-            data-aos="fade-up"
-          >
-            <LinkIconExternal icon-name="brand-discord">
-              @marchewa02
-            </LinkIconExternal>
-          </li>
-          <li
+            v-for="link in SOCIAL_NAVIGATION"
+            :key="link.text"
             class="opacity-0"
             data-aos="fade-up"
           >
             <LinkIconExternal
-              icon-name="mail"
-              href="mailto:merchwa.dawid@gmail.com"
+              :icon-name="link.iconName"
+              :title="link.title"
             >
-              merchwa.dawid@gmail.com
+              {{ link.userName }}
             </LinkIconExternal>
           </li>
         </ul>
