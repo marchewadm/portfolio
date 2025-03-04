@@ -8,13 +8,13 @@
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      I've been passionate about computers and technology since childhood. I still vividly remember the day my father taught me how to build a PC &mdash; an experience that sparked my curiosity and set me on a lifelong journey of figuring out how things work. That moment laid the foundation for my ongoing exploration of the digital world.
     </TypographyParagraph>
     <TypographyParagraph
       class="mb-3 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+      While technology plays a huge role in my life, my interests extend far beyond it. Music has always been a constant companion, whether in the raw energy of rock or the immersive depth of ambient soundscapes. I'm also a big fan of literature &mdash; everything from sci-fi and fantasy to philosophical classics. These stories and ideas push me to see things from different angles and challenge the way I think.
     </TypographyParagraph>
     <div
       class="
