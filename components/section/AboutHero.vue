@@ -16,7 +16,7 @@
         data-aos="fade-up"
         data-aos-delay="600"
       >
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam.
+        Life is a constant process of trial and error &mdash; mistakes show us our limits, challenges test our resilience, and experiences shape our perspective. What we take from them is entirely up to us.
       </TypographyParagraph>
       <div
         class="

@@ -28,19 +28,13 @@
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
-    </TypographyParagraph>
-    <TypographyParagraph
-      class="mb-2 text-justify opacity-0"
-      data-aos="fade-up"
-    >
-      Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+      In IT, learning never really stops. I'm currently in my third year of studies, and in the near future, I'd love to pursue a master's degree in computer science or mathematics &mdash; something that has been on my mind for a long time and feels like a quiet dream of mine. I've even considered studying philosophy as a fascinating addition, something that could offer a fresh perspective &mdash; but who knows what the future holds?
     </TypographyParagraph>
     <TypographyParagraph
       class="mb-3 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+      For now, I'm focused on growing in the open-source space while also working on my engineering thesis in AI/ML.
     </TypographyParagraph>
     <ImageCaption
       class="opacity-0"

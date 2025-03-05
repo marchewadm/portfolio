@@ -28,19 +28,30 @@
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+      At this time, I'm a third-year Computer Science student. But I didn't wake up one day and decide to become a developer &mdash; it just kind of happened.
     </TypographyParagraph>
     <TypographyParagraph
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+      Back then, <LinkUnderlineExternal
+        href="https://www.minecraft.net"
+        title="Open the Minecraft website in a new tab"
+      >
+        Minecraft</LinkUnderlineExternal> was
+      hugely popular among kids, and I was no exception &mdash; I spent countless hours playing it. One day, while playing on a server, someone in the global chat mentioned that they were struggling to set up their own server. I was only around nine years old at the time and had absolutely no idea how servers worked &mdash; neither in Minecraft nor in any other game. But for some reason, I told him I could fix it.
+    </TypographyParagraph>
+    <TypographyParagraph
+      class="mb-2 text-justify opacity-0"
+      data-aos="fade-up"
+    >
+      I started searching the internet, digging through forums, and after a while, I managed to find a solution. We ended up working together to build our own server, and that's where it all began. Setting up game servers, running online forums &mdash; it was my first step into the world of technology.
     </TypographyParagraph>
     <TypographyParagraph
       class="text-justify opacity-0"
       data-aos="fade-up"
     >
-      Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+      But the real hero of this story is my father. He was the one who first showed me how to build a PC, sparking my curiosity and passion for technology. For that, I'll always be grateful.
     </TypographyParagraph>
   </SectionSubPageBase>
 </template>

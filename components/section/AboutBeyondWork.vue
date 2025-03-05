@@ -28,7 +28,7 @@
       class="mb-3 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt.
+      When I'm not staring at lines of code for hours, I love brewing a cup of tea, grabbing a book, and getting lost in the worlds of sci-fi literature. It's an incredible escape from everyday life &mdash; reading allows me to experience things I might never encounter otherwise. It's a great workout for the mind, a moment of relaxation, and an opportunity for self-reflection all at once.
     </TypographyParagraph>
     <ImageCaption
       class="mb-3 opacity-0"
@@ -41,13 +41,13 @@
       class="mb-2 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+      I live by the saying <q>Mens sana in corpore sano</q> &mdash; a healthy mind in a healthy body. That's why, for many years now, I've made sports a regular part of my life, whether it's skateboarding, running, or cycling. Physical activity is the perfect way to refresh and clear my mind.
     </TypographyParagraph>
     <TypographyParagraph
       class="text-justify opacity-0"
       data-aos="fade-up"
     >
-      Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+      I'm also a huge fan of ambient music, especially space ambient, which can spark the imagination just as much as a well-written book. Additionally, I enjoy louder genres like rock and metal, as well as the vibes of liquid drum and bass &mdash; and I even used to play guitar myself!
     </TypographyParagraph>
   </SectionSubPageBase>
 </template>

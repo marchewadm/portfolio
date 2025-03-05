@@ -55,7 +55,7 @@ function toggleCategory(idx: number) {
       class="mb-3 text-justify opacity-0"
       data-aos="fade-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+      Every developer has their own set of tools &mdash; here's mine. These are the languages, frameworks, and technologies I rely on to build efficient, scalable, and well-structured applications. Whether it's backend development, frontend work, or managing infrastructure, this toolbox helps me turn ideas into reality.
     </TypographyParagraph>
     <ul
       class="mb-2 flex flex-wrap gap-2 opacity-0"
