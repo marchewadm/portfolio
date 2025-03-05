@@ -1,10 +1,10 @@
 <script setup lang="ts">
 type Props = {
-  href?: string;
-  title?: string;
+  href: string;
+  title: string;
 };
 
-const { href = "#" } = defineProps<Props>();
+defineProps<Props>();
 </script>
 
 <template>
