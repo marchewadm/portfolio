@@ -47,13 +47,12 @@ const currentYearAsString = computed(() => String(currentYear));
           "
         >
           Licensed under the
-          <LinkFooterExternal
+          <LinkUnderlineExternal
             href="https://opensource.org/license/mit"
             title="Open the MIT License website in a new tab"
           >
-            MIT License
-          </LinkFooterExternal>
-          &copy; <time :datetime="currentYearAsString">{{ currentYear }}</time> Dawid Merchwa
+            MIT License</LinkUnderlineExternal> &copy;
+          <time :datetime="currentYearAsString">{{ currentYear }}</time> Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
           variant="thin"
@@ -76,18 +75,18 @@ const currentYearAsString = computed(() => String(currentYear));
             &hearts;
           </span>
           in
-          <LinkFooterExternal
+          <LinkUnderlineExternal
             href="https://www.figma.com"
             title="Open the Figma website in a new tab"
           >
-            Figma</LinkFooterExternal>,
+            Figma</LinkUnderlineExternal>,
           developed with passion and precision using
-          <LinkFooterExternal
+          <LinkUnderlineExternal
             href="https://nuxt.com"
             title="Open the Nuxt.js website in a new tab"
           >
             Nuxt.js
-          </LinkFooterExternal>
+          </LinkUnderlineExternal>
         </TypographyParagraph>
       </div>
       <NavigationFooterDesktop />
