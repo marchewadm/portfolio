@@ -1,9 +1,10 @@
 <script setup lang="ts">
 type Props = {
+  asTag?: "p" | "span";
   variant?: "default" | "lg";
 };
 
-const { variant = "default" } = defineProps<Props>();
+const { asTag = "p", variant = "default" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
   "text-base md:text-xl": variant === "default",
@@ -12,10 +13,11 @@ const variantClasses = computed(() => ({
 </script>
 
 <template>
-  <p
-    class="font-medium tracking-tight"
+  <component
+    :is="asTag"
     :class="variantClasses"
+    class="font-medium tracking-tight"
   >
     <slot />
-  </p>
+  </component>
 </template>
