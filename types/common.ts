@@ -40,3 +40,9 @@ export type PortfolioWork = {
 export type IconName = {
   iconName: string;
 };
+
+export type ImageCaption = {
+  src: string;
+  alt: string;
+  caption: string;
+};

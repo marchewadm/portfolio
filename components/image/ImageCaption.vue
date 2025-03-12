@@ -1,11 +1,7 @@
 <script setup lang="ts">
-type Props = {
-  src: string;
-  alt: string;
-  caption: string;
-};
+import type { ImageCaption } from "~/types/common";
 
-defineProps<Props>();
+defineProps<ImageCaption>();
 </script>
 
 <template>
