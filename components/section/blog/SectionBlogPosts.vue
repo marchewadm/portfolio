@@ -30,7 +30,7 @@ const showNoResults = computed(() =>
 </script>
 
 <template>
-  <SectionSubPageBase class="w-full flex-grow">
+  <BaseSectionSubPage class="w-full flex-grow">
     <TypographyHeading
       id="section-blog-recent-posts"
       class="mb-3 truncate opacity-0"
@@ -51,7 +51,7 @@ const showNoResults = computed(() =>
       "
     >
       <template v-if="displayedPosts.length">
-        <CardBlogArticle
+        <CardBlogPost
           v-for="post in displayedPosts"
           :key="post.id"
           :href="post.path"
@@ -75,5 +75,5 @@ const showNoResults = computed(() =>
         </TypographyParagraph>
       </div>
     </div>
-  </SectionSubPageBase>
+  </BaseSectionSubPage>
 </template>
