@@ -63,9 +63,9 @@ const variantClasses = computed(() => ({
         class="mb-1 flex items-center justify-center"
         aria-label="Close"
       >
-        <IconBase
+        <BaseIcon
           icon-name="x"
-          size="sm"
+          variant="sm"
           aria-hidden="true"
         />
       </ToastClose>
