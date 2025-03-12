@@ -1,5 +1,5 @@
 <template>
-  <SectionHomeBase
+  <BaseSectionHome
     heading="Education"
     heading-id="section-home-education"
     subtitle="Insights from my academic path"
@@ -60,5 +60,5 @@
     >
       I've also had the opportunity to observe best practices in software development from more experienced colleagues, as well as share my knowledge with those who are just beginning their journey in the field.
     </TypographyParagraph>
-  </SectionHomeBase>
+  </BaseSectionHome>
 </template>

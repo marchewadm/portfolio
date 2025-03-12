@@ -1,5 +1,5 @@
 <template>
-  <SectionHomeBase
+  <BaseSectionHome
     heading="Get in Touch"
     heading-id="section-home-contact"
     subtitle="Reach out for collaboration or inquiries"
@@ -18,11 +18,11 @@
         >
           I'd love to hear from you! Whether it's about my projects, collaboration opportunities, or any questions you have, feel free to get in touch.
         </TypographyParagraph>
-        <ul
+        <BaseListLinkWithIcon
           class="
-            mb-3 flex flex-col gap-y-2 place-self-start
+            mb-3
 
-            md:gap-y-3
+            md:mb-0
           "
         >
           <li
@@ -31,16 +31,18 @@
             class="opacity-0"
             data-aos="fade-up"
           >
-            <LinkIconExternal
+            <LinkWithIcon
               :icon-name="link.iconName"
+              :href="link.href"
               :title="link.title"
+              :target="link.target"
             >
               {{ link.userName }}
-            </LinkIconExternal>
+            </LinkWithIcon>
           </li>
-        </ul>
+        </BaseListLinkWithIcon>
       </div>
       <FormContact />
     </div>
-  </SectionHomeBase>
+  </BaseSectionHome>
 </template>

@@ -18,7 +18,7 @@
           <TypographyHeading
             id="section-home-hero"
             class="mb-1 opacity-0"
-            tag="h1"
+            as-tag="h1"
             data-aos="fade-up"
           >
             Dawid Merchwa
@@ -54,28 +54,28 @@
             data-aos="fade-left"
             data-aos-delay="1200"
           >
-            <ButtonVariant
+            <ButtonVariantWithIcon
               icon-name="arrow-right"
-              icon-animation="bounce-right"
+              animation="bounce-right"
               href="/#section-home-contact"
               title="Visit the contact section"
             >
               Get in touch
-            </ButtonVariant>
+            </ButtonVariantWithIcon>
           </div>
           <div
             class="opacity-0"
             data-aos="fade-left"
             data-aos-delay="1400"
           >
-            <ButtonVariant
+            <BaseButtonVariant
               class="w-full"
               variant="secondary"
               href="#"
               title="View my resume in a new tab"
             >
               Resume
-            </ButtonVariant>
+            </BaseButtonVariant>
           </div>
         </div>
       </div>
@@ -109,6 +109,6 @@
         </NuxtLink>
       </div>
     </div>
-    <ParticlesLink />
+    <ParticlesConnectionEffect />
   </section>
 </template>

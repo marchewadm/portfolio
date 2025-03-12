@@ -5,7 +5,7 @@ const { data: posts } = await useAsyncData("blog", () => {
 </script>
 
 <template>
-  <SectionHomeBase
+  <BaseSectionHome
     heading="Blog"
     heading-id="section-home-blog"
     subtitle="From life to technology, my honest musings"
@@ -17,7 +17,7 @@ const { data: posts } = await useAsyncData("blog", () => {
         md:grid-cols-2
       "
     >
-      <CardBlogArticle
+      <CardBlogPost
         v-for="post in posts"
         :key="post.id"
         :href="post.path"
@@ -40,13 +40,13 @@ const { data: posts } = await useAsyncData("blog", () => {
       "
       data-aos="fade-up"
     >
-      <ButtonVariant
+      <BaseButtonVariant
         variant="secondary"
         href="/blog"
         title="Discover more articles on the blog page"
       >
         See all
-      </ButtonVariant>
+      </BaseButtonVariant>
     </div>
-  </SectionHomeBase>
+  </BaseSectionHome>
 </template>

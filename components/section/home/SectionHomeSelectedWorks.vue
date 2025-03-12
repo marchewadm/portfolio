@@ -1,10 +1,10 @@
 <template>
-  <SectionHomeBase
+  <BaseSectionHome
     heading="Selected Works"
     heading-id="section-home-selected-works"
     subtitle="Showcasing skills through real projects"
   >
-    <AccordionSelectedWorks />
+    <PortfolioWorksAccordion />
     <div
       class="
         w-full opacity-0
@@ -13,13 +13,13 @@
       "
       data-aos="fade-up"
     >
-      <ButtonVariant
+      <BaseButtonVariant
         variant="secondary"
         href="/selected-works"
         title="Discover more projects on the selected works page"
       >
         See all
-      </ButtonVariant>
+      </BaseButtonVariant>
     </div>
-  </SectionHomeBase>
+  </BaseSectionHome>
 </template>

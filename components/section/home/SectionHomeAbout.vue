@@ -1,5 +1,5 @@
 <template>
-  <SectionHomeBase
+  <BaseSectionHome
     heading="About"
     heading-id="section-home-about"
     subtitle="Life, values, and inspirations shared"
@@ -24,13 +24,13 @@
       "
       data-aos="fade-up"
     >
-      <ButtonVariant
+      <BaseButtonVariant
         variant="secondary"
         href="/about"
         title="Read more about me"
       >
         More details
-      </ButtonVariant>
+      </BaseButtonVariant>
     </div>
-  </SectionHomeBase>
+  </BaseSectionHome>
 </template>
