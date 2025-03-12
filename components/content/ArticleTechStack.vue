@@ -7,24 +7,19 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="mb-6 flex flex-wrap gap-2">
-    <NuxtLink
+  <ListButtonWrapped>
+    <li
       v-for="technology in technologies"
       :key="technology.name"
-      :href="technology.homepageUrl"
-      class="
-        border border-decorative text-foreground-lighter rounded-md px-3 py-1
-        text-sm font-light transition-colors duration-300
-
-        focus-visible:bg-decorative-lightest
-
-        hover:bg-decorative-lightest
-
-        md:text-base
-      "
-      target="_blank"
     >
-      {{ technology.name }}
-    </NuxtLink>
-  </div>
+      <ButtonTag
+        variant="filled"
+        class="inline-block"
+        :href="technology.homepageUrl"
+        :title="`Open the ${technology.name} website in a new tab`"
+      >
+        {{ technology.name }}
+      </ButtonTag>
+    </li>
+  </ListButtonWrapped>
 </template>
