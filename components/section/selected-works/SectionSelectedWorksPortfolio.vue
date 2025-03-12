@@ -23,27 +23,11 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
         >
           <PortfolioWorkDesktop
             :project-index="idx"
-            :title="selectedWork.title"
-            :subtitle="selectedWork.subtitle"
-            :description="selectedWork.description"
-            :path="selectedWork.path"
-            :image="selectedWork.image"
-            :alt="selectedWork.alt"
-            :technologies="selectedWork.technologies"
-            :demo-url="selectedWork.demoUrl"
-            :source-code-url="selectedWork.sourceCodeUrl"
+            v-bind="selectedWork"
           />
           <PortfolioWorkMobile
             :project-index="idx"
-            :title="selectedWork.title"
-            :subtitle="selectedWork.subtitle"
-            :description="selectedWork.description"
-            :path="selectedWork.path"
-            :image="selectedWork.image"
-            :alt="selectedWork.alt"
-            :technologies="selectedWork.technologies"
-            :demo-url="selectedWork.demoUrl"
-            :source-code-url="selectedWork.sourceCodeUrl"
+            v-bind="selectedWork"
             :selected-works-without-last="selectedWorks.length - 1"
           />
         </div>
