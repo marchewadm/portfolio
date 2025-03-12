@@ -138,7 +138,7 @@ const onSubmit = handleSubmit(async (values) => {
       "
       data-aos="fade-up"
     >
-      <ButtonVariant
+      <ButtonVariantWithIcon
         type="submit"
         class="
           w-full
@@ -150,7 +150,7 @@ const onSubmit = handleSubmit(async (values) => {
         :disabled="isSubmitting"
       >
         Drop me a message
-      </ButtonVariant>
+      </ButtonVariantWithIcon>
     </div>
   </form>
 </template>
