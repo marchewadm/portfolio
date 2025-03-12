@@ -1,10 +1,7 @@
 <script setup lang="ts">
-type Props = {
-  href: string;
-  title: string;
-};
+import type { BaseLink } from "~/types/common";
 
-defineProps<Props>();
+defineProps<BaseLink>();
 </script>
 
 <template>
@@ -12,13 +9,13 @@ defineProps<Props>();
     class="
       underline-offset-4
 
-      focus-within:underline
+      focus-visible:underline
 
       hover:underline
     "
-    target="_blank"
     :to="href"
     :title="title"
+    :target="target"
   >
     <slot />
   </NuxtLink>

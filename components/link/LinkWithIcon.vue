@@ -1,11 +1,9 @@
 <script setup lang="ts">
-type Props = {
-  href?: string;
-  title?: string;
-  iconName: string;
-};
+import type { BaseLink, IconName } from "~/types/common";
 
-const { href = "#" } = defineProps<Props>();
+type Props = BaseLink & IconName;
+
+defineProps<Props>();
 </script>
 
 <template>
@@ -17,12 +15,12 @@ const { href = "#" } = defineProps<Props>();
 
       hover:text-foreground-lighter
     "
-    target="_blank"
     :to="href"
     :title="title"
+    :target="target"
   >
-    <IconBase
-      size="lg"
+    <BaseIcon
+      variant="lg"
       :icon-name="iconName"
     />
     <span
