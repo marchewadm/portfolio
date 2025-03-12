@@ -28,10 +28,10 @@ const currentYearAsString = computed(() => String(currentYear));
           lg:hidden
         "
       >
-        <AccordionFooterLinksMobile />
+        <FooterNavigationMobile />
       </div>
       <div class="flex flex-col">
-        <ButtonLogo
+        <LinkLogo
           class="
             w-fit text-sm
 
@@ -47,11 +47,12 @@ const currentYearAsString = computed(() => String(currentYear));
           "
         >
           Licensed under the
-          <LinkUnderlineExternal
+          <LinkUnderline
             href="https://opensource.org/license/mit"
             title="Open the MIT License website in a new tab"
+            target="_blank"
           >
-            MIT License</LinkUnderlineExternal> &copy;
+            MIT License</LinkUnderline> &copy;
           <time :datetime="currentYearAsString">{{ currentYear }}</time> Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
@@ -75,21 +76,23 @@ const currentYearAsString = computed(() => String(currentYear));
             &hearts;
           </span>
           in
-          <LinkUnderlineExternal
+          <LinkUnderline
             href="https://www.figma.com"
             title="Open the Figma website in a new tab"
+            target="_blank"
           >
-            Figma</LinkUnderlineExternal>,
+            Figma</LinkUnderline>,
           developed with passion and precision using
-          <LinkUnderlineExternal
+          <LinkUnderline
             href="https://nuxt.com"
             title="Open the Nuxt.js website in a new tab"
+            target="_blank"
           >
             Nuxt.js
-          </LinkUnderlineExternal>
+          </LinkUnderline>
         </TypographyParagraph>
       </div>
-      <NavigationFooterDesktop />
+      <FooterNavigationDesktop />
     </div>
   </footer>
 </template>

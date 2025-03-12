@@ -18,20 +18,13 @@
           v-for="link in section.links"
           :key="link.text"
         >
-          <ButtonNavigation
-            class="
-              transition-colors duration-300
-
-              focus-visible:text-foreground-lightest
-
-              hover:text-foreground-lightest
-            "
+          <LinkMuted
             :href="link.href"
-            :target="link.target"
             :title="link.title"
+            :target="link.target"
           >
             {{ link.text }}
-          </ButtonNavigation>
+          </LinkMuted>
         </li>
       </ul>
     </nav>
