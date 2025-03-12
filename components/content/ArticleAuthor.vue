@@ -5,9 +5,9 @@ type Props = {
   authorImageSrc: string;
 };
 
-const props = defineProps<Props>();
+const { author } = defineProps<Props>();
 
-const getAuthorImageAlt = computed(() => `Image presenting the article's author - ${props.author}`);
+const authorImageAlt = computed(() => `Image of the article's author, ${author}`);
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const getAuthorImageAlt = computed(() => `Image presenting the article's author 
         "
         loading="lazy"
         :src="authorImageSrc"
-        :alt="getAuthorImageAlt"
+        :alt="authorImageAlt"
       />
     </div>
     <div class="flex flex-col justify-between">
