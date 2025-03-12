@@ -12,9 +12,8 @@ type Props = {
 
 const { author, articleTitle } = defineProps<Props>();
 
-const getAuthorImageAlt = computed(() => `Image presenting the article's author - ${author}`);
-
-const getLinkTitle = computed(() => `Read more about ${articleTitle}`);
+const linkTitle = computed(() => `Read more about ${articleTitle}`);
+const authorImageAlt = computed(() => `Image of the article's author, ${author}`);
 </script>
 
 <template>
@@ -24,7 +23,7 @@ const getLinkTitle = computed(() => `Read more about ${articleTitle}`);
     <NuxtLink
       class="group mb-4 block overflow-hidden rounded-tl-lg rounded-tr-lg"
       :to="href"
-      :title="getLinkTitle"
+      :title="linkTitle"
     >
       <NuxtImg
         class="
@@ -51,18 +50,15 @@ const getLinkTitle = computed(() => `Read more about ${articleTitle}`);
           hover:text-foreground-lighter
         "
         :to="href"
-        :title="getLinkTitle"
+        :title="linkTitle"
       >
-        <span
-          class="
-            line-clamp-1 text-xl
-
-            md:text-2xl
-          "
+        <TypographyTitle
+          as-tag="span"
+          class="line-clamp-1"
         >
           {{ articleTitle }}
-        </span>
-        <IconBase
+        </TypographyTitle>
+        <BaseIcon
           icon-name="arrow-up-right"
           class="
             flex-shrink-0 transition-transform duration-300
@@ -95,7 +91,7 @@ const getLinkTitle = computed(() => `Read more about ${articleTitle}`);
             "
             loading="lazy"
             :src="authorImageSrc"
-            :alt="getAuthorImageAlt"
+            :alt="authorImageAlt"
           />
         </div>
         <div class="flex flex-col justify-between">
