@@ -1,15 +1,15 @@
 <script setup lang="ts">
-type Props = {
-  href?: string;
-  title?: string;
+import type { BaseLink } from "~/types/common";
+
+type Props = BaseLink & {
   variant?: "filled" | "outline";
 };
 
-const { title, href, variant = "outline" } = defineProps<Props>();
+const { title, href, variant = "outline", target = "_blank" } = defineProps<Props>();
 
-const componentTag = computed(() => href ? resolveComponent("NuxtLink") : "button");
+const asTag = computed(() => href ? resolveComponent("NuxtLink") : "button");
 
-const linkAttributes = computed(() => href ? { target: "_blank", to: href, title } : {});
+const linkAttributes = computed(() => href ? { to: href, title, target } : {});
 
 const variantClasses = computed(() => ({
   "bg-decorative-lightest": variant === "filled",
@@ -19,7 +19,7 @@ const variantClasses = computed(() => ({
 
 <template>
   <component
-    :is="componentTag"
+    :is="asTag"
     :class="variantClasses"
     class="
       border border-decorative text-foreground-lighter rounded-md px-3 py-1
