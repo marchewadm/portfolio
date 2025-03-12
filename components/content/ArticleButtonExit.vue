@@ -6,7 +6,6 @@ type Props = {
 const { buttonType } = defineProps<Props>();
 
 const buttonLink = computed(() => buttonType === "blog" ? "/blog" : "/selected-works");
-
 const buttonText = computed(() => buttonType === "blog" ? "Return to articles" : "Return to portfolio");
 </script>
 
@@ -20,11 +19,12 @@ const buttonText = computed(() => buttonType === "blog" ? "Return to articles" :
 
       hover:text-foreground-lightest
     "
+    :title="buttonText"
     :href="buttonLink"
   >
-    <IconBase
+    <BaseIcon
       icon-name="arrow-left"
-      size="sm"
+      variant="sm"
     />
     <span
       class="
