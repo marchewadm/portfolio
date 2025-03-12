@@ -1,7 +1,7 @@
 <script setup lang="ts">
-type Props = {
-  heading: string;
-  headingId: string;
+import type { BaseSection } from "~/types/common";
+
+type Props = BaseSection & {
   subtitle: string;
 };
 
