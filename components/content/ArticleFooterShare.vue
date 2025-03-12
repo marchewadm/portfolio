@@ -1,28 +1,34 @@
 <template>
-  <div
-    class="
-      border-t border-decorative mt-3 flex flex-col gap-y-2 pt-3
-
-      md:gap-y-3
-    "
-  >
-    <LinkIconExternal
-      href="#"
-      icon-name="brand-linkedin"
-    >
-      Share on LinkedIn
-    </LinkIconExternal>
-    <LinkIconExternal
-      href="#"
-      icon-name="brand-x"
-    >
-      Share on X
-    </LinkIconExternal>
-    <LinkIconExternal
-      href="#"
-      icon-name="brand-github"
-    >
-      Edit on GitHub
-    </LinkIconExternal>
-  </div>
+  <ListLinkWithIconBordered>
+    <li>
+      <LinkWithIcon
+        href="#"
+        target="_blank"
+        icon-name="brand-linkedin"
+        title="Share this post on LinkedIn in a new tab"
+      >
+        Share on LinkedIn
+      </LinkWithIcon>
+    </li>
+    <li>
+      <LinkWithIcon
+        href="#"
+        target="_blank"
+        icon-name="brand-x"
+        title="Share this post on X in a new tab"
+      >
+        Share on X
+      </LinkWithIcon>
+    </li>
+    <li>
+      <LinkWithIcon
+        href="#"
+        target="_blank"
+        icon-name="brand-github"
+        title="Edit this post on GitHub in a new tab"
+      >
+        Edit on GitHub
+      </LinkWithIcon>
+    </li>
+  </ListLinkWithIconBordered>
 </template>
