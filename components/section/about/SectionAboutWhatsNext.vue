@@ -1,5 +1,5 @@
 <template>
-  <SectionSubPageBase>
+  <BaseSectionSubPage>
     <div class="relative mb-3">
       <TypographyHeading
         id="section-about-whats-next"
@@ -38,10 +38,10 @@
     </TypographyParagraph>
     <ImageCaption
       class="opacity-0"
-      image-src="/img/work-1.jpg"
-      image-alt="Lorem ipsum"
-      image-caption="Hello world! That's me!"
+      src="/img/work-1.jpg"
+      alt="Lorem ipsum"
+      caption="Hello world! That's me!"
       data-aos="fade-up"
     />
-  </SectionSubPageBase>
+  </BaseSectionSubPage>
 </template>

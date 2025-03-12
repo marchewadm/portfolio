@@ -1,5 +1,5 @@
 <template>
-  <SectionSubPageBase>
+  <BaseSectionSubPage>
     <div class="relative mb-3">
       <TypographyHeading
         id="section-about-beyond-work"
@@ -32,9 +32,9 @@
     </TypographyParagraph>
     <ImageCaption
       class="mb-3 opacity-0"
-      image-src="/img/work-1.jpg"
-      image-alt="Lorem ipsum"
-      image-caption="Photo taken from my personal collection"
+      src="/img/work-1.jpg"
+      alt="Lorem ipsum"
+      caption="Photo taken from my personal collection"
       data-aos="fade-up"
     />
     <TypographyParagraph
@@ -49,5 +49,5 @@
     >
       I'm also a huge fan of ambient music, especially space ambient, which can spark the imagination just as much as a well-written book. Additionally, I enjoy louder genres like rock and metal, as well as the vibes of liquid drum and bass &mdash; and I even used to play guitar myself!
     </TypographyParagraph>
-  </SectionSubPageBase>
+  </BaseSectionSubPage>
 </template>
