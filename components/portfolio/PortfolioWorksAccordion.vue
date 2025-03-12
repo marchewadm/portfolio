@@ -21,24 +21,11 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
       <AccordionItem :value="selectedWork.path">
         <AccordionHeader as-child>
           <AccordionTrigger class="group flex w-full flex-col">
-            <span class="flex justify-between">
-              <span
-                class="
-                  text-base font-medium tracking-tight
-
-                  md:text-xl
-                "
-              >
+            <span class="flex items-center justify-between">
+              <TypographyTitle as-tag="span">
                 {{ selectedWork.title }}
-              </span>
-              <IconBase
-                class="
-                  text-decorative transition-transform duration-300
-
-                  group-data-[state=open]:rotate-180
-                "
-                icon-name="chevron-down"
-              />
+              </TypographyTitle>
+              <IconAccordionToggle />
             </span>
             <span
               class="
@@ -90,7 +77,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
           <TypographyParagraph class="mb-3 text-justify">
             {{ selectedWork.description }}
           </TypographyParagraph>
-          <ButtonVariant
+          <BaseButtonVariant
             class="
               mx-auto w-full
 
@@ -101,28 +88,32 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             :title="`Read more about ${selectedWork.title}`"
           >
             More details
-          </ButtonVariant>
+          </BaseButtonVariant>
         </AccordionContent>
       </AccordionItem>
-      <div
+      <ListButtonWrapped
         class="
-          mb-3 flex flex-wrap gap-2 border-b border-decorative py-3
+          mb-3 border-b border-decorative py-3
 
           md:pb-3 md:pt-4
         "
       >
-        <ButtonTag
+        <li
           v-for="(technology, idx) in selectedWork.technologies"
           :key="technology.name"
-          variant="filled"
-          data-aos="zoom-in"
-          :href="technology.homepageUrl"
           :data-aos-delay="idx * 100"
-          :title="`Open the ${technology.name} website in a new tab`"
+          data-aos="zoom-in"
         >
-          {{ technology.name }}
-        </ButtonTag>
-      </div>
+          <ButtonTag
+            variant="filled"
+            class="inline-block"
+            :href="technology.homepageUrl"
+            :title="`Open the ${technology.name} website in a new tab`"
+          >
+            {{ technology.name }}
+          </ButtonTag>
+        </li>
+      </ListButtonWrapped>
     </article>
   </AccordionRoot>
 </template>
