@@ -1,5 +1,4 @@
-<script setup lang="ts">
-const options = {
+export const PARTICLES_CONFIG = {
   fullScreen: {
     enable: false,
     zIndex: -1,
@@ -75,20 +74,3 @@ const options = {
     },
   ],
 };
-</script>
-
-<template>
-  <div
-    class="
-      absolute h-full w-full
-
-      [mask-image:_linear-gradient(to_bottom,_transparent_0,_white_60px,white_calc(100%-60px),_transparent_100%)]
-    "
-  >
-    <NuxtParticles
-      id="ts-particles-link"
-      class="h-full w-full"
-      :options="options"
-    />
-  </div>
-</template>
