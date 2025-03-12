@@ -1,9 +1,8 @@
 <template>
-  <NuxtLink
-    to="/"
-    class="font-light tracking-tight"
+  <BaseLinkNavigation
+    href="/"
     title="Visit the home page"
   >
     marchewa.dev
-  </NuxtLink>
+  </BaseLinkNavigation>
 </template>
