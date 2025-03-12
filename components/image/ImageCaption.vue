@@ -1,8 +1,8 @@
 <script setup lang="ts">
 type Props = {
-  imageSrc: string;
-  imageAlt: string;
-  imageCaption: string;
+  src: string;
+  alt: string;
+  caption: string;
 };
 
 defineProps<Props>();
@@ -23,14 +23,14 @@ defineProps<Props>();
           md:h-96
         "
         loading="lazy"
-        :src="imageSrc"
-        :alt="imageAlt"
+        :src="src"
+        :alt="alt"
       />
     </div>
     <figcaption
       class="text-center font-thin text-foreground-lighter mt-1 text-sm"
     >
-      {{ imageCaption }}
+      {{ caption }}
     </figcaption>
   </figure>
 </template>
