@@ -19,10 +19,9 @@ const shouldDisplayError = computed(() => displayError && errorMessage.value);
 </script>
 
 <template>
-  <FormInputBase
+  <BaseFormInput
     :id="id"
     v-model="value"
-    class="block w-full"
     :type="type"
     :placeholder="placeholder"
     :minlength="minlength"
@@ -30,6 +29,7 @@ const shouldDisplayError = computed(() => displayError && errorMessage.value);
     :autocomplete="autocomplete"
     :tabindex="tabindex"
     :class="{ 'border-red-700 focus:border-red-700 focus:outline-none focus:ring-red-700 hover:border-red-700': shouldDisplayError }"
+    class="block w-full"
   />
   <p
     v-if="shouldDisplayError"

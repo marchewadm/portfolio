@@ -1,9 +1,7 @@
 <script setup lang="ts">
-type Props = {
-  fieldId: string;
-};
+import type { BaseFormLabel } from "~/types/common";
 
-defineProps<Props>();
+defineProps<BaseFormLabel>();
 </script>
 
 <template>
