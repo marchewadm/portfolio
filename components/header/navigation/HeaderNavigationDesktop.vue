@@ -11,10 +11,8 @@
         v-for="link in MAIN_NAVIGATION"
         :key="link.text"
       >
-        <NuxtLink
+        <BaseLinkNavigation
           class="
-            font-light tracking-tight
-
             after:block after:scale-x-0 after:border-b
             after:transition-transform after:duration-200 after:ease-in-out
             after:content-[''] after:border-foreground
@@ -27,24 +25,23 @@
           :title="link.title"
         >
           {{ link.text }}
-        </NuxtLink>
+        </BaseLinkNavigation>
       </li>
     </ul>
   </nav>
-  <NuxtLink
+  <div
     class="
-      bg-primary text-on-primary hidden rounded-xl px-6 py-2 tracking-tight
-      transition-colors duration-300
+      hidden
 
-      focus-visible:bg-primary-lighter focus-visible:text-white
-
-      hover:bg-primary-lighter hover:text-white
-
-      md:inline-block
+      md:block
     "
-    href="/#section-home-contact"
-    title="Visit the contact section"
   >
-    Contact
-  </NuxtLink>
+    <BaseButtonVariant
+      href="/#section-home-contact"
+      title="Visit the contact section"
+      class="md:!text-base"
+    >
+      Contact
+    </BaseButtonVariant>
+  </div>
 </template>
