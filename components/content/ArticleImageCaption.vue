@@ -1,36 +1,18 @@
 <script setup lang="ts">
 type Props = {
-  imageSrc: string;
-  imageAlt: string;
-  imageCaption: string;
+  src: string;
+  alt: string;
+  caption: string;
 };
 
 defineProps<Props>();
 </script>
 
 <template>
-  <figure class="my-3">
-    <div class="overflow-hidden rounded-xl">
-      <NuxtImg
-        class="
-          h-52 w-full rounded-xl object-cover grayscale transition-all
-          duration-300
-
-          hover:scale-110 hover:grayscale-0
-
-          lg:h-[500px]
-
-          md:h-96
-        "
-        loading="lazy"
-        :src="imageSrc"
-        :alt="imageAlt"
-      />
-    </div>
-    <figcaption
-      class="text-center font-thin text-foreground-lighter mt-1 text-sm"
-    >
-      {{ imageCaption }}
-    </figcaption>
-  </figure>
+  <ImageCaption
+    class="my-3"
+    :src="src"
+    :alt="alt"
+    :caption="caption"
+  />
 </template>
