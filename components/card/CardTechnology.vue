@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import type { IconName } from "~/types/icon";
+import type { BaseLink, IconName } from "~/types/common";
 
-type Props = {
-  href: string;
-  title: string;
-} & IconName;
+type Props = BaseLink & IconName;
 
 defineProps<Props>();
 </script>
@@ -17,9 +14,9 @@ defineProps<Props>();
 
       md:h-24 md:w-24
     "
-    target="_blank"
     :href="href"
     :title="title"
+    :target="target"
   >
     <span
       class="
@@ -30,8 +27,8 @@ defineProps<Props>();
     >
       <slot />
     </span>
-    <IconBase
-      size="lg"
+    <BaseIcon
+      variant="lg"
       provider="tech-logo"
       :icon-name="iconName"
     />
