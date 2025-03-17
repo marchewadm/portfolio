@@ -1,9 +1,9 @@
 <template>
   <div class="flex min-h-screen flex-col">
-    <NavigationMainWrapper />
+    <HeaderMain />
     <main class="flex flex-grow flex-col overflow-hidden">
       <slot />
     </main>
-    <FooterWrapper />
+    <FooterMain />
   </div>
 </template>

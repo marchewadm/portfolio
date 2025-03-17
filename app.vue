@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <ToastBase />
+    <ToastNotification />
   </NuxtLayout>
 </template>
 

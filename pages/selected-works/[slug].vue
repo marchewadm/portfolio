@@ -8,9 +8,9 @@ const { data: page } = await useAsyncData(route.path, () => {
 
 <template>
   <div>
-    <SectionSubPageBase v-if="page">
+    <BaseSectionSubPage v-if="page">
       <ContentRenderer :value="page" />
-    </SectionSubPageBase>
+    </BaseSectionSubPage>
     <p v-else>
       TODO: 404
     </p>
