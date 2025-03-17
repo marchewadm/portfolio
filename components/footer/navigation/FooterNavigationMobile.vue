@@ -1,8 +1,20 @@
+<script setup lang="ts">
+const route = useRoute();
+const activeAccordionItem = ref<string>();
+
+watch(() => route.fullPath, (newVal, oldVal) => {
+  if (newVal !== oldVal && activeAccordionItem.value) {
+    activeAccordionItem.value = undefined;
+  }
+});
+</script>
+
 <template>
   <AccordionRoot
+    v-model="activeAccordionItem"
     class="flex w-full flex-col gap-y-3"
     type="single"
-    :collapsible="true"
+    collapsible
   >
     <nav
       v-for="section in NAVIGATION_DATA"

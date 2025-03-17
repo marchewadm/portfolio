@@ -1,9 +1,16 @@
 <script setup lang="ts">
+const route = useRoute();
 const isMenuVisible = ref(false);
 
 function toggleMenu() {
   isMenuVisible.value = !isMenuVisible.value;
 }
+
+watch(() => route.fullPath, (newVal, oldVal) => {
+  if (newVal !== oldVal && isMenuVisible.value) {
+    isMenuVisible.value = false;
+  }
+});
 </script>
 
 <template>
