@@ -12,9 +12,9 @@ defineProps<Props>();
       flex flex-col shadow-xs-below h-20 w-20 items-center justify-evenly
       rounded-lg p-2 transition-all duration-300
 
-      hover:scale-95
+      active:scale-95
 
-      md:h-24 md:w-24
+      md:h-24 md:w-24 md:hover:scale-95 md:focus-visible:scale-95
     "
     :href="href"
     :title="title"
