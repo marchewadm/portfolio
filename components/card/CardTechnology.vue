@@ -10,7 +10,9 @@ defineProps<Props>();
   <NuxtLink
     class="
       flex flex-col shadow-xs-below h-20 w-20 items-center justify-evenly
-      rounded-lg p-2
+      rounded-lg p-2 transition-all duration-300
+
+      hover:scale-95
 
       md:h-24 md:w-24
     "

@@ -17,10 +17,12 @@ const variantClasses = computed(() => ({
     :is="asTag"
     :class="variantClasses"
     class="
-      flex justify-center rounded-xl px-6 py-2 tracking-tight transition-colors
+      flex justify-center rounded-xl px-6 py-2 tracking-tight transition-all
       duration-300
 
-      md:text-lg
+      active:scale-95
+
+      md:text-lg md:active:scale-100
     "
     v-bind="linkAttributes"
   >
