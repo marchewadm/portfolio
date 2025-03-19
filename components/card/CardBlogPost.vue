@@ -69,7 +69,7 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
           "
         />
       </NuxtLink>
-      <TypographyParagraph class="mb-2 line-clamp-5 text-justify">
+      <TypographyParagraph class="mb-2 line-clamp-5">
         {{ articleDescription }}
       </TypographyParagraph>
       <div

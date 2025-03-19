@@ -63,7 +63,7 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
       </NuxtLink>
     </div>
     <TypographyParagraph
-      class="mb-3 text-justify opacity-0"
+      class="mb-3 opacity-0"
       data-aos="fade-up"
     >
       {{ description }}

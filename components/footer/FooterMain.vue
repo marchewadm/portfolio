@@ -41,7 +41,7 @@ const currentYearAsString = computed(() => String(currentYear));
         <TypographyParagraph
           variant="thin"
           class="
-            mt-1 text-justify text-xs
+            mt-1 text-xs
 
             md:text-sm
           "
@@ -58,7 +58,7 @@ const currentYearAsString = computed(() => String(currentYear));
         <TypographyParagraph
           variant="thin"
           class="
-            group mt-1 text-justify text-xs
+            group mt-1 text-xs
 
             lg:mt-auto
 

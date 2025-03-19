@@ -13,7 +13,7 @@
     >
       <div>
         <TypographyParagraph
-          class="mb-3 text-justify opacity-0"
+          class="mb-3 opacity-0"
           data-aos="fade-up"
         >
           I'd love to hear from you! Whether it's about my projects, collaboration opportunities, or any questions you have, feel free to get in touch.

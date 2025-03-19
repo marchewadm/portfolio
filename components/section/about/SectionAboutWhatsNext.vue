@@ -25,13 +25,13 @@
       </div>
     </div>
     <TypographyParagraph
-      class="mb-2 text-justify opacity-0"
+      class="mb-2 opacity-0"
       data-aos="fade-up"
     >
       In IT, learning never really stops. I'm currently in my third year of studies, and in the near future, I'd love to pursue a master's degree in computer science or mathematics &mdash; something that has been on my mind for a long time and feels like a quiet dream of mine. I've even considered studying philosophy as a fascinating addition, something that could offer a fresh perspective &mdash; but who knows what the future holds?
     </TypographyParagraph>
     <TypographyParagraph
-      class="mb-3 text-justify opacity-0"
+      class="mb-3 opacity-0"
       data-aos="fade-up"
     >
       For now, I'm focused on growing in the open-source space while also working on my engineering thesis in AI/ML.

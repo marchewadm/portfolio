@@ -74,7 +74,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
               :alt="selectedWork.alt"
             />
           </NuxtLink>
-          <TypographyParagraph class="mb-3 text-justify">
+          <TypographyParagraph class="mb-3">
             {{ selectedWork.description }}
           </TypographyParagraph>
           <BaseButtonVariant

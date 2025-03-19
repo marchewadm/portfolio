@@ -37,7 +37,7 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
         :use-animations="true"
       />
       <TypographyParagraph
-        class="my-3 text-justify opacity-0"
+        class="my-3 opacity-0"
         data-aos="fade-up"
       >
         {{ description }}
