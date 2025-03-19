@@ -25,10 +25,7 @@ const { searchQuery, isSearching } = storeToRefs(searchQueryStore);
       data-aos="fade-left"
       data-aos-delay="1200"
     >
-      <BaseFormLabel
-        class="w-fit"
-        field-id="form-search"
-      >
+      <BaseFormLabel field-id="form-search">
         Looking for a particular post?
       </BaseFormLabel>
       <div class="relative">

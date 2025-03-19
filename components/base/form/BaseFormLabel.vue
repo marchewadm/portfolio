@@ -7,9 +7,9 @@ defineProps<BaseFormLabel>();
 <template>
   <label
     class="
-      mb-2 inline-block font-medium
+      mb-2 inline-block w-full font-medium
 
-      md:text-lg
+      md:w-fit md:text-lg
     "
     :for="fieldId"
   >
