@@ -1,7 +1,6 @@
 <template>
   <BaseSectionHome
     heading="Selected Works"
-    heading-id="section-home-selected-works"
     subtitle="Showcasing skills through real projects"
   >
     <PortfolioWorksAccordion />

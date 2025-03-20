@@ -29,7 +29,6 @@ function toggleCategory(idx: number) {
   <BaseSectionSubPage>
     <div class="relative mb-3">
       <TypographyHeading
-        id="section-about-toolbox"
         class="opacity-0"
         data-aos="fade-up"
       >

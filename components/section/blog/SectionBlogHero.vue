@@ -6,7 +6,6 @@ const { searchQuery, isSearching } = storeToRefs(searchQueryStore);
 <template>
   <BaseSectionSubPageHero
     heading="Ideas, Projects, and Lessons I've Learned Along the Way"
-    heading-id="section-blog-hero"
     illustration="listening"
   >
     <TypographyParagraph

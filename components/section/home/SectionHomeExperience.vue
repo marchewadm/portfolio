@@ -1,7 +1,6 @@
 <template>
   <BaseSectionHome
     heading="Experience"
-    heading-id="section-home-experience"
     subtitle="Professional roles and open source impact"
   >
     <div

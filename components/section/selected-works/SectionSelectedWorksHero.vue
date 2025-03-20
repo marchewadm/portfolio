@@ -1,7 +1,6 @@
 <template>
   <BaseSectionSubPageHero
     heading="Projects that I have worked on so far and the stories behind them"
-    heading-id="section-selected-works-hero"
     illustration="idea"
   >
     <TypographyParagraph

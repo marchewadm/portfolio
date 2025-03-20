@@ -16,7 +16,6 @@
       <div>
         <hgroup class="mb-4">
           <TypographyHeading
-            id="section-home-hero"
             class="mb-1 opacity-0"
             as-tag="h1"
             data-aos="fade-up"

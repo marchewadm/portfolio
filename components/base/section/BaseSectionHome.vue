@@ -3,6 +3,7 @@ import type { BaseSection } from "~/types/common";
 
 type Props = BaseSection & {
   subtitle: string;
+  headingId?: string;
 };
 
 defineProps<Props>();

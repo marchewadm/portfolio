@@ -6,7 +6,6 @@ export type BaseLink = {
 
 export type BaseSection = {
   heading: string;
-  headingId: string;
 };
 
 export type BaseFormLabel = {

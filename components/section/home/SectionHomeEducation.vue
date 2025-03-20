@@ -1,7 +1,6 @@
 <template>
   <BaseSectionHome
     heading="Education"
-    heading-id="section-home-education"
     subtitle="Insights from my academic path"
   >
     <div class="mb-3 grid w-full grid-cols-[1fr_auto]">

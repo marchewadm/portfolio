@@ -1,7 +1,6 @@
 <template>
   <BaseSectionSubPageHero
     heading="Behind every face is a tale of trials, triumphs, and transformation"
-    heading-id="section-about-hero"
     illustration="greeting"
   >
     <TypographyParagraph

@@ -7,7 +7,6 @@ const { data: posts } = await useAsyncData("blog", () => {
 <template>
   <BaseSectionHome
     heading="Blog"
-    heading-id="section-home-blog"
     subtitle="From life to technology, my honest musings"
   >
     <div

@@ -32,7 +32,6 @@ const showNoResults = computed(() =>
 <template>
   <BaseSectionSubPage class="w-full flex-grow">
     <TypographyHeading
-      id="section-blog-recent-posts"
       class="mb-3 truncate opacity-0"
       data-aos="fade-up"
     >

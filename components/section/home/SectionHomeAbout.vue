@@ -1,7 +1,6 @@
 <template>
   <BaseSectionHome
     heading="About"
-    heading-id="section-home-about"
     subtitle="Life, values, and inspirations shared"
   >
     <TypographyParagraph

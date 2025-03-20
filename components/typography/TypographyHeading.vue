@@ -1,12 +1,10 @@
 <script setup lang="ts">
 type Props = {
-  id: string;
   asTag?: "h1" | "h2";
+  id?: string;
 };
 
-const { id, asTag = "h2" } = defineProps<Props>();
-
-const formattedLink = computed(() => `#${id}`);
+const { asTag = "h2" } = defineProps<Props>();
 
 const variantClasses = computed(() => ({
   "text-2xl md:text-5xl": asTag === "h1",
@@ -18,11 +16,9 @@ const variantClasses = computed(() => ({
   <component
     :is="asTag"
     :id="id"
-    class="font-medium tracking-tight"
     :class="variantClasses"
+    class="font-medium tracking-tight"
   >
-    <NuxtLink :to="formattedLink">
-      <slot />
-    </NuxtLink>
+    <slot />
   </component>
 </template>

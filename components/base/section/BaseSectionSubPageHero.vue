@@ -12,7 +12,6 @@ defineProps<Props>();
   >
     <div>
       <TypographyHeading
-        :id="headingId"
         class="mb-3 opacity-0"
         as-tag="h1"
         data-aos="fade-up"

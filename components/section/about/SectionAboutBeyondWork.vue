@@ -2,7 +2,6 @@
   <BaseSectionSubPage>
     <div class="relative mb-3">
       <TypographyHeading
-        id="section-about-beyond-work"
         class="opacity-0"
         data-aos="fade-up"
       >
