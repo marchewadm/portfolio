@@ -49,7 +49,13 @@ watch(() => route.fullPath, (newVal, oldVal) => {
                 class="border-b pb-2 border-decorative"
               >
                 <BaseLinkNavigation
-                  class="inline-block w-full"
+                  class="
+                    inline-block w-full transition-colors duration-300
+
+                    focus-visible:text-foreground-lighter
+
+                    hover:text-foreground-lighter
+                  "
                   :href="link.href"
                   :title="link.title"
                 >
@@ -88,6 +94,13 @@ watch(() => route.fullPath, (newVal, oldVal) => {
                 :key="link.text"
               >
                 <ButtonIcon
+                  class="
+                    transition-colors duration-300
+
+                    focus-visible:text-foreground-lighter
+
+                    hover:text-foreground-lighter
+                  "
                   variant="lg"
                   target="_blank"
                   :href="link.href"
