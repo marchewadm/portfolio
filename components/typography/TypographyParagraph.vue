@@ -5,15 +5,21 @@ type Props = {
 
 const { variant = "default" } = defineProps<Props>();
 
-const variantClasses = computed(() => ({
-  "text-base font-light tracking-tight md:text-lg": variant === "default",
-  "text-sm font-light tracking-tight md:text-base text-foreground-lighter": variant === "sm",
-  "text-sm font-thin text-foreground-lighter md:text-base": variant === "thin",
-}));
+const variantClasses = computed(() => {
+  if (variant === "default") {
+    return "text-base md:text-lg";
+  }
+
+  const commonClasses = "text-sm font-light md:text-base";
+  const colorClass = variant === "sm" ? "text-foreground-lighter" : "text-foreground-lightest";
+
+  return `${commonClasses} ${colorClass}`;
+});
 </script>
 
 <template>
   <p
+    class="font-light tracking-tight"
     :class="variantClasses"
   >
     <slot />
