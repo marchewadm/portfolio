@@ -19,7 +19,7 @@
         "
         data-aos="fade-up"
       >
-        2022 &dash; 2026
+        2022 &dash; present
       </TypographyParagraph>
       <TypographyParagraph
         class="opacity-0"
