@@ -27,7 +27,7 @@ defineProps<Props>();
       </TypographyHeading>
       <TypographyParagraph
         class="opacity-0"
-        variant="thin"
+        variant="muted"
         data-aos="fade-up"
       >
         {{ subtitle }}

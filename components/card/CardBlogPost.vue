@@ -98,7 +98,7 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
           <TypographyParagraph variant="sm">
             {{ author }}
           </TypographyParagraph>
-          <TypographyParagraph variant="thin">
+          <TypographyParagraph variant="muted">
             <time :datetime="date">
               {{ formatDate(date) }}
             </time>

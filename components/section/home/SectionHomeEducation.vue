@@ -11,7 +11,7 @@
         WSB Merito University in Wrocław
       </TypographyTitle>
       <TypographyParagraph
-        variant="thin"
+        variant="muted"
         class="
           self-center text-xs opacity-0
 

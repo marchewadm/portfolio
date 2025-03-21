@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type Props = {
-  variant?: "default" | "sm" | "thin";
+  variant?: "default" | "sm" | "muted";
 };
 
 const { variant = "default" } = defineProps<Props>();

@@ -24,7 +24,10 @@ defineProps<ImageCaption>();
       />
     </div>
     <figcaption
-      class="text-center font-thin text-foreground-lighter mt-1 text-sm"
+      class="
+        text-center font-light text-foreground-lightest mt-1 text-sm
+        tracking-tight
+      "
     >
       {{ caption }}
     </figcaption>

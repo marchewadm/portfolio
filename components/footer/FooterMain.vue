@@ -39,7 +39,7 @@ const currentYearAsString = computed(() => String(currentYear));
           "
         />
         <TypographyParagraph
-          variant="thin"
+          variant="muted"
           class="
             mt-1 text-xs
 
@@ -56,7 +56,7 @@ const currentYearAsString = computed(() => String(currentYear));
           <time :datetime="currentYearAsString">{{ currentYear }}</time> Dawid Merchwa
         </TypographyParagraph>
         <TypographyParagraph
-          variant="thin"
+          variant="muted"
           class="
             group mt-1 text-xs
 
