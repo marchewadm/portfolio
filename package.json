@@ -10,8 +10,37 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
+    "@nuxt/content": "^3.0.0",
+    "@nuxt/eslint": "^0.7.2",
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/icon": "^1.9.0",
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/seo": "^2.2.0",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.10.1",
+    "@vee-validate/nuxt": "^4.15.0",
+    "@vee-validate/zod": "^4.15.0",
+    "@vueuse/integrations": "^12.5.0",
+    "@vueuse/nuxt": "^12.5.0",
+    "fuse.js": "^7.0.0",
     "nuxt": "^3.14.1592",
+    "nuxt-aos": "^1.2.5",
+    "nuxt-security": "^2.1.5",
+    "nuxt-svgo": "^4.0.12",
+    "pinia": "^3.0.1",
+    "radix-vue": "^1.9.11",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/tabler": "^1.2.10",
+    "eslint-plugin-readable-tailwind": "^1.8.2",
+    "nuxt-particles": "^0.3.0",
+    "typescript": "^5.7.2",
+    "vue-eslint-parser": "^9.4.3"
   }
 }
