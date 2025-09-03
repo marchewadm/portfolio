@@ -1,0 +1,10 @@
+services:
+  nuxt-app:
+    build: .
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "3000:80"
