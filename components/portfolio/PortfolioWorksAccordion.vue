@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const { data: selectedWorks } = await useAsyncData(route.path, () => {
-  return queryCollection("selectedWorks").order("createdAt", "DESC").all();
+  return queryCollection("selectedWorks").order("createdAt", "DESC").limit(3).all();
 });
 </script>
 
