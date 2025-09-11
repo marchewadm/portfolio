@@ -25,7 +25,7 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
       :to="href"
       :title="linkTitle"
     >
-      <NuxtImg
+      <CldImage
         class="
           h-56 w-full rounded-tl-lg rounded-tr-lg object-cover grayscale
           transition-all duration-300
@@ -34,7 +34,8 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
 
           hover:scale-110 hover:grayscale-0
         "
-        loading="lazy"
+        width="850"
+        height="250"
         :src="articleImageSrc"
         :alt="articleImageAlt"
       />
@@ -80,7 +81,7 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
         "
       >
         <div class="overflow-hidden rounded-full">
-          <NuxtImg
+          <CldImage
             class="
               h-10 w-10 rounded-full object-cover grayscale transition-all
               duration-300
@@ -89,7 +90,8 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
 
               md:h-12 md:w-12
             "
-            loading="lazy"
+            width="100"
+            height="100"
             :src="authorImageSrc"
             :alt="authorImageAlt"
           />

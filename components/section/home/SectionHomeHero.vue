@@ -93,9 +93,11 @@
           class="group rounded-full"
           title="Visit the about page"
         >
-          <NuxtImg
-            src="/img/work-1.jpg"
+          <CldImage
+            src="work-1_qqrtn1"
             alt="Portrait of the author"
+            width="400"
+            height="400"
             class="
               h-48 w-48 rounded-full object-cover grayscale transition-all
               duration-300

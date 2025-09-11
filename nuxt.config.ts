@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/seo",
     "@nuxt/content",
+    "@nuxtjs/cloudinary",
     "nuxt-particles",
     "radix-vue/nuxt",
     "nuxt-svgo",

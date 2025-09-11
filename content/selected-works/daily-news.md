@@ -4,7 +4,7 @@ subtitle: A mobile application for reading news articles from various sources.
 
 sourceCodeUrl: 'https://github.com/marchewadm/dailynews'
 
-image: /img/work-1.jpg
+image: work-1_qqrtn1
 alt: The project's photo sample
 
 description: Daily News is a mobile application written in TypeScript using the Ionic Framework and Vue.js, designed for browsing the latest news articles from various sources. It uses Firebase for user data storage, authentication, and saving selected articles. Building it gave me a hands-on look at how modern mobile apps are structured and allowed me to deepen my knowledge of TypeScript and Vue.js. The app is available on both Android and iOS.

@@ -56,7 +56,7 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
             :to="selectedWork.path"
             :title="`Read more about ${selectedWork.title}`"
           >
-            <NuxtImg
+            <CldImage
               class="
                 h-52 w-full rounded-xl object-cover grayscale transition-all
                 duration-300
@@ -69,9 +69,10 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
 
                 md:h-96
               "
-              loading="lazy"
-              :src="selectedWork.image"
+              width="1200"
+              height="600"
               :alt="selectedWork.alt"
+              :src="selectedWork.image"
             />
           </NuxtLink>
           <TypographyParagraph class="mb-3">

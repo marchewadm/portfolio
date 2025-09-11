@@ -43,7 +43,7 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
         :title="projectDetailsTitle"
         :to="path"
       >
-        <NuxtImg
+        <CldImage
           class="
             h-52 w-full rounded-xl object-cover grayscale transition-all
             duration-300
@@ -56,7 +56,8 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
 
             md:mt-4 md:h-96
           "
-          loading="lazy"
+          width="1200"
+          height="600"
           :src="image"
           :alt="alt"
         />

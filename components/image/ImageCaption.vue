@@ -7,7 +7,7 @@ defineProps<ImageCaption>();
 <template>
   <figure>
     <div class="overflow-hidden rounded-xl">
-      <NuxtImg
+      <CldImage
         class="
           h-52 w-full rounded-xl object-cover grayscale transition-all
           duration-300
@@ -18,9 +18,10 @@ defineProps<ImageCaption>();
 
           md:h-96
         "
-        loading="lazy"
-        :src="src"
+        width="1200"
+        height="600"
         :alt="alt"
+        :src="src"
       />
     </div>
     <figcaption
