@@ -1,40 +1,40 @@
 ---
-title: Lorem ipsum dolor sit amet
-subtitle: Quis nostrud exercitation ullamco.
+title: marchewa.dev
+subtitle: A personal portfolio website showcasing my projects and skills.
 
-demoUrl: '#'
-sourceCodeUrl: '#'
+demoUrl: 'https://marchewa.dev'
+sourceCodeUrl: 'https://github.com/marchewadm/portfolio'
 
 image: /img/work-1.jpg
 alt: The project's photo sample
 
-description: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+description: A personal portfolio website, designed in Figma with mobile-first principles, developed using Nuxt.js and styled with Tailwind CSS. It features a blog section powered by Nuxt Content, where I share articles on web development, programming and computer science in general. The site also showcases a selection of my projects, each with detailed descriptions, technologies used and links to repositories containing the source code.
 
 technologies:
-  - name: Python
-    homepageUrl: https://www.python.org/
-  - name: JavaScript
-    homepageUrl: https://developer.mozilla.org/en-US/docs/Web/JavaScript/
-  - name: TypeScript
-    homepageUrl: https://www.typescriptlang.org/
-  - name: Vue.js
-    homepageUrl: https://vuejs.org/
-  - name: FastAPI
-    homepageUrl: https://fastapi.tiangolo.com/
-  - name: Tailwind CSS
-    homepageUrl: https://tailwindcss.com/
-  - name: VueUse
-    homepageUrl: https://vueuse.org/
-  - name: Pinia
-    homepageUrl: https://pinia.vuejs.org/
-  - name: PostgreSQL
-    homepageUrl: https://www.postgresql.org/
-  - name: AWS
-    homepageUrl: https://aws.amazon.com/
-  - name: Docker
-    homepageUrl: https://www.docker.com/
+    - name: JavaScript
+      homepageUrl: https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+    - name: TypeScript
+      homepageUrl: https://www.typescriptlang.org/
+    - name: Nuxt.js
+      homepageUrl: https://nuxt.com/
+    - name: Pinia
+      homepageUrl: https://pinia.vuejs.org/
+    - name: VueUse
+      homepageUrl: https://vueuse.org/
+    - name: VeeValidate
+      homepageUrl: https://vee-validate.logaretm.com/v4/
+    - name: Radix Vue
+      homepageUrl: https://www.radix-vue.com/
+    - name: Zod
+      homepageUrl: https://zod.dev/
+    - name: Tailwind CSS
+      homepageUrl: https://tailwindcss.com/
+    - name: AWS
+      homepageUrl: https://aws.amazon.com/
+    - name: Docker
+      homepageUrl: https://www.docker.com/
 
-createdAt: 2024-12-21
+createdAt: 2024-12-05
 ---
 
 ::article-button-exit{buttonType="selectedWorks"}
@@ -68,4 +68,3 @@ Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, c
 Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
 
 ::article-footer-portfolio{:demoUrl="demoUrl" :sourceCodeUrl="sourceCodeUrl"}
-::
