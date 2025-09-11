@@ -7,7 +7,7 @@ sourceCodeUrl: 'https://github.com/marchewadm/chat-roulette'
 image: /img/work-1.jpg
 alt: The project's photo sample
 
-description: A web application with a chat roulette feature that lets users connect based on selected categories. Account creation is optional, but it provides benefits such as profile personalization and friend management for continuing conversations.
+description: A web application inspired by the chat roulette concept, allowing users to connect based on selected categories. Account creation is optional but provides extra features such as profile personalization and friend management for continuing conversations. This was my first larger project built with Vue.js. Looking back, I can see many aspects I would approach differently today, but I believe every developer should go through such an experience - after all, we learn best from our mistakes. Nonetheless, I am fine with this project as it is, as it reminds me of my early days in web development.
 
 technologies:
     - name: JavaScript
@@ -32,8 +32,8 @@ technologies:
       homepageUrl: https://socket.io/
     - name: PostgreSQL
       homepageUrl: https://www.postgresql.org/
-    - name: Azure Blob storage
-      homepageUrl: https://azure.microsoft.com/en-us/products/storage/blobs/
+    - name: Azure
+      homepageUrl: https://azure.microsoft.com/
     - name: SendGrid API
       homepageUrl: https://sendgrid.com/en-us/
     - name: Docker

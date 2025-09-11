@@ -7,7 +7,7 @@ sourceCodeUrl: 'https://github.com/marchewadm/llm-api-aggregator-backend'
 image: /img/work-1.jpg
 alt: The project's photo sample
 
-description: LLM API Aggregator is a tool that allows you to store and manage chats from various LLMs in one place, making them easier to organize and access. Its backend is built with FastAPI, SQLAlchemy (for PostgreSQL communication), Alembic, Redis, and Pydantic (for data validation). The frontend is developed with Vue.js, Pinia, VeeValidate, VueUse, and @vueuse/motion, with components provided through shadcn-vue to deliver a smooth and modern user experience.
+description: LLM API Aggregator is a tool that allows users to store and manage chats from various LLMs in one place, making them easier to organize and access. While similar concepts already existed, I decided to build my own version as a way to learn and practice FastAPI and SQLAlchemy. The application follows a layered architecture with controllers, services and the repository pattern. It was also my first larger project written in TypeScript, where I focused on applying good coding practices, while at the same time improving my Vue.js skills. Additionally, I integrated AWS, using S3 (via the Python AWS SDK, Boto3) and took my first steps in working with Redis. As of now, the application supports both the OpenAI API and the Gemini API.
 
 technologies:
     - name: Python
@@ -36,10 +36,14 @@ technologies:
       homepageUrl: https://zod.dev/
     - name: Tailwind CSS
       homepageUrl: https://tailwindcss.com/
+    - name: Cypress
+      homepageUrl: https://www.cypress.io/
     - name: PostgreSQL
       homepageUrl: https://www.postgresql.org/
     - name: Redis
       homepageUrl: https://redis.io/
+    - name: AWS
+      homepageUrl: https://aws.amazon.com/
     - name: OpenAI API
       homepageUrl: https://openai.com/api/
     - name: Gemini API
