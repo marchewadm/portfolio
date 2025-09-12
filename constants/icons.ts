@@ -32,7 +32,6 @@ export const TECH_CATEGORIES = [
       { name: "nuxt-icon", label: "Nuxt.js", url: "https://nuxt.com/" },
       { name: "express", label: "Express.js", url: "https://expressjs.com/" },
       { name: "fastapi-icon", label: "FastAPI", url: "https://fastapi.tiangolo.com/" },
-      { name: "django-icon", label: "Django", url: "https://www.djangoproject.com/" },
       { name: "laravel", label: "Laravel", url: "https://laravel.com/" },
       { name: "tailwindcss-icon", label: "Tailwind CSS", url: "https://tailwindcss.com/" },
     ],
