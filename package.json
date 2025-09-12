@@ -31,7 +31,7 @@
     "nuxt-aos": "^1.2.5",
     "nuxt-security": "^2.1.5",
     "nuxt-svgo": "^4.0.12",
-    "pinia": "^3.0.1",
+    "pinia": "^3.0.3",
     "radix-vue": "^1.9.11",
     "unenv": "^1.10.0",
     "vue": "latest",
