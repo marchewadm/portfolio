@@ -29,8 +29,10 @@ technologies:
       homepageUrl: https://zod.dev/
     - name: Tailwind CSS
       homepageUrl: https://tailwindcss.com/
-    - name: AWS
-      homepageUrl: https://aws.amazon.com/
+    - name: Netlify
+      homepageUrl: https://www.netlify.com/
+    - name: Cloudinary
+      homepageUrl: https://cloudinary.com/
     - name: Docker
       homepageUrl: https://www.docker.com/
 
@@ -52,19 +54,19 @@ createdAt: 2024-12-05
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+I finally decided to build my own portfolio… and after half a year I can proudly say the website is finished. Sure, it could have been done faster, or even slower - but that doesn't matter. What matters is the final result, and I'm happy with it. Well, almost happy... there's always something that could be improved. And I'm sure some people would say that basically everything here needs to be improved! :smile:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+It was definitely a challenging path - a lot of learning (mainly design), some refactoring... even my Figma draft was created from scratch at least three times. I remember how I really liked my very first design, but once I applied it to HTML and CSS I was disappointed. That's when I decided to go for more muted colors. So if anyone ever wondered why I picked the current color palette - there's your answer.
 
-## Nihil molestiae consequatur, vel illum qui dolorem?
+Instead of Vue.js, I decided to go one step further and use Nuxt.js, which definitely makes life easier and, most importantly, saves me from having to deal with tons of imports at the beginning of every file. On top of that, thanks to Nuxt Content, I can conveniently write articles in Markdown - and I really appreciate this feature.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+## What's Next?
+
+Hmm, hard to say. I've already seen some other designs that I'd like to borrow ideas from, so maybe I'll tweak the navigation a bit in the future. For now, I'm fine with the current one, but you know how it is - once something new catches your eye, you just keep chasing after it.
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+Oh, and of course… now that I finally have a place to showcase my projects, you can bet I'll be sharing them here! :wink:
 
 ::article-footer-portfolio{:demoUrl="demoUrl" :sourceCodeUrl="sourceCodeUrl"}

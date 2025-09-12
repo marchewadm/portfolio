@@ -57,19 +57,27 @@ createdAt: 2023-12-17
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+At some point, I decided it was time to learn a frontend framework. I tried React first, because, well, it's the most popular one, so it must be good, right? Of course, I don't want to start any "framework wars" here - everyone has their own preferences. Personally, React didn't really click with me. I wouldn't mind working with it daily if I had to, but since I had some reservations, I started looking for alternatives. And that's how I ended up discovering Vue.js.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+This project was where I took my very first steps with Vue. To be honest, it's far from ideal - not even halfway decent. It's full of bad practices, from file and folder structure decisions to questionable code choices, and even Git usage. There aren't even any migrations here, despite the fact that the app uses a database! I remember manually creating tables and columns in PostgreSQL, as if I was living in the Stone Age. But hey - everyone has to start somewhere, huh? Oh, and maybe today I wouldn't choose Express.js for this type of project either. :roll_eyes:
 
-## Nihil molestiae consequatur, vel illum qui dolorem?
+## More About the Project
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+The idea behind the app was to act as a chat roulette. Users could see the total number of people online to check whether it was even worth trying to find someone to talk to (hint: it wasn't!). They could either create an account or stay "anonymous". Without an account, though, they had no profile personalization and no ability to send friend requests.
+
+I knew that on some chat roulette platforms, people love filtering their matches by categories, so I implemented that feature here as well.
+
+For the backend, I used Express.js with Socket.IO, and for the database, PostgreSQL. The frontend was built with Vue.js. At the time, I didn't use TypeScript because I hadn't learned it yet - I wanted to get comfortable with plain JavaScript first. I did return to this project later with the idea of migrating it to TypeScript, but honestly, once I saw the state of the code, I thought: better to rewrite it from scratch than try to refactor this mess. Maybe one day.
+
+I also styled everything with Tailwind CSS, building all components from scratch instead of relying on any UI libraries.
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+## Final Words
 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+Everyone starts somewhere - some better, some worse. Today we have plenty of tools that make development so much easier, but how are beginners supposed to use them if they don't even know what problems those tools are solving?
+
+I think that's the perfect way to describe this project: back then, I didn't know about most of these tools. And even if I had heard of them, I didn't know how to actually use them.
 
 ::article-footer-portfolio{:sourceCodeUrl="sourceCodeUrl"}

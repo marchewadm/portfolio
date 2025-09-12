@@ -4,7 +4,7 @@ subtitle: A mobile application for reading news articles from various sources.
 
 sourceCodeUrl: 'https://github.com/marchewadm/dailynews'
 
-image: /img/work-1.jpg
+image: work-1_qqrtn1
 alt: The project's photo sample
 
 description: Daily News is a mobile application written in TypeScript using the Ionic Framework and Vue.js, designed for browsing the latest news articles from various sources. It uses Firebase for user data storage, authentication, and saving selected articles. Building it gave me a hands-on look at how modern mobile apps are structured and allowed me to deepen my knowledge of TypeScript and Vue.js. The app is available on both Android and iOS.
@@ -47,19 +47,25 @@ createdAt: 2025-06-26
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+I wanted to learn a framework that could be used to build mobile applications. I decided to go with the Ionic Framework and gave myself five calm evenings to complete the task. I thought it would be a good idea to use some API and a database, but nothing too fancy.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+So, I kept brainstorming what I could build. A few more interesting project ideas came to mind, and I'm still keeping them safe in my head for the future. :wink: But this article isn't about those projects - maybe one day I'll get to them.
 
-## Nihil molestiae consequatur, vel illum qui dolorem?
+## So What's My Project About?
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+To keep things simple, I chose to use News API and Firebase. The app itself isn't particularly groundbreaking - it fetches the latest world news, and a logged-in user can read articles and save them for later, in case they want to come back to them, let's say, when catching up on politics.
+
+## Why Ionic?
+
+Mostly because I feel most comfortable working with Vue.js. Yes, I know I could have gone with Quasar or even other solutions like NativeScript. But at that moment, Ionic seemed like the simplest and fastest to pick up.
+
+Was it really the easiest? I don't know, since I haven't tried the alternatives. But I do remember that at times I wanted to throw the project away because I constantly felt like Ionic wasn't really listening to me and was doing its own thing. By the time I'm writing this article, three months have passed since I built the app, so I don't remember all the details, but I do know those issues were there… maybe something with element positioning? :thinking:
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+## Was It Worth It?
 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+I still consider it a good learning experience because I also got to use Firebase - before this, I hadn't spent more than five minutes with it. And at least now I know that Vue.js is capable of powering some sort of mobile applications... though in the future I might give Quasar or React Native a try.
 
 ::article-footer-portfolio{:sourceCodeUrl="sourceCodeUrl"}

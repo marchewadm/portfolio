@@ -39,19 +39,21 @@ createdAt: 2023-11-02
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+This was the project where I could finally use Python for something other than automating my daily tasks or doing web scraping. It's a relatively simple project, but it still laid down some solid foundations for my path into web development.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+The main idea was to build an online store where users could browse products, add them to their carts, and place orders. On the other side, the administrator could add products to the catalog and manage ongoing orders.
 
-## Nihil molestiae consequatur, vel illum qui dolorem?
+## How I Built It
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+The project was built entirely with Django, from backend to frontend, using the Django template engine. On the frontend, I used JavaScript to integrate Swiper.js for showcasing new arrivals, add small animations (for example showing success or error states), handle cart interactions, implement lazy loading for images, and embed a map with Leaflet. Styling was done with SCSS.
+
+Later on, I revisited this project and decided to add a Dockerfile so it can run inside a Docker container.
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+## Final Words
 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+A very simple project, but one that gave me the first real foundations of how web applications can be structured. Looking back, I see how basic it is - but that's exactly what makes it important in my learning path.
 
 ::article-footer-portfolio{:sourceCodeUrl="sourceCodeUrl"}
