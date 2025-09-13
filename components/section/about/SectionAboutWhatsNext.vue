@@ -27,7 +27,7 @@
       class="mb-2 opacity-0"
       data-aos="fade-up"
     >
-      In IT, learning never really stops. I'm currently in my third year of studies, and in the near future, I'd love to pursue a master's degree in computer science or mathematics &mdash; something that has been on my mind for a long time and feels like a quiet dream of mine. I've even considered studying philosophy as a fascinating addition, something that could offer a fresh perspective &mdash; but who knows what the future holds?
+      In IT, learning never really stops. I'm currently in my third year of studies, and in the near future, I'd love to pursue a master's degree in computer science or mathematics &dash; something that has been on my mind for a long time and feels like a quiet dream of mine. I've even considered studying philosophy as a fascinating addition, something that could offer a fresh perspective &dash; but who knows what the future holds?
     </TypographyParagraph>
     <TypographyParagraph
       class="mb-3 opacity-0"
