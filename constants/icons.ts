@@ -72,7 +72,7 @@ export const TECH_CATEGORIES = [
     icons: [
       { name: "linux-tux", label: "Linux", url: "https://kernel.org/" },
       { name: "fedora", label: "Fedora", url: "https://fedoraproject.org/" },
-      { name: "debian", label: "Debian", url: "https://www.debian.org/" },
+      { name: "ubuntu", label: "Ubuntu", url: "https://ubuntu.com/" },
       { name: "microsoft-windows-icon", label: "Windows", url: "https://www.microsoft.com/en-us/windows/" },
     ],
   },
