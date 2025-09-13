@@ -18,6 +18,7 @@ export type BaseButtonVariant = BaseLink & {
 
 export type Illustration = {
   illustration: string;
+  useAnimations?: boolean;
 };
 
 export type PortfolioWork = {
