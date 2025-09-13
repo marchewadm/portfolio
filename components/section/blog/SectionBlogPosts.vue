@@ -30,7 +30,10 @@ const showNoResults = computed(() =>
 </script>
 
 <template>
-  <BaseSectionSubPage class="w-full flex-grow">
+  <BaseSectionSubPage
+    class="w-full flex-grow"
+    is-last
+  >
     <TypographyHeading
       class="mb-3 truncate opacity-0"
       data-aos="fade-up"

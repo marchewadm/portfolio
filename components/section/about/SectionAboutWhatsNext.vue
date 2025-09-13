@@ -1,5 +1,5 @@
 <template>
-  <BaseSectionSubPage>
+  <BaseSectionSubPage is-last>
     <div class="relative mb-3">
       <TypographyHeading
         class="opacity-0"

@@ -8,7 +8,10 @@ const { data: page } = await useAsyncData(route.path, () => {
 
 <template>
   <div>
-    <BaseSectionSubPage v-if="page">
+    <BaseSectionSubPage
+      v-if="page"
+      is-last
+    >
       <ContentRenderer :value="page" />
     </BaseSectionSubPage>
     <p v-else>

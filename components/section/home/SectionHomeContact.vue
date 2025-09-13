@@ -3,6 +3,7 @@
     heading="Get in Touch"
     heading-id="section-home-contact"
     subtitle="Reach out for collaboration or inquiries"
+    is-last
   >
     <div
       class="
