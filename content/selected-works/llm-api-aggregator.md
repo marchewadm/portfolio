@@ -89,6 +89,7 @@ I thought it might be worth splitting responsibilities a bit and following a str
 
 For example, let's take a look at some controller:
 
+::code-block
 ```python
 from fastapi import APIRouter
 
@@ -108,11 +109,13 @@ async def update_user_password(
 
     return user_service.update_user_password(auth.user_id, payload)
 ```
+::
 
 In the service layer, I handled the business logic - for example, verifying the current password before calling the repository to update it.
 
 I also split hashing logic into a separate utility (HashUtil), where I used Bcrypt to handle create_hash and verify_hash, while Pydantic models provided responses with default messages.
 
+::code-block
 ```python
 def update_user_password(
     self, user_id: int, payload: UserUpdatePasswordRequest
@@ -156,9 +159,11 @@ def update_user_password(
     self.repository.update_password_by_id(user_id, hashed_new_password)
     return UserUpdatePasswordResponse()
 ```
+::
 
 A repository method might look like this:
 
+::code-block
 ```python
 def update_password_by_id(
     self, user_id: int, hashed_new_password: str
@@ -181,6 +186,7 @@ def update_password_by_id(
     )
     self.db.commit()
 ```
+::
 
 ## Pydantic
 
