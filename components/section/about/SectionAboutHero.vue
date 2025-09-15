@@ -25,6 +25,7 @@
         animation="bounce-right"
         href="#"
         title="View my resume in a new tab"
+        target="_blank"
       >
         View my resume
       </ButtonVariantWithIcon>

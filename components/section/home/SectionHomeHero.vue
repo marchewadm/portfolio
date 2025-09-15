@@ -72,6 +72,7 @@
               variant="secondary"
               href="#"
               title="View my resume in a new tab"
+              target="_blank"
             >
               Resume
             </BaseButtonVariant>

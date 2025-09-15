@@ -30,8 +30,9 @@
         class="w-full"
         icon-name="arrow-right"
         animation="bounce-right"
-        href="#"
+        href="https://github.com/marchewadm"
         title="Visit my GitHub profile in a new tab"
+        target="_blank"
       >
         Check out my GitHub
       </ButtonVariantWithIcon>
