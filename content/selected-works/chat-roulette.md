@@ -63,7 +63,7 @@ This project was where I took my very first steps with Vue. To be honest, it's f
 
 ## More About the Project
 
-The idea behind the app was to act as a chat roulette. Users could see the total number of people online to check whether it was even worth trying to find someone to talk to (hint: it wasn't!). They could either create an account or stay "anonymous". Without an account, though, they had no profile personalization and no ability to send friend requests.
+The idea behind the app was to act as a chat roulette. Users could see the total number of people online to check whether it was even worth trying to find someone to talk to (**hint**: it wasn't!). They could either create an account or stay "anonymous". Without an account, though, they had no profile personalization and no ability to send friend requests.
 
 I knew that on some chat roulette platforms, people love filtering their matches by categories, so I implemented that feature here as well.
 

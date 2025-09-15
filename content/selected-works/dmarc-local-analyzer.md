@@ -59,7 +59,7 @@ My address ends with @fastmail.com - nothing wrong with that, I still sometimes 
 
 Well, once you buy your own domain and want to configure your email service, things look a bit different compared to using a provider like Gmail or Fastmail. They take care of all the configuration for you - your emails just get delivered and spam ends up where it should be... in the spam folder.
 
-But if you're running your own email, let's say `john.doe@example.com`, suddenly you need to set up SPF records so mail servers know which services are allowed to send emails from your domain. On top of that, you'll need to configure DKIM to ensure that the email really comes from you and wasn't altered with along the way. And finally, you need a DMARC policy to tell other mail servers what to do with emails that fail those checks (SPF and DKIM) - whether to reject them or maybe just mark them as spam?
+But if you're running your own email, let's say **@example.com**, suddenly you need to set up SPF records so mail servers know which services are allowed to send emails from your domain. On top of that, you'll need to configure DKIM to ensure that the email really comes from you and wasn't altered with along the way. And finally, you need a DMARC policy to tell other mail servers what to do with emails that fail those checks (SPF and DKIM) - whether to reject them or maybe just mark them as spam?
 
 Sounds complicated? For some people, maybe, and that's totally fine.
 

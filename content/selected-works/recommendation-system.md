@@ -75,12 +75,13 @@ I always wanted to try my hand at machine learning. Okay, fine, I'm not good at 
 
 I downloaded the MovieLens dataset, which contained various information about movies, such as titles, genres, user ratings, tags used to search for a particular movie, and so on. Then I started creating the first repository in this project, which deals solely with the model. I know what the structure of a typical web application should look like, but I didn't know what the folder structure of an application that processes this data from the dataset, trains, and predicts could look like - for this purpose, I used the directory structure proposed by :prose-a{text="Cookiecutter Data Science" title="Open the Cookiecutter Data Science website in a new tab" target="_blank" href="https://cookiecutter-data-science.drivendata.org/#directory-structure"}.
 
-My first step was exploring the data in Jupyter Notebook, creating charts to understand it better. Then I cleaned the data, removing unnecessary information. I combined tags for each movie - for example, if a movie had tags like "funny" and "animation", they would be merged into a single string "funny animation" in a new tags column. Next, I merged grouped tags with TMDB IDs, added rating statistics (average rating and rating counts), weighted genres to reflect their importance in text-based similarity, and finally created movie profiles - a single textual representation per movie combining title, weighted genres and tags.
+My first step was exploring the data in Jupyter Notebook, creating charts to understand it better. Then I cleaned the data, removing unnecessary information. I combined tags for each movie - for example, if a movie had tags like **funny** and **animation**, they would be merged into a single string **funny animation** in a new tags column. Next, I merged grouped tags with TMDB IDs, added rating statistics (average rating and rating counts), weighted genres to reflect their importance in text-based similarity, and finally created movie profiles - a single textual representation per movie combining title, weighted genres and tags.
 
 ## Feature Engineering and Similarity
 
 Using these movie profiles, I applied TF-IDF vectorization and cosine similarity to numerically represent movies and measure similarity.
 
+::code-block
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -88,26 +89,32 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf_vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=3)
 tfidf_matrix = tfidf_vectorizer.fit_transform(movies_df["movie_profile"])
 ```
+::
 
 Then, I computed the cosine similarity:
 
+::code-block
 ```python
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 ```
+::
 
 I also created a mapping from movie titles to DataFrame indices to allow quick lookup:
 
+::code-block
 ```python
 movie_id_to_index = pd.Series(movies_df.index.values, index=movies_df["movieId"])
 ```
+::
 
 ## Recommendation Algorithm
 
 The core recommendation function finds movies similar to a given movie, applying optional filters like genres, tags and minimum rating counts to improve relevance.
 
+::code-block
 ```python
 import numpy as np
 
@@ -214,15 +221,18 @@ def find_movie_recommendations(
 
     return recommendations_df
 ```
+::
 
 For example, if you choose Pulp Fiction (1994), the algorithm generates a list of relevant recommendations based on textual similarity and metadata.
 
+::code-block
 ```python
 # 296 is the ID for Pulp Fiction (1994)
 movie_recommendations = find_movie_recommendations(
     296, movie_id_to_index, movies_df, cosine_sim
 )
 ```
+::
 
 And for Pulp Fiction, we get the following recommendations:
 
@@ -231,7 +241,7 @@ And for Pulp Fiction, we get the following recommendations:
 
 ## What About the Web App?
 
-To serve the model, I used FastAPI. When the server starts, it loads the model into memory, so it doesn't have to reload it every time someone queries the API - that would be a waste of resources. Currently, the model is stored in the `models/` folder, but in the near future, I plan to integrate AWS services for this purpose.
+To serve the model, I used FastAPI. When the server starts, it loads the model into memory, so it doesn't have to reload it every time someone queries the API - that would be a waste of resources. Currently, the model is stored in the **models/** folder, but in the near future, I plan to integrate AWS services for this purpose.
 
 The backend is handled with Laravel, using Sanctum for authentication and role-based access. Users can store watched movies, view their activity, track genre preferences over time, and access data enriched with the TMDB API. API calls are cached using Redis, and MySQL stores all data.
 

@@ -113,7 +113,7 @@ async def update_user_password(
 
 In the service layer, I handled the business logic - for example, verifying the current password before calling the repository to update it.
 
-I also split hashing logic into a separate utility (HashUtil), where I used Bcrypt to handle create_hash and verify_hash, while Pydantic models provided responses with default messages.
+I also split hashing logic into a separate utility (**HashUtil**), where I used Bcrypt to handle **create_hash** and **verify_hash**, while Pydantic models provided responses with default messages.
 
 ::code-block
 ```python
@@ -190,7 +190,7 @@ def update_password_by_id(
 
 ## Pydantic
 
-An absolutely fantastic tool. Really. I used it in this project as often as I could - for request validation, response serialization and even application settings (src/core/config.py). It made my code much more reliable and readable.
+An absolutely fantastic tool. Really. I used it in this project as often as I could - for request validation, response serialization and even application settings (**src/core/config.py**). It made my code much more reliable and readable.
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
