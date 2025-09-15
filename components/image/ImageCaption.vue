@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import type { ImageCaption } from "~/types/common";
 
-defineProps<ImageCaption>();
+const { isGrayscale = true } = defineProps<ImageCaption>();
+
+// const grayscaleClasses = computed(() => ({
+//   "grayscale hover:grayscale-0": isGrayscale,
+// }));
+const grayscaleClasses = computed(() => isGrayscale ? "grayscale-0 hover:grayscale-0" : "");
 </script>
 
 <template>
@@ -9,10 +14,9 @@ defineProps<ImageCaption>();
     <div class="overflow-hidden rounded-xl">
       <CldImage
         class="
-          h-52 w-full rounded-xl object-cover grayscale transition-all
-          duration-300
+          h-52 w-full rounded-xl object-cover transition-all duration-300
 
-          hover:scale-110 hover:grayscale-0
+          hover:scale-110
 
           lg:h-[500px]
 
@@ -20,6 +24,7 @@ defineProps<ImageCaption>();
         "
         width="1200"
         height="600"
+        :class="grayscaleClasses"
         :alt="alt"
         :src="src"
       />

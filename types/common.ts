@@ -45,4 +45,5 @@ export type ImageCaption = {
   src: string;
   alt: string;
   caption: string;
+  isGrayscale?: boolean;
 };
