@@ -156,4 +156,19 @@ export default defineNuxtConfig({
     offset: 0,
     duration: 600,
   },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "catppuccin-latte",
+          langs: [
+            "ts",
+            "python",
+            "vue",
+            "php",
+          ],
+        },
+      },
+    },
+  },
 });

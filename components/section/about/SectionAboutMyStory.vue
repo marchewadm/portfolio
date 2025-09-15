@@ -36,6 +36,7 @@
       Back then, <LinkUnderline
         href="https://www.minecraft.net"
         title="Open the Minecraft website in a new tab"
+        target="_blank"
       >
         Minecraft</LinkUnderline> was
       hugely popular among kids, and I was no exception &dash; I spent countless hours playing it. One day, while playing on a server, someone in the global chat mentioned that they were struggling to set up their own server. I was only around nine years old at the time and had absolutely no idea how servers worked &dash; neither in Minecraft nor in any other game. But for some reason, I told him I could fix it.

@@ -69,19 +69,150 @@ createdAt: 2024-04-17
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat duis aute irure dolor in.
+Times are changing, people adapt, but some things remain problematic. That's exactly how I felt when I had to use multiple LLMs at the same time - juggling several tabs with ChatGPT, Gemini, maybe even Claude. And it wasn't always about using the ready-made products... I also wanted to experiment with their APIs. That's when the idea of building an aggregator for different LLMs came to my mind.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat.
+Sure, I know similar solutions already existed (though fewer than today), but I wanted to have my own version - something I could learn from while building.
 
-## Nihil molestiae consequatur, vel illum qui dolorem?
+And indeed, I learned a lot. I had already played with Python before, had some basic knowledge of TypeScript and Vue.js, but this was the project where I finally felt comfortable - you know that feeling when you're not blindly following tutorials anymore, but actually know what you're doing?
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem.
+## What I Learned from This Project
+
+I rebuilt this project a few times, even over something as basic as backend folder structure. That's the "freedom" you get with frameworks like FastAPI - it doesn't force an opinionated structure. A valuable lesson for me, because it made me appreciate batteries-included frameworks like Django or Laravel.
+
+That said, FastAPI is still an amazing choice for many projects. As the name suggests, it's fast - like really fast. You can spin up an API in under 5 minutes and most of the time goes into downloading dependencies rather than writing the API itself. Plus, it's Python, which brings both simplicity and flexibility.
+
+But was FastAPI the right choice for this project? Probably not. I only realized that once the project grew larger, and I started missing the ready-made solutions that other frameworks provide out of the box.
+
+## Architecture and Patterns
+
+I thought it might be worth splitting responsibilities a bit and following a structure with repositories, services, and controllers. In FastAPI, controllers are basically routers.
+
+For example, let's take a look at some controller:
+
+::code-block
+```python
+from fastapi import APIRouter
+
+
+router = APIRouter(prefix="/user", tags=["user"])
+
+
+@router.patch("/update-password", response_model=UserUpdatePasswordResponse)
+async def update_user_password(
+    auth: AuthDependency,
+    user_service: UserServiceDependency,
+    payload: UserUpdatePasswordRequest,
+):
+    """
+    Update the user's password by user ID.
+    """
+
+    return user_service.update_user_password(auth.user_id, payload)
+```
+::
+
+In the service layer, I handled the business logic - for example, verifying the current password before calling the repository to update it.
+
+I also split hashing logic into a separate utility (**HashUtil**), where I used Bcrypt to handle **create_hash** and **verify_hash**, while Pydantic models provided responses with default messages.
+
+::code-block
+```python
+def update_user_password(
+    self, user_id: int, payload: UserUpdatePasswordRequest
+) -> UserUpdatePasswordResponse:
+    """
+    Update a user's password by ID.
+
+    Args:
+        user_id (int): The ID of the user to update.
+        payload (UserUpdatePasswordRequest): The payload containing the current and new password.
+
+    Raises:
+        HTTPException: Raised with status code 400 if the current password is incorrect.
+        HTTPException: Raised with status code 404 if the user is not found.
+
+    Returns:
+        UserUpdatePasswordResponse: The response containing a message if the operation is successful.
+            Message can be customized, but defaults to the one in the schema.
+    """
+
+    user = self.repository.get_one_with_selected_attributes_by_condition(
+        ["password"], "id", user_id
+    )
+
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="User not found."
+        )
+    if not hash_util.verify_hash(
+        payload.current_password.get_secret_value(), user.password
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Please check your credentials and try again.",
+        )
+
+    hashed_new_password = hash_util.create_hash(
+        payload.new_password.get_secret_value()
+    )
+
+    self.repository.update_password_by_id(user_id, hashed_new_password)
+    return UserUpdatePasswordResponse()
+```
+::
+
+A repository method might look like this:
+
+::code-block
+```python
+def update_password_by_id(
+    self, user_id: int, hashed_new_password: str
+) -> None:
+    """
+    Update the user's password by user id.
+
+    Args:
+        user_id (int): User id.
+        hashed_new_password (str): Hashed new password.
+
+    Returns:
+        None
+    """
+
+    self.db.execute(
+        update(self.model)
+        .where(self.model.id == user_id)
+        .values({self.model.password: hashed_new_password})
+    )
+    self.db.commit()
+```
+::
+
+## Pydantic
+
+An absolutely fantastic tool. Really. I used it in this project as often as I could - for request validation, response serialization and even application settings (**src/core/config.py**). It made my code much more reliable and readable.
 
 ::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero  tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo  minus id quod maxime placeat facere possimus, omnis voluptas assumenda  est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates  repudiandae sint et molestiae non recusandae.
+## Working with AWS
 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis  voluptatibus maiores alias consequatur aut perferendis doloribus  asperiores repellat.
+Initially, I had bigger plans (like hosting the whole app), but AWS costs would have been too much. Still, AWS turned out to be useful. I especially liked working with S3, which I integrated through Boto3 (AWS SDK for Python).
+
+I created an S3Service responsible for file management (uploading, downloading, deleting). The idea was that a user might want to send a file to their LLM for analysis and later revisit that chat. S3 made this possible - simple and effective. Cool.
+
+## Frontend Side of Things
+
+As I mentioned earlier, this was my first web dev project where I finally felt comfortable while coding. Sure, I had to read documentation and watch few tutorials, but that's exactly the magic of programming in my opinion - adapting to a new environment.
+
+I had some basic Vue.js experience before, but only on a very basic level. It was here that I finally started using different libraries - for form animations, for UI components and for customizing them. This was also where I finally got to use TypeScript the way the docs recommend and I really started to understand why people appreciate it so much. Even if I return to this project after some time, I'll still be able to tell what's going on in the code.
+
+That's also when I started following conventions like conventional commits and managing multiple Git branches effectively.
+
+## Final Thoughts
+
+So, was it worth building this project? I think so. Apart from improving my Python, Vue and TypeScript skills, I also improved my PostgreSQL knowledge, got to work with SQLAlchemy and Redis for caching, learned migrations and Alembic, practiced integrating multiple services, started using a logger, learned how to connect several APIs at once, and tested my application properly. That's actually quite a lot of knowledge packed into a single project.
+
+If anyone's interested in the project, you can check it out on my GitHub. There's also a direct link to the repo below.
 
 ::article-footer-portfolio{:sourceCodeUrl="sourceCodeUrl"}
