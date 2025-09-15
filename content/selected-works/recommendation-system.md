@@ -65,7 +65,7 @@ createdAt: 2025-06-12
 ::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
 ::
 
-Everyone has faced that late night dilemma: what should I watch? It's a terrible feeling and a huge waste of time. You're preparing your dinner, want to watch something, so you start searching. But sometimes, picky people exist. So you search and search... and your dinner gets cold. You try websites with recommendations, but either the genres don't fit, or the movies that look interesting, you've already seen. And just like that, your dinner is cold.
+Everyone has faced that late night dilemma: what should I watch? It's a terrible feeling and a huge waste of time. You're preparing your dinner, want to watch something, so you start searching. But sometimes, picky people exist. So you search and search... and your dinner gets cold. You try websites with recommendations, but either the genres don't fit, or the movies that look interesting have already been seen. And just like that, your dinner is cold.
 
 ## Why?
 
