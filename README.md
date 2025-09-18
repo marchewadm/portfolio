@@ -4,14 +4,11 @@ This is the repository containing the source code of my personal website [marche
 
 ## Table Of Contents
 
-- [Demo](#demo)
 - [Setup](#setup)
   - [Cloning The Repository](#cloning-the-repository) 
     - [Via Docker Compose](#via-docker-compose)
     - [Without Docker](#without-docker)
 - [License](#license) 
-
-## Demo
 
 ## Installation
 
