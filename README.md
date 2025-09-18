@@ -5,12 +5,14 @@ This is the repository containing the source code of my personal website [marche
 ## Table Of Contents
 
 - [Setup](#setup)
-  - [Cloning The Repository](#cloning-the-repository) 
+  - [Cloning The Repository](#cloning-the-repository)
+  - [Environment Variables](#environment-variables)
+  - [Running The Project](#running-the-project)
     - [Via Docker Compose](#via-docker-compose)
     - [Without Docker](#without-docker)
 - [License](#license) 
 
-## Installation
+## Setup
 
 ### Cloning The Repository
 
@@ -18,6 +20,18 @@ This is the repository containing the source code of my personal website [marche
 git clone https://github.com/marchewadm/portfolio.git
 cd portfolio
 ```
+
+### Environment Variables
+
+Before running the project, create a `.env` file in the root directory. You can use the provided `.env.example` as a template.
+
+Example of `.env` file:
+
+```bash
+CLOUDINARY_CLOUD_NAME=<YOUR_CLOUDINARY_CLOUD_NAME>
+```
+
+### Running The Project
 
 #### Via Docker Compose
 
