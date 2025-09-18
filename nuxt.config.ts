@@ -14,6 +14,14 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "icon", type: "image/png", sizes: "192x192", href: "/android-chrome-192x192.png" },
+        { rel: "icon", type: "image/png", sizes: "512x512", href: "/android-chrome-512x512.png" },
+      ],
     },
   },
   experimental: {
@@ -42,6 +50,7 @@ export default defineNuxtConfig({
     "@formkit/auto-animate/nuxt",
     "@pinia/nuxt",
     "nuxt-aos",
+    "@vite-pwa/nuxt",
   ],
   imports: {
     dirs: ["constants/*"],
@@ -155,6 +164,76 @@ export default defineNuxtConfig({
     once: true,
     offset: 0,
     duration: 600,
+  },
+  pwa: {
+    registerType: "autoUpdate",
+    manifest: {
+      lang: "en",
+      name: "marchewa.dev",
+      short_name: "marchewa.dev",
+      icons: [
+        {
+          src: "/android-chrome-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "/android-chrome-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+      start_url: "/",
+      display: "standalone",
+      orientation: "any",
+      theme_color: "#ffffff",
+      background_color: "#ffffff",
+    },
+    workbox: {
+      globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+      runtimeCaching: [
+        {
+          urlPattern: ({ request }) => request.destination === "image" || /\.(?:png|jpe?g|gif|webp|svg)$/.test(request.url),
+          handler: "CacheFirst",
+          options: {
+            cacheName: "images-cache",
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 7 * 24 * 60 * 60,
+            },
+          },
+        },
+        {
+          urlPattern: ({ request }) => request.destination === "document",
+          handler: "NetworkFirst",
+          options: {
+            cacheName: "pages-cache",
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 7 * 24 * 60 * 60,
+            },
+          },
+        },
+        {
+          urlPattern: ({ request }) => request.destination === "font",
+          handler: "CacheFirst",
+          options: {
+            cacheName: "fonts-cache",
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 30 * 24 * 60 * 60,
+            },
+          },
+        },
+        {
+          urlPattern: ({ request }) => request.destination === "style" || request.destination === "script",
+          handler: "StaleWhileRevalidate",
+          options: {
+            cacheName: "assets-cache",
+          },
+        },
+      ],
+    },
   },
   content: {
     build: {
