@@ -72,6 +72,7 @@
               variant="secondary"
               href="#"
               title="View my resume in a new tab"
+              target="_blank"
             >
               Resume
             </BaseButtonVariant>
@@ -93,9 +94,11 @@
           class="group rounded-full"
           title="Visit the about page"
         >
-          <NuxtImg
-            src="/img/work-1.jpg"
+          <CldImage
+            src="portfolio/hero-profile-pic"
             alt="Portrait of the author"
+            width="400"
+            height="400"
             class="
               h-48 w-48 rounded-full object-cover grayscale transition-all
               duration-300

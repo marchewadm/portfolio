@@ -69,7 +69,7 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
         :title="projectDetailsTitle"
         :to="path"
       >
-        <NuxtImg
+        <CldImage
           class="
             h-80 w-full rounded-xl object-cover grayscale transition-all
             duration-300
@@ -78,7 +78,8 @@ const projectDetailsTitle = computed(() => `Read more about ${title}`);
 
             hover:scale-110 hover:grayscale-0
           "
-          loading="lazy"
+          width="1200"
+          height="600"
           :src="image"
           :alt="alt"
         />

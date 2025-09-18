@@ -7,7 +7,10 @@ const { data: selectedWorks } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <BaseSectionSubPage class="w-full">
+  <BaseSectionSubPage
+    class="w-full"
+    is-last
+  >
     <TypographyHeading
       class="mb-3 opacity-0"
       data-aos="fade-up"

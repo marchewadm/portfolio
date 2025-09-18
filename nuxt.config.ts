@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/seo",
     "@nuxt/content",
+    "@nuxtjs/cloudinary",
     "nuxt-particles",
     "radix-vue/nuxt",
     "nuxt-svgo",
@@ -154,5 +155,21 @@ export default defineNuxtConfig({
     once: true,
     offset: 0,
     duration: 600,
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "catppuccin-latte",
+          langs: [
+            "ts",
+            "python",
+            "vue",
+            "php",
+            "json",
+          ],
+        },
+      },
+    },
   },
 });

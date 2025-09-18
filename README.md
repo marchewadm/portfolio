@@ -1,75 +1,58 @@
-# Nuxt Minimal Starter
+# marchewa.dev - My Personal Portfolio Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the repository containing the source code of my personal website [marchewa.dev](https://marchewa.dev/).
 
-## Setup
+## Table Of Contents
 
-Make sure to install dependencies:
+- [Setup](#setup)
+  - [Cloning The Repository](#cloning-the-repository) 
+    - [Via Docker Compose](#via-docker-compose)
+    - [Without Docker](#without-docker)
+- [License](#license) 
+
+## Installation
+
+### Cloning The Repository
 
 ```bash
-# npm
+git clone https://github.com/marchewadm/portfolio.git
+cd portfolio
+```
+
+#### Via Docker Compose
+
+1. **Build Docker Image**
+
+```bash
+docker compose build
+```
+
+2. **Run The Container**
+
+```bash
+docker compose up -d
+```
+
+3. **Stop The Container**
+
+```bash
+docker compose down
+```
+
+#### Without Docker
+
+1. **Install All dependencies**
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+2. **Run Development Server**
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## License
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).

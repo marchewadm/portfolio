@@ -39,7 +39,7 @@
       class="mb-2 opacity-0"
       data-aos="fade-up"
     >
-      However, computer science isn't just about programming &mdash; I've also completed courses in computer networks, database management, server administration on both Windows and Linux, Bash scripting, and software testing.
+      However, computer science isn't just about programming &dash; I've also completed courses in computer networks, database management, server administration on both Windows and Linux, Bash scripting, and software testing.
     </TypographyParagraph>
     <TypographyParagraph
       class="mb-2 opacity-0"

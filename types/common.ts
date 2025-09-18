@@ -18,6 +18,7 @@ export type BaseButtonVariant = BaseLink & {
 
 export type Illustration = {
   illustration: string;
+  useAnimations?: boolean;
 };
 
 export type PortfolioWork = {
@@ -44,4 +45,5 @@ export type ImageCaption = {
   src: string;
   alt: string;
   caption: string;
+  isGrayscale?: boolean;
 };

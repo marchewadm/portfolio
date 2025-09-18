@@ -1,10 +1,10 @@
 ---
 author: Dawid Merchwa
-avatar: /img/work-1.jpg
+avatar: work-1_qqrtn1
 
 title: Sed do eiusmod
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-image: /img/blog-article-2.jpg
+image: work-1_qqrtn1
 alt: The article photo sample
 
 date: 2024-11-05

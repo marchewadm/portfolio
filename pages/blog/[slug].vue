@@ -9,12 +9,13 @@ const { data: page } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <div>
-    <BaseSectionSubPage v-if="page">
+  <div v-if="page">
+    <BaseSectionSubPage is-last>
       <ContentRenderer :value="page" />
     </BaseSectionSubPage>
-    <p v-else>
-      TODO: 404
-    </p>
   </div>
+  <SectionErrorContent
+    v-else
+    error-message="The page you were looking for was not found."
+  />
 </template>

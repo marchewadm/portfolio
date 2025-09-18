@@ -54,7 +54,7 @@ function toggleCategory(idx: number) {
       class="mb-3 opacity-0"
       data-aos="fade-up"
     >
-      Every developer has their own set of tools &mdash; here's mine. These are the languages, frameworks, and technologies I rely on to build efficient, scalable, and well-structured applications. Whether it's backend development, frontend work, or managing infrastructure, this toolbox helps me turn ideas into reality.
+      Every developer has their own set of tools &dash; here's mine. These are the languages, frameworks, and technologies I rely on to build efficient, scalable, and well-structured applications. Whether it's backend development, frontend work, or managing infrastructure, this toolbox helps me turn ideas into reality.
     </TypographyParagraph>
     <ListButtonWrapped
       class="mb-2 opacity-0"

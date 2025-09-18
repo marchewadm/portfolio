@@ -19,7 +19,7 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
     "
   >
     <div class="overflow-hidden rounded-full">
-      <NuxtImg
+      <CldImage
         class="
           h-10 w-10 rounded-full object-cover grayscale transition-all
           duration-300
@@ -28,7 +28,8 @@ const authorImageAlt = computed(() => `Image of the article's author, ${author}`
 
           md:h-12 md:w-12
         "
-        loading="lazy"
+        width="100"
+        height="100"
         :src="authorImageSrc"
         :alt="authorImageAlt"
       />

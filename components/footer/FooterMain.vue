@@ -7,7 +7,7 @@ const currentYearAsString = computed(() => String(currentYear));
 <template>
   <footer
     class="
-      mt-11 bg-surface-darker px-4 pb-5 pt-11
+      bg-surface-darker px-4 pb-5 pt-11
 
       lg:pb-11
     "

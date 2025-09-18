@@ -8,7 +8,7 @@
       data-aos="fade-up"
       data-aos-delay="600"
     >
-      Life is a constant process of trial and error &mdash; mistakes show us our limits, challenges test our resilience, and experiences shape our perspective. What we take from them is entirely up to us.
+      Life is a constant process of trial and error &dash; mistakes show us our limits, challenges test our resilience, and experiences shape our perspective. What we take from them is entirely up to us.
     </TypographyParagraph>
     <div
       class="
@@ -25,6 +25,7 @@
         animation="bounce-right"
         href="#"
         title="View my resume in a new tab"
+        target="_blank"
       >
         View my resume
       </ButtonVariantWithIcon>

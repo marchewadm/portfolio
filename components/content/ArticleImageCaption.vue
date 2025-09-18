@@ -10,5 +10,6 @@ defineProps<ImageCaption>();
     :src="src"
     :alt="alt"
     :caption="caption"
+    :is-grayscale="false"
   />
 </template>

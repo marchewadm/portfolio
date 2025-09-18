@@ -32,7 +32,6 @@ export const TECH_CATEGORIES = [
       { name: "nuxt-icon", label: "Nuxt.js", url: "https://nuxt.com/" },
       { name: "express", label: "Express.js", url: "https://expressjs.com/" },
       { name: "fastapi-icon", label: "FastAPI", url: "https://fastapi.tiangolo.com/" },
-      { name: "django-icon", label: "Django", url: "https://www.djangoproject.com/" },
       { name: "laravel", label: "Laravel", url: "https://laravel.com/" },
       { name: "tailwindcss-icon", label: "Tailwind CSS", url: "https://tailwindcss.com/" },
     ],
@@ -73,7 +72,7 @@ export const TECH_CATEGORIES = [
     icons: [
       { name: "linux-tux", label: "Linux", url: "https://kernel.org/" },
       { name: "fedora", label: "Fedora", url: "https://fedoraproject.org/" },
-      { name: "debian", label: "Debian", url: "https://www.debian.org/" },
+      { name: "ubuntu", label: "Ubuntu", url: "https://ubuntu.com/" },
       { name: "microsoft-windows-icon", label: "Windows", url: "https://www.microsoft.com/en-us/windows/" },
     ],
   },
@@ -81,6 +80,8 @@ export const TECH_CATEGORIES = [
     category: "Tools",
     icons: [
       { name: "pycharm", label: "PyCharm", url: "https://www.jetbrains.com/pycharm/" },
+      { name: "webstorm", label: "WebStorm", url: "https://www.jetbrains.com/webstorm/" },
+      { name: "phpstorm", label: "PhpStorm", url: "https://www.jetbrains.com/phpstorm/" },
       { name: "visual-studio-code", label: "VS Code", url: "https://code.visualstudio.com/" },
       { name: "git-icon", label: "Git", url: "https://git-scm.com/" },
       { name: "figma", label: "Figma", url: "https://www.figma.com/" },
