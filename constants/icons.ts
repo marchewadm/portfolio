@@ -80,6 +80,8 @@ export const TECH_CATEGORIES = [
     category: "Tools",
     icons: [
       { name: "pycharm", label: "PyCharm", url: "https://www.jetbrains.com/pycharm/" },
+      { name: "webstorm", label: "WebStorm", url: "https://www.jetbrains.com/webstorm/" },
+      { name: "phpstorm", label: "PhpStorm", url: "https://www.jetbrains.com/phpstorm/" },
       { name: "visual-studio-code", label: "VS Code", url: "https://code.visualstudio.com/" },
       { name: "git-icon", label: "Git", url: "https://git-scm.com/" },
       { name: "figma", label: "Figma", url: "https://www.figma.com/" },
