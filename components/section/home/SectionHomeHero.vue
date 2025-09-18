@@ -95,7 +95,7 @@
           title="Visit the about page"
         >
           <CldImage
-            src="work-1_qqrtn1"
+            src="portfolio/hero-profile-pic"
             alt="Portrait of the author"
             width="400"
             height="400"

@@ -1,11 +1,11 @@
 ---
-title: Recommendation System
+title: Recommendation System (WIP)
 subtitle: A movie recommendation system using NLP and cosine similarity.
 
 sourceCodeUrl: 'https://github.com/marchewadm/movie-recommendation-model'
 
-image: /img/work-1.jpg
-alt: The project's photo sample
+image: portfolio/selected-works/recommendation-system-1
+alt: Screenshot of the FastAPI OpenAPI docs
 
 description: A movie recommendation system built using NLP and cosine similarity. It analyzes user preferences and movie features from the MovieLens dataset to generate personalized recommendations. The trained model is served through a FastAPI backend exposing an API, while Laravel manages users, role-based access control (RBAC), watched movies, generates insights, and integrates with the TMDB API, using Redis for caching. Finally, Nuxt.js provides an intuitive interface to explore recommendations, view interactive charts, and track viewing history and preferences over time.
 
@@ -62,7 +62,7 @@ createdAt: 2025-06-12
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 Everyone has faced that late night dilemma: what should I watch? It's a terrible feeling and a huge waste of time. You're preparing your dinner, want to watch something, so you start searching. But sometimes, picky people exist. So you search and search... and your dinner gets cold. You try websites with recommendations, but either the genres don't fit, or the movies that look interesting have already been seen. And just like that, your dinner is cold.
@@ -223,21 +223,41 @@ def find_movie_recommendations(
 ```
 ::
 
-For example, if you choose Pulp Fiction (1994), the algorithm generates a list of relevant recommendations based on textual similarity and metadata.
+For example, if you choose Pulp Fiction (1994), the algorithm generates a list of relevant recommendations based on textual similarity and metadata. To make things a bit easier, let's set a limit of 3 recommendations.
 
 ::code-block
 ```python
-# 296 is the ID for Pulp Fiction (1994)
+# 680 is the ID for Pulp Fiction (1994)
 movie_recommendations = find_movie_recommendations(
-    296, movie_id_to_index, movies_df, cosine_sim
+    680, movie_id_to_index, movies_df, cosine_sim, 3
 )
 ```
 ::
 
 And for Pulp Fiction, we get the following recommendations:
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::code-block
+```json
+{
+  "recommendations": [
+    {
+      "tmdbId": 115,
+      "similarityScore": 0.35814
+    },
+    {
+      "tmdbId": 101,
+      "similarityScore": 0.27574
+    },
+    {
+      "tmdbId": 550,
+      "similarityScore": 0.26478
+    }
+  ]
+}
+```
 ::
+
+The **tmdbId** values correspond to the following movies: **The Big Lebowski (1998)**, **Léon: The Professional (1994)**, and **Fight Club (1999)**.
 
 ## What About the Web App?
 

@@ -37,8 +37,8 @@
     </TypographyParagraph>
     <ImageCaption
       class="opacity-0"
-      src="/img/work-1.jpg"
-      alt="Lorem ipsum"
+      src="portfolio/hero-profile-pic"
+      alt="Portrait of the author"
       caption="Hello world! That's me!"
       data-aos="fade-up"
     />

@@ -1,11 +1,11 @@
 ---
-title: DMARC Local Analyzer
+title: DMARC Local Analyzer (WIP)
 subtitle: Human-readable DMARC report parser and email authentication validator.
 
 sourceCodeUrl: 'https://github.com/marchewadm/DMARC-Local-Analyzer'
 
-image: /img/work-1.jpg
-alt: The project's photo sample
+image: portfolio/selected-works/dmarc-local-analyzer-1
+alt: Screenshot of Postman sending a request to a demo endpoint
 
 description: DMARC Local Analyzer is a tool that converts complex XML reports into clear, human-readable insights. It validates domain configurations including DMARC policies, DKIM, and SPF records to ensure compliance and improve deliverability. The application supports automatic periodic fetching and manual uploads, offers a demo mode without database storage, and enables historical report tracking for long-term monitoring.
 
@@ -44,7 +44,7 @@ createdAt: 2025-05-01
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 At some point, I really had enough of Google's services. You know, I stopped using YouTube directly and instead switched to alternatives like Odysee or YouTube wrappers (like FreeTube). I stopped using Google search and even earlier I had already switched exclusively to Firefox. Yes, I know there are "better" versions of Chrome, but at the end of the day, it's still Chromium-based and I wanted to support other initiatives a bit, so Firefox was the obvious choice. Following up, I decided to stop using Gmail. Weeeeeeeell, that's where the real struggle began - what email provider was I supposed to use instead?

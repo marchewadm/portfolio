@@ -4,8 +4,8 @@ subtitle: A chat roulette system with category-based matching and optional accou
 
 sourceCodeUrl: 'https://github.com/marchewadm/chat-roulette'
 
-image: /img/work-1.jpg
-alt: The project's photo sample
+image: portfolio/selected-works/chat-roulette-1
+alt: Screenshot of the Chat Roulette app registration form
 
 description: A web application inspired by the chat roulette concept, allowing users to connect based on selected categories. Account creation is optional but provides extra features such as profile personalization and friend management for continuing conversations. This was my first larger project built with Vue.js. Looking back, I can see many aspects I would approach differently today, but I believe every developer should go through such an experience - after all, we learn best from our mistakes. Nonetheless, I am fine with this project as it is, as it reminds me of my early days in web development.
 
@@ -54,7 +54,7 @@ createdAt: 2023-12-17
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 At some point, I decided it was time to learn a frontend framework. I tried React first, because, well, it's the most popular one, so it must be good, right? Of course, I don't want to start any "framework wars" here - everyone has their own preferences. Personally, React didn't really click with me. I wouldn't mind working with it daily if I had to, but since I had some reservations, I started looking for alternatives. And that's how I ended up discovering Vue.js.
@@ -71,7 +71,7 @@ For the backend, I used Express.js with Socket.IO, and for the database, Postgre
 
 I also styled everything with Tailwind CSS, building all components from scratch instead of relying on any UI libraries.
 
-::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{src="portfolio/selected-works/chat-roulette-2" alt="Screenshot of the chat" caption="Screenshot of the chat"}
 ::
 
 ## Final Words

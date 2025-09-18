@@ -4,8 +4,8 @@ subtitle: Simple e-commerce website built with Django where users can browse pro
 
 sourceCodeUrl: 'https://github.com/marchewadm/floresta'
 
-image: /img/work-1.jpg
-alt: The project's photo sample
+image: portfolio/selected-works/floresta-1
+alt: Screenshot of the subpage featuring easy-care plants
 
 description: This project was developed as part of an assignment for the Advanced Python Programming Techniques course at my university. It is one of the tasks required for the course, where the goal was to create a simple e-commerce website using Django, allowing users to browse products, add them to their cart, and place orders.
 
@@ -36,7 +36,7 @@ createdAt: 2023-11-02
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 This was the project where I could finally use Python for something other than automating my daily tasks or doing web scraping. It's a relatively simple project, but it still laid down some solid foundations for my path into web development.
@@ -49,7 +49,7 @@ The project was built entirely with Django, from backend to frontend, using the 
 
 Later on, I revisited this project and decided to add a Dockerfile so it can run inside a Docker container.
 
-::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{src="portfolio/selected-works/floresta-2" alt="Screenshot of the homepage" caption="Screenshot of the homepage"}
 ::
 
 ## Final Words

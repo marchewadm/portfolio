@@ -31,9 +31,9 @@
     </TypographyParagraph>
     <ImageCaption
       class="mb-3 opacity-0"
-      src="/img/work-1.jpg"
-      alt="Lorem ipsum"
-      caption="Photo taken from my personal collection"
+      src="portfolio/section-beyond-work"
+      alt="View of vineyards and hills in Rhineland-Palatinate"
+      caption="I've been visiting Rhineland-Palatinate for many years - its landscapes never cease to amaze me"
       data-aos="fade-up"
     />
     <TypographyParagraph

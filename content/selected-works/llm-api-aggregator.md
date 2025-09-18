@@ -4,8 +4,8 @@ subtitle: Simplifying access to multiple LLM APIs in one place.
 
 sourceCodeUrl: 'https://github.com/marchewadm/llm-api-aggregator-backend'
 
-image: /img/work-1.jpg
-alt: The project's photo sample
+image: portfolio/selected-works/llm-api-aggregator-1
+alt: Screenshot showing the create account page of the LLM API aggregator
 
 description: LLM API Aggregator is a tool that allows users to store and manage chats from various LLMs in one place, making them easier to organize and access. While similar concepts already existed, I decided to build my own version as a way to learn and practice FastAPI and SQLAlchemy. The application follows a layered architecture with controllers, services and the repository pattern. It was also my first larger project written in TypeScript, where I focused on applying good coding practices, while at the same time improving my Vue.js skills. Additionally, I integrated AWS, using S3 (via the Python AWS SDK, Boto3) and took my first steps in working with Redis. As of now, the application supports both the OpenAI API and the Gemini API.
 
@@ -66,7 +66,7 @@ createdAt: 2024-04-17
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 Times are changing, people adapt, but some things remain problematic. That's exactly how I felt when I had to use multiple LLMs at the same time - juggling several tabs with ChatGPT, Gemini, maybe even Claude. And it wasn't always about using the ready-made products... I also wanted to experiment with their APIs. That's when the idea of building an aggregator for different LLMs came to my mind.
@@ -82,6 +82,9 @@ I rebuilt this project a few times, even over something as basic as backend fold
 That said, FastAPI is still an amazing choice for many projects. As the name suggests, it's fast - like really fast. You can spin up an API in under 5 minutes and most of the time goes into downloading dependencies rather than writing the API itself. Plus, it's Python, which brings both simplicity and flexibility.
 
 But was FastAPI the right choice for this project? Probably not. I only realized that once the project grew larger, and I started missing the ready-made solutions that other frameworks provide out of the box.
+
+::article-image-caption{src="portfolio/selected-works/llm-api-aggregator-2" alt="Screenshot showing part of a conversation about generating Python code" caption="Screenshot showing part of a conversation about generating Python code"}
+::
 
 ## Architecture and Patterns
 
@@ -192,7 +195,55 @@ def update_password_by_id(
 
 An absolutely fantastic tool. Really. I used it in this project as often as I could - for request validation, response serialization and even application settings (**src/core/config.py**). It made my code much more reliable and readable.
 
-::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
+::code-block
+```python
+from pathlib import Path
+from functools import lru_cache
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    """
+    Store the settings of the application by loading them from the environment variables.
+    """
+
+    DATABASE_URL: str
+    REDIS_SERVER_HOST: str
+    REDIS_SERVER_PORT: int
+    ALLOWED_ORIGIN: str
+    JWT_AUTH_SECRET_KEY: str
+    FERNET_MASTER_KEY: str
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_IN_MINUTES: int = 180
+    REDIS_API_KEYS_EXPIRE_IN_SEC: int = 900
+    AWS_ACCESS_KEY_ID: str
+    AWS_SECRET_ACCESS_KEY: str
+    AWS_REGION: str
+    AWS_S3_BUCKET_NAME: str
+    AWS_S3_DOWNLOAD_PATH: str = str(Path("src/s3/tmp/"))
+
+    model_config = SettingsConfigDict(
+        case_sensitive=True,
+        env_file="./.env",
+        env_file_encoding="utf-8",
+    )
+
+
+@lru_cache
+def get_settings() -> Settings:
+    """
+    Used to get the settings of the application.
+
+    Returns:
+        Settings: The settings of the application.
+    """
+
+    return Settings()
+
+
+settings = get_settings()
+```
 ::
 
 ## Working with AWS

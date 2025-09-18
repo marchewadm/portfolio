@@ -4,8 +4,8 @@ subtitle: A mobile application for reading news articles from various sources.
 
 sourceCodeUrl: 'https://github.com/marchewadm/dailynews'
 
-image: work-1_qqrtn1
-alt: The project's photo sample
+image: portfolio/selected-works/daily-news-1
+alt: Screenshot of the latest articles
 
 description: Daily News is a mobile application written in TypeScript using the Ionic Framework and Vue.js, designed for browsing the latest news articles from various sources. It uses Firebase for user data storage, authentication, and saving selected articles. Building it gave me a hands-on look at how modern mobile apps are structured and allowed me to deepen my knowledge of TypeScript and Vue.js. The app is available on both Android and iOS.
 
@@ -44,7 +44,7 @@ createdAt: 2025-06-26
 ::article-tech-stack{:technologies="technologies"}
 ::
 
-::article-image-caption{:src="image" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{:src="image" :alt="alt" :caption="alt"}
 ::
 
 I wanted to learn a framework that could be used to build mobile applications. I decided to go with the Ionic Framework and gave myself five calm evenings to complete the task. I thought it would be a good idea to use some API and a database, but nothing too fancy.
@@ -61,7 +61,7 @@ Mostly because I feel most comfortable working with Vue.js. Yes, I know I could 
 
 Was it really the easiest? I don't know, since I haven't tried the alternatives. But I do remember that at times I wanted to throw the project away because I constantly felt like Ionic wasn't really listening to me and was doing its own thing. By the time I'm writing this article, three months have passed since I built the app, so I don't remember all the details, but I do know those issues were there… maybe something with element positioning? :thinking:
 
-::article-image-caption{src="/img/blog-article-2.jpg" :alt="alt" caption="Photo taken from my personal collection"}
+::article-image-caption{src="portfolio/selected-works/daily-news-2" alt="Screenshot of the user's saved articles" caption="Screenshot of the user's saved articles"}
 ::
 
 ## Was It Worth It?
