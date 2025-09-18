@@ -166,6 +166,7 @@ export default defineNuxtConfig({
             "python",
             "vue",
             "php",
+            "json",
           ],
         },
       },
