@@ -3,9 +3,6 @@ import type { ImageCaption } from "~/types/common";
 
 const { isGrayscale = true } = defineProps<ImageCaption>();
 
-// const grayscaleClasses = computed(() => ({
-//   "grayscale hover:grayscale-0": isGrayscale,
-// }));
 const grayscaleClasses = computed(() => isGrayscale ? "grayscale-0 hover:grayscale-0" : "");
 </script>
 
