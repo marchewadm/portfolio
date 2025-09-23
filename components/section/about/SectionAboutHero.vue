@@ -23,7 +23,7 @@
         class="w-full"
         icon-name="arrow-right"
         animation="bounce-right"
-        href="#"
+        href="https://drive.google.com/file/d/1op72bEpsWJYhPjdVXHiadR41dA5pX0TE/view"
         title="View my resume in a new tab"
         target="_blank"
       >

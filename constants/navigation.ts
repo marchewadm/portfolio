@@ -77,7 +77,7 @@ export const NAVIGATION_DATA = [
     links: [
       {
         text: "Resume",
-        href: "#",
+        href: "https://drive.google.com/file/d/1op72bEpsWJYhPjdVXHiadR41dA5pX0TE/view",
         target: "_blank",
         title: "View my resume in a new tab",
       },
